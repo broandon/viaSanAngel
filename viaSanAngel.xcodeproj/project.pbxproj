@@ -14,6 +14,7 @@
 		CFBCB5372347E730009F32B0 /* viaSanAngel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CFBCB5352347E730009F32B0 /* viaSanAngel.xcdatamodeld */; };
 		CFBCB5392347E731009F32B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFBCB5382347E731009F32B0 /* Assets.xcassets */; };
 		CFBCB53C2347E731009F32B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFBCB53A2347E731009F32B0 /* LaunchScreen.storyboard */; };
+		CFBCB5452347F413009F32B0 /* signInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBCB5442347F413009F32B0 /* signInViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		CFBCB5382347E731009F32B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CFBCB53B2347E731009F32B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CFBCB53D2347E731009F32B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CFBCB5442347F413009F32B0 /* signInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signInViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +44,7 @@
 		CFBCB5202347E730009F32B0 = {
 			isa = PBXGroup;
 			children = (
+				CFBCB5432347F3F0009F32B0 /* Sign In Screen */,
 				CFBCB52B2347E730009F32B0 /* viaSanAngel */,
 				CFBCB52A2347E730009F32B0 /* Products */,
 			);
@@ -68,6 +71,14 @@
 				CFBCB5352347E730009F32B0 /* viaSanAngel.xcdatamodeld */,
 			);
 			path = viaSanAngel;
+			sourceTree = "<group>";
+		};
+		CFBCB5432347F3F0009F32B0 /* Sign In Screen */ = {
+			isa = PBXGroup;
+			children = (
+				CFBCB5442347F413009F32B0 /* signInViewController.swift */,
+			);
+			path = "Sign In Screen";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,6 +156,7 @@
 				CFBCB5372347E730009F32B0 /* viaSanAngel.xcdatamodeld in Sources */,
 				CFBCB52D2347E730009F32B0 /* AppDelegate.swift in Sources */,
 				CFBCB52F2347E730009F32B0 /* SceneDelegate.swift in Sources */,
+				CFBCB5452347F413009F32B0 /* signInViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,6 +303,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6RW3S42MR2;
 				INFOPLIST_FILE = viaSanAngel/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -298,7 +311,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Broandon.viaSanAngel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -309,6 +322,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6RW3S42MR2;
 				INFOPLIST_FILE = viaSanAngel/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -316,7 +330,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Broandon.viaSanAngel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
