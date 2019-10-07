@@ -1,0 +1,6 @@
+framework module Pods_viaSanAngel {
+  umbrella header "Pods-viaSanAngel-umbrella.h"
+
+  export *
+  module * { export * }
+}

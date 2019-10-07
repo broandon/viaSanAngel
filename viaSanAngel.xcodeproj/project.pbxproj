@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF09567D234A749400A7C213 /* signUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF09567C234A749400A7C213 /* signUpViewController.swift */; };
+		CF095680234A7A4100A7C213 /* mainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF09567F234A7A4100A7C213 /* mainTabBarViewController.swift */; };
+		CF095683234A7A8700A7C213 /* StoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF095682234A7A8700A7C213 /* StoresViewController.swift */; };
+		CF42CC42234ABD3D009EB13E /* configuracionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF42CC41234ABD3C009EB13E /* configuracionViewController.swift */; };
+		CFA75117234AEBAF0005559F /* configuracionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA75116234AEBAF0005559F /* configuracionTableViewController.swift */; };
+		CFA75119234AEC510005559F /* myProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA75118234AEC510005559F /* myProfileViewController.swift */; };
 		CFBCB52D2347E730009F32B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBCB52C2347E730009F32B0 /* AppDelegate.swift */; };
 		CFBCB52F2347E730009F32B0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBCB52E2347E730009F32B0 /* SceneDelegate.swift */; };
 		CFBCB5312347E730009F32B0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBCB5302347E730009F32B0 /* ViewController.swift */; };
@@ -15,9 +21,19 @@
 		CFBCB5392347E731009F32B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFBCB5382347E731009F32B0 /* Assets.xcassets */; };
 		CFBCB53C2347E731009F32B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFBCB53A2347E731009F32B0 /* LaunchScreen.storyboard */; };
 		CFBCB5452347F413009F32B0 /* signInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBCB5442347F413009F32B0 /* signInViewController.swift */; };
+		E023047F2ECF69112C463889 /* Pods_viaSanAngel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2E0F7D5664FE877D8C14E35 /* Pods_viaSanAngel.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		42DB1E5933F9273554AC93DF /* Pods-viaSanAngel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-viaSanAngel.debug.xcconfig"; path = "Target Support Files/Pods-viaSanAngel/Pods-viaSanAngel.debug.xcconfig"; sourceTree = "<group>"; };
+		43FEB4509E4508962807A5E7 /* Pods-viaSanAngel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-viaSanAngel.release.xcconfig"; path = "Target Support Files/Pods-viaSanAngel/Pods-viaSanAngel.release.xcconfig"; sourceTree = "<group>"; };
+		C2E0F7D5664FE877D8C14E35 /* Pods_viaSanAngel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_viaSanAngel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF09567C234A749400A7C213 /* signUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signUpViewController.swift; sourceTree = "<group>"; };
+		CF09567F234A7A4100A7C213 /* mainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainTabBarViewController.swift; sourceTree = "<group>"; };
+		CF095682234A7A8700A7C213 /* StoresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoresViewController.swift; sourceTree = "<group>"; };
+		CF42CC41234ABD3C009EB13E /* configuracionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = configuracionViewController.swift; sourceTree = "<group>"; };
+		CFA75116234AEBAF0005559F /* configuracionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = configuracionTableViewController.swift; sourceTree = "<group>"; };
+		CFA75118234AEC510005559F /* myProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myProfileViewController.swift; sourceTree = "<group>"; };
 		CFBCB5292347E730009F32B0 /* viaSanAngel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = viaSanAngel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFBCB52C2347E730009F32B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CFBCB52E2347E730009F32B0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -35,18 +51,59 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E023047F2ECF69112C463889 /* Pods_viaSanAngel.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		29556CF08F19B963E8854503 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C2E0F7D5664FE877D8C14E35 /* Pods_viaSanAngel.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CA3F9233E26B34152048D263 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				42DB1E5933F9273554AC93DF /* Pods-viaSanAngel.debug.xcconfig */,
+				43FEB4509E4508962807A5E7 /* Pods-viaSanAngel.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		CF09567E234A79C400A7C213 /* Tab Bar */ = {
+			isa = PBXGroup;
+			children = (
+				CF09567F234A7A4100A7C213 /* mainTabBarViewController.swift */,
+			);
+			path = "Tab Bar";
+			sourceTree = "<group>";
+		};
+		CF095681234A7A6B00A7C213 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				CF095682234A7A8700A7C213 /* StoresViewController.swift */,
+				CF42CC41234ABD3C009EB13E /* configuracionViewController.swift */,
+				CFA75116234AEBAF0005559F /* configuracionTableViewController.swift */,
+				CFA75118234AEC510005559F /* myProfileViewController.swift */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
 		CFBCB5202347E730009F32B0 = {
 			isa = PBXGroup;
 			children = (
+				CF095681234A7A6B00A7C213 /* Categories */,
+				CF09567E234A79C400A7C213 /* Tab Bar */,
 				CFBCB5432347F3F0009F32B0 /* Sign In Screen */,
 				CFBCB52B2347E730009F32B0 /* viaSanAngel */,
 				CFBCB52A2347E730009F32B0 /* Products */,
+				CA3F9233E26B34152048D263 /* Pods */,
+				29556CF08F19B963E8854503 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				CFBCB5442347F413009F32B0 /* signInViewController.swift */,
+				CF09567C234A749400A7C213 /* signUpViewController.swift */,
 			);
 			path = "Sign In Screen";
 			sourceTree = "<group>";
@@ -88,9 +146,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CFBCB5402347E731009F32B0 /* Build configuration list for PBXNativeTarget "viaSanAngel" */;
 			buildPhases = (
+				A8E4B7362C4E655EED86105D /* [CP] Check Pods Manifest.lock */,
 				CFBCB5252347E730009F32B0 /* Sources */,
 				CFBCB5262347E730009F32B0 /* Frameworks */,
 				CFBCB5272347E730009F32B0 /* Resources */,
+				91CC7EE0CE69D3E1E836AF1D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -147,15 +207,68 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		91CC7EE0CE69D3E1E836AF1D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-viaSanAngel/Pods-viaSanAngel-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Hero/Hero.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hero.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-viaSanAngel/Pods-viaSanAngel-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A8E4B7362C4E655EED86105D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-viaSanAngel-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CFBCB5252347E730009F32B0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFA75119234AEC510005559F /* myProfileViewController.swift in Sources */,
+				CF42CC42234ABD3D009EB13E /* configuracionViewController.swift in Sources */,
+				CFA75117234AEBAF0005559F /* configuracionTableViewController.swift in Sources */,
 				CFBCB5312347E730009F32B0 /* ViewController.swift in Sources */,
 				CFBCB5372347E730009F32B0 /* viaSanAngel.xcdatamodeld in Sources */,
+				CF09567D234A749400A7C213 /* signUpViewController.swift in Sources */,
 				CFBCB52D2347E730009F32B0 /* AppDelegate.swift in Sources */,
+				CF095683234A7A8700A7C213 /* StoresViewController.swift in Sources */,
 				CFBCB52F2347E730009F32B0 /* SceneDelegate.swift in Sources */,
+				CF095680234A7A4100A7C213 /* mainTabBarViewController.swift in Sources */,
 				CFBCB5452347F413009F32B0 /* signInViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -298,6 +411,7 @@
 		};
 		CFBCB5412347E731009F32B0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 42DB1E5933F9273554AC93DF /* Pods-viaSanAngel.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -317,6 +431,7 @@
 		};
 		CFBCB5422347E731009F32B0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 43FEB4509E4508962807A5E7 /* Pods-viaSanAngel.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

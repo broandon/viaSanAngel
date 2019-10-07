@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import Hero
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
