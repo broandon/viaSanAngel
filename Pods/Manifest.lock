@@ -1,16 +1,31 @@
 PODS:
   - Hero (1.4.0)
+  - IQKeyboardManagerSwift (6.5.4)
+  - NVActivityIndicatorView (4.8.0):
+    - NVActivityIndicatorView/Presenter (= 4.8.0)
+  - NVActivityIndicatorView/Presenter (4.8.0)
+  - TableViewReloadAnimation (0.0.5)
 
 DEPENDENCIES:
   - Hero
+  - IQKeyboardManagerSwift
+  - NVActivityIndicatorView
+  - TableViewReloadAnimation
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - Hero
+  trunk:
+    - IQKeyboardManagerSwift
+    - NVActivityIndicatorView
+    - TableViewReloadAnimation
 
 SPEC CHECKSUMS:
   Hero: bac92350d7201a1a940003e0767c7b52ce7c99a1
+  IQKeyboardManagerSwift: 2dde0fc70110e8eac7ccce2a46fdbec6a850b414
+  NVActivityIndicatorView: d24b7ebcf80af5dcd994adb650e2b6c93379270f
+  TableViewReloadAnimation: f3a4c4048efbc56331be98075f26a2e533a14c16
 
-PODFILE CHECKSUM: 9056b82a7618b1294578024e577d440ef156d846
+PODFILE CHECKSUM: bc6425568ca57e950ed451e0bbacfdc95c6f93a5
 
-COCOAPODS: 1.6.1
+COCOAPODS: 1.8.4

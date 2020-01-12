@@ -8,5 +8,9 @@ target 'viaSanAngel' do
   # Pods for viaSanAngel
   
   pod 'Hero'
+  pod 'IQKeyboardManagerSwift'
+  pod 'TableViewReloadAnimation'
+  pod 'NVActivityIndicatorView'
+  
 
 end

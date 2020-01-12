@@ -13,9 +13,7 @@ class myProfileViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
-        
+ 
     }
     
     @IBAction func goBack(_ sender: Any) {

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,6 +11,7 @@
 		CF095680234A7A4100A7C213 /* mainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF09567F234A7A4100A7C213 /* mainTabBarViewController.swift */; };
 		CF095683234A7A8700A7C213 /* StoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF095682234A7A8700A7C213 /* StoresViewController.swift */; };
 		CF42CC42234ABD3D009EB13E /* configuracionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF42CC41234ABD3C009EB13E /* configuracionViewController.swift */; };
+		CF7532C523CAE4D400C3DFF4 /* baseURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7532C423CAE4D400C3DFF4 /* baseURL.swift */; };
 		CFA75117234AEBAF0005559F /* configuracionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA75116234AEBAF0005559F /* configuracionTableViewController.swift */; };
 		CFA75119234AEC510005559F /* myProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA75118234AEC510005559F /* myProfileViewController.swift */; };
 		CFBCB52D2347E730009F32B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBCB52C2347E730009F32B0 /* AppDelegate.swift */; };
@@ -32,6 +33,7 @@
 		CF09567F234A7A4100A7C213 /* mainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainTabBarViewController.swift; sourceTree = "<group>"; };
 		CF095682234A7A8700A7C213 /* StoresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoresViewController.swift; sourceTree = "<group>"; };
 		CF42CC41234ABD3C009EB13E /* configuracionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = configuracionViewController.swift; sourceTree = "<group>"; };
+		CF7532C423CAE4D400C3DFF4 /* baseURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = baseURL.swift; sourceTree = "<group>"; };
 		CFA75116234AEBAF0005559F /* configuracionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = configuracionTableViewController.swift; sourceTree = "<group>"; };
 		CFA75118234AEC510005559F /* myProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myProfileViewController.swift; sourceTree = "<group>"; };
 		CFBCB5292347E730009F32B0 /* viaSanAngel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = viaSanAngel.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -94,9 +96,18 @@
 			path = Categories;
 			sourceTree = "<group>";
 		};
+		CF7532C323CAE4BC00C3DFF4 /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				CF7532C423CAE4D400C3DFF4 /* baseURL.swift */,
+			);
+			path = Misc;
+			sourceTree = "<group>";
+		};
 		CFBCB5202347E730009F32B0 = {
 			isa = PBXGroup;
 			children = (
+				CF7532C323CAE4BC00C3DFF4 /* Misc */,
 				CF095681234A7A6B00A7C213 /* Categories */,
 				CF09567E234A79C400A7C213 /* Tab Bar */,
 				CFBCB5432347F3F0009F32B0 /* Sign In Screen */,
@@ -214,16 +225,11 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-viaSanAngel/Pods-viaSanAngel-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Hero/Hero.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-viaSanAngel/Pods-viaSanAngel-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hero.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-viaSanAngel/Pods-viaSanAngel-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -265,6 +271,7 @@
 				CFBCB5312347E730009F32B0 /* ViewController.swift in Sources */,
 				CFBCB5372347E730009F32B0 /* viaSanAngel.xcdatamodeld in Sources */,
 				CF09567D234A749400A7C213 /* signUpViewController.swift in Sources */,
+				CF7532C523CAE4D400C3DFF4 /* baseURL.swift in Sources */,
 				CFBCB52D2347E730009F32B0 /* AppDelegate.swift in Sources */,
 				CF095683234A7A8700A7C213 /* StoresViewController.swift in Sources */,
 				CFBCB52F2347E730009F32B0 /* SceneDelegate.swift in Sources */,
