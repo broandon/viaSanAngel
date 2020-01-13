@@ -15,7 +15,6 @@
 		CFA75117234AEBAF0005559F /* configuracionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA75116234AEBAF0005559F /* configuracionTableViewController.swift */; };
 		CFA75119234AEC510005559F /* myProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA75118234AEC510005559F /* myProfileViewController.swift */; };
 		CFBCB52D2347E730009F32B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBCB52C2347E730009F32B0 /* AppDelegate.swift */; };
-		CFBCB52F2347E730009F32B0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBCB52E2347E730009F32B0 /* SceneDelegate.swift */; };
 		CFBCB5312347E730009F32B0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBCB5302347E730009F32B0 /* ViewController.swift */; };
 		CFBCB5342347E730009F32B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFBCB5322347E730009F32B0 /* Main.storyboard */; };
 		CFBCB5372347E730009F32B0 /* viaSanAngel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CFBCB5352347E730009F32B0 /* viaSanAngel.xcdatamodeld */; };
@@ -38,7 +37,6 @@
 		CFA75118234AEC510005559F /* myProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myProfileViewController.swift; sourceTree = "<group>"; };
 		CFBCB5292347E730009F32B0 /* viaSanAngel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = viaSanAngel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFBCB52C2347E730009F32B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CFBCB52E2347E730009F32B0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		CFBCB5302347E730009F32B0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CFBCB5332347E730009F32B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CFBCB5362347E730009F32B0 /* viaSanAngel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = viaSanAngel.xcdatamodel; sourceTree = "<group>"; };
@@ -130,7 +128,6 @@
 			isa = PBXGroup;
 			children = (
 				CFBCB52C2347E730009F32B0 /* AppDelegate.swift */,
-				CFBCB52E2347E730009F32B0 /* SceneDelegate.swift */,
 				CFBCB5302347E730009F32B0 /* ViewController.swift */,
 				CFBCB5322347E730009F32B0 /* Main.storyboard */,
 				CFBCB5382347E731009F32B0 /* Assets.xcassets */,
@@ -274,7 +271,6 @@
 				CF7532C523CAE4D400C3DFF4 /* baseURL.swift in Sources */,
 				CFBCB52D2347E730009F32B0 /* AppDelegate.swift in Sources */,
 				CF095683234A7A8700A7C213 /* StoresViewController.swift in Sources */,
-				CFBCB52F2347E730009F32B0 /* SceneDelegate.swift in Sources */,
 				CF095680234A7A4100A7C213 /* mainTabBarViewController.swift in Sources */,
 				CFBCB5452347F413009F32B0 /* signInViewController.swift in Sources */,
 			);

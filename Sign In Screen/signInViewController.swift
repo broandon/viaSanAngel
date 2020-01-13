@@ -8,13 +8,16 @@
 
 import UIKit
 import Hero
+import NVActivityIndicatorView
 
-class signInViewController: UIViewController {
+class signInViewController: UIViewController, NVActivityIndicatorViewable {
     
     //MARK: Outlets
     
     @IBOutlet weak var mailTextField: UITextField!
     @IBOutlet weak var passTextField: UITextField!
+    
+    let http = HTTPViewController()
     
     //MARK: viewDid
     
@@ -37,7 +40,6 @@ class signInViewController: UIViewController {
     
     @IBAction func createAccount(_ sender: Any) {
         
-        
         self.hero.isEnabled = true
         
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
@@ -50,23 +52,144 @@ class signInViewController: UIViewController {
     
     @IBAction func signInButton(_ sender: Any) {
         
-        self.hero.isEnabled = true
+        mailTextField.resignFirstResponder()
+        passTextField.resignFirstResponder()
         
-        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let newViewController = storyBoard.instantiateViewController(withIdentifier: "mainTabBarViewController") as! UITabBarController
-        newViewController.hero.modalAnimationType = .zoomSlide(direction: .down)
+        if mailTextField.text!.isEmpty {
+            
+            // Alert with no action
+            
+            let alert = UIAlertController(title: "Error", message: "Por favor introduce tu correo.", preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: "Volver", style: .default, handler: nil))
+            
+            self.present(alert, animated: true)
+            
+            return
+            
+        }
         
-        self.hero.replaceViewController(with: newViewController)
+        if passTextField.text!.isEmpty {
+            
+            // Alert with no action
+            
+            let alert = UIAlertController(title: "Error", message: "Por favor introduce tu contraseña.", preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: "Volver", style: .default, handler: nil))
+            
+            self.present(alert, animated: true)
+            
+            return
+            
+        }
         
+        startAnimating(type: .ballClipRotatePulse)
+        
+        // POST REQUEST
+        
+        let url = URL(string: http.baseURL())!
+        
+        var request = URLRequest(url: url)
+        request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type") // Headers
+        request.httpMethod = "POST" // Metodo
+        
+        let postString = "funcion=login&email="+mailTextField.text!+"&password="+passTextField.text! // Parametros
+        
+        request.httpBody = postString.data(using: .utf8) // SE codifica a UTF-8
+        
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            
+            // Validacion para errores de Red
+            
+            guard let data = data, error == nil else {
+                print("error=\(String(describing: error))")
+                return
+            }
+            
+            do {
+                
+                let json = try? JSONSerialization.jsonObject(with: data, options: []) as? NSDictionary
+                print(" \n\n Respuesta: ")
+                print(" ============ ")
+                print(json as Any)
+                print(" ============ ")
+                
+                if let parseJSON = json {
+                    
+                    if let state = parseJSON["state"]{
+                        
+                        let stateString = "\(state)"
+                        
+                        if stateString == "200" {
+                            
+                            DispatchQueue.main.async {
+                                
+                                self.stopAnimating()
+                                
+                                self.hero.isEnabled = true
+                                
+                                let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                                let newViewController = storyBoard.instantiateViewController(withIdentifier: "mainTabBarViewController") as! UITabBarController
+                                newViewController.hero.modalAnimationType = .zoomSlide(direction: .down)
+                                
+                                self.hero.replaceViewController(with: newViewController)
+                                
+                                UserDefaults.standard.set(true, forKey: "isLoggedIn")
+                                
+                            }
+                            
+                        } else if stateString == "101" {
+                            
+                            DispatchQueue.main.async {
+                                
+                                self.stopAnimating()
+                                
+                                let alert = UIAlertController(title: "Error", message: "El usuario no ha sido encontrado. Verifica que tus datos estén bien escritos o la contraseña sea la correcta.", preferredStyle: .alert)
+                                
+                                alert.addAction(UIAlertAction(title: "Volver a intentar", style: .default, handler: nil))
+                                
+                                self.present(alert, animated: true)
+                                
+                            }
+                            
+                        } else {
+                            
+                            DispatchQueue.main.async {
+                                
+                                self.stopAnimating()
+                                
+                                let alert = UIAlertController(title: "Error", message: "Hay un problema con el servidor, inténtalo de nuevo más tarde.", preferredStyle: .alert)
+                                
+                                alert.addAction(UIAlertAction(title: "Entendido", style: .default, handler: nil))
+                                
+                                self.present(alert, animated: true)
+                                
+                            }
+                            
+                        }
+                        
+                    }
+                    
+                    if let motherAccessToken = parseJSON["data"] {
+                        if let motherAccessToken1 = motherAccessToken as? [String: String]{
+                            if let accessTokenPre = motherAccessToken1["id_user"]{
+                                
+                                UserDefaults.standard.set(accessTokenPre, forKey: "userID")
+                                
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+        task.resume()
         
     }
-    
-    
     
     @IBAction func closeController(_ sender: Any) {
         
         self.dismiss(animated: true, completion: nil)
-        
         
     }
     
