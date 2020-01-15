@@ -9,14 +9,14 @@
 import UIKit
 
 class HTTPViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         
-
+        
+        
     }
-
+    
     func baseURL() -> String {
         
         let URLString = "http://easycode.mx/viasanangel/webservice/controller_last.php"
@@ -24,5 +24,5 @@ class HTTPViewController: UIViewController {
         return URLString
         
     }
-
+    
 }

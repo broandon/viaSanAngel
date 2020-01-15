@@ -25,9 +25,7 @@ class configuracionTableViewController: UITableViewController {
     //MARK: Buttons
     
     @IBAction func closeSession(_ sender: Any) {
-        
-        self.view.alpha = 0
-        
+                
         let alert = UIAlertController(title: "Cerrar Sesión", message: "¿De verdad quieres cerrar la sesión? Deberás introducir tu mail y contraseña nuevamente.", preferredStyle: .alert)
 
         alert.addAction(UIAlertAction(title: "No", style: .default, handler: nil))

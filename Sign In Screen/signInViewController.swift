@@ -16,6 +16,7 @@ class signInViewController: UIViewController, NVActivityIndicatorViewable {
     
     @IBOutlet weak var mailTextField: UITextField!
     @IBOutlet weak var passTextField: UITextField!
+    @IBOutlet weak var recoverTextField: UITextField!
     
     let http = HTTPViewController()
     
@@ -130,7 +131,7 @@ class signInViewController: UIViewController, NVActivityIndicatorViewable {
                                 
                                 let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                                 let newViewController = storyBoard.instantiateViewController(withIdentifier: "mainTabBarViewController") as! UITabBarController
-                                newViewController.hero.modalAnimationType = .zoomSlide(direction: .down)
+                                newViewController.hero.modalAnimationType = .uncover(direction: .down)
                                 
                                 self.hero.replaceViewController(with: newViewController)
                                 
@@ -193,6 +194,8 @@ class signInViewController: UIViewController, NVActivityIndicatorViewable {
         
     }
     
+    
+    
     //MARK: Funcs
     
     func LogginCheckup() {
@@ -206,6 +209,105 @@ class signInViewController: UIViewController, NVActivityIndicatorViewable {
             appDelegate?.window??.rootViewController = homePage
             
         }
+        
+    }
+    
+    @IBAction func recoverPassword(_ sender: Any) {
+        
+        recoverTextField.resignFirstResponder()
+        
+        if recoverTextField.text!.isEmpty {
+            
+            let alert = UIAlertController(title: "Error", message: "Por favor introduce tu correo electrónico.", preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: "Entendido", style: .cancel, handler: nil))
+            
+            self.present(alert, animated: true)
+            
+            return
+            
+        }
+        
+        startAnimating(type: .ballClipRotatePulse)
+        
+        // POST REQUEST
+        
+        let url = URL(string: http.baseURL())!
+        
+        var request = URLRequest(url: url)
+        request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type") // Headers
+        request.httpMethod = "POST" // Metodo
+        
+        let postString = "funcion=recoverAccount&email="+recoverTextField.text! // Parametros
+        
+        request.httpBody = postString.data(using: .utf8) // SE codifica a UTF-8
+        
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            
+            // Validacion para errores de Red
+            
+            guard let data = data, error == nil else {
+                print("error=\(String(describing: error))")
+                return
+            }
+            
+            do {
+                
+                let json = try? JSONSerialization.jsonObject(with: data, options: []) as? NSDictionary
+                print(" \n\n Respuesta: ")
+                print(" ============ ")
+                print(json as Any)
+                print(" ============ ")
+                
+                if let parseJSON = json {
+                    
+                    if let state = parseJSON["state"]{
+                        
+                        let stateString = "\(state)"
+                        
+                        if stateString == "200" {
+                            
+                            self.stopAnimating()
+                            
+                            DispatchQueue.main.async {
+                                
+                                let alert = UIAlertController(title: "¡Éxito!", message: "Se ha enviado un correo con instrucciones para recuperar tu cuenta.", preferredStyle: .alert)
+                                
+                                alert.addAction(UIAlertAction(title: "Entendido", style: .cancel, handler: { action in
+                                    
+                                    self.dismiss(animated: true, completion: nil)
+                                    
+                                }))
+                                
+                                self.present(alert, animated: true)
+                                
+                            }
+                            
+                        } else {
+                            
+                            self.stopAnimating()
+                            
+                            DispatchQueue.main.async {
+                                
+                                let alert = UIAlertController(title: "Error", message: "No hemos encontrado este correo. Revisa tus datos e inténtalo de nuevo.", preferredStyle: .alert)
+                                
+                                alert.addAction(UIAlertAction(title: "Entendido", style: .cancel, handler: nil))
+                                
+                                self.present(alert, animated: true)
+                                
+                            }
+                            
+                        }
+                        
+                    }
+                    
+                }
+                
+            }
+            
+        }
+        
+        task.resume()
         
     }
     
