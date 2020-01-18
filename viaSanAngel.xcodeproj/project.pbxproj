@@ -10,11 +10,14 @@
 		CF09567D234A749400A7C213 /* signUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF09567C234A749400A7C213 /* signUpViewController.swift */; };
 		CF095680234A7A4100A7C213 /* mainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF09567F234A7A4100A7C213 /* mainTabBarViewController.swift */; };
 		CF095683234A7A8700A7C213 /* StoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF095682234A7A8700A7C213 /* StoresViewController.swift */; };
-		CF42CC42234ABD3D009EB13E /* configuracionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF42CC41234ABD3C009EB13E /* configuracionViewController.swift */; };
 		CF5415D123CFCF2800CFD34A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF5415D023CFCF2800CFD34A /* Assets.xcassets */; };
+		CF74A17523D1354400950974 /* tiendasTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF74A17323D1354400950974 /* tiendasTableViewCell.swift */; };
+		CF74A17623D1354400950974 /* tiendasTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF74A17423D1354400950974 /* tiendasTableViewCell.xib */; };
 		CF7532C523CAE4D400C3DFF4 /* baseURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7532C423CAE4D400C3DFF4 /* baseURL.swift */; };
+		CF852C2423D23D0900A78E7D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF852C2323D23D0900A78E7D /* Extensions.swift */; };
+		CF852C2723D261CD00A78E7D /* profileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF852C2623D261CD00A78E7D /* profileViewController.swift */; };
+		CF852C2923D2642F00A78E7D /* pickerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF852C2823D2642F00A78E7D /* pickerDelegate.swift */; };
 		CFA75117234AEBAF0005559F /* configuracionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA75116234AEBAF0005559F /* configuracionTableViewController.swift */; };
-		CFA75119234AEC510005559F /* myProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA75118234AEC510005559F /* myProfileViewController.swift */; };
 		CFBCB52D2347E730009F32B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBCB52C2347E730009F32B0 /* AppDelegate.swift */; };
 		CFBCB5312347E730009F32B0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBCB5302347E730009F32B0 /* ViewController.swift */; };
 		CFBCB5342347E730009F32B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFBCB5322347E730009F32B0 /* Main.storyboard */; };
@@ -31,11 +34,14 @@
 		CF09567C234A749400A7C213 /* signUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signUpViewController.swift; sourceTree = "<group>"; };
 		CF09567F234A7A4100A7C213 /* mainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainTabBarViewController.swift; sourceTree = "<group>"; };
 		CF095682234A7A8700A7C213 /* StoresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoresViewController.swift; sourceTree = "<group>"; };
-		CF42CC41234ABD3C009EB13E /* configuracionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = configuracionViewController.swift; sourceTree = "<group>"; };
 		CF5415D023CFCF2800CFD34A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CF74A17323D1354400950974 /* tiendasTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tiendasTableViewCell.swift; sourceTree = "<group>"; };
+		CF74A17423D1354400950974 /* tiendasTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = tiendasTableViewCell.xib; sourceTree = "<group>"; };
 		CF7532C423CAE4D400C3DFF4 /* baseURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = baseURL.swift; sourceTree = "<group>"; };
+		CF852C2323D23D0900A78E7D /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		CF852C2623D261CD00A78E7D /* profileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profileViewController.swift; sourceTree = "<group>"; };
+		CF852C2823D2642F00A78E7D /* pickerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pickerDelegate.swift; sourceTree = "<group>"; };
 		CFA75116234AEBAF0005559F /* configuracionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = configuracionTableViewController.swift; sourceTree = "<group>"; };
-		CFA75118234AEC510005559F /* myProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myProfileViewController.swift; sourceTree = "<group>"; };
 		CFBCB5292347E730009F32B0 /* viaSanAngel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = viaSanAngel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFBCB52C2347E730009F32B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CFBCB5302347E730009F32B0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -86,10 +92,7 @@
 		CF095681234A7A6B00A7C213 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
-				CF095682234A7A8700A7C213 /* StoresViewController.swift */,
-				CF42CC41234ABD3C009EB13E /* configuracionViewController.swift */,
 				CFA75116234AEBAF0005559F /* configuracionTableViewController.swift */,
-				CFA75118234AEC510005559F /* myProfileViewController.swift */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -98,13 +101,25 @@
 			isa = PBXGroup;
 			children = (
 				CF7532C423CAE4D400C3DFF4 /* baseURL.swift */,
+				CF852C2323D23D0900A78E7D /* Extensions.swift */,
+				CF852C2823D2642F00A78E7D /* pickerDelegate.swift */,
 			);
 			path = Misc;
+			sourceTree = "<group>";
+		};
+		CF852C2523D261B200A78E7D /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				CF852C2623D261CD00A78E7D /* profileViewController.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 		CFBCB5202347E730009F32B0 = {
 			isa = PBXGroup;
 			children = (
+				CF852C2523D261B200A78E7D /* Profile */,
+				CFBF36E223D12EAB005103DD /* (Tab 1) Stores */,
 				CF7532C323CAE4BC00C3DFF4 /* Misc */,
 				CF095681234A7A6B00A7C213 /* Categories */,
 				CF09567E234A79C400A7C213 /* Tab Bar */,
@@ -145,6 +160,16 @@
 				CF09567C234A749400A7C213 /* signUpViewController.swift */,
 			);
 			path = "Sign In Screen";
+			sourceTree = "<group>";
+		};
+		CFBF36E223D12EAB005103DD /* (Tab 1) Stores */ = {
+			isa = PBXGroup;
+			children = (
+				CF095682234A7A8700A7C213 /* StoresViewController.swift */,
+				CF74A17323D1354400950974 /* tiendasTableViewCell.swift */,
+				CF74A17423D1354400950974 /* tiendasTableViewCell.xib */,
+			);
+			path = "(Tab 1) Stores";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,6 +232,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF74A17623D1354400950974 /* tiendasTableViewCell.xib in Resources */,
 				CFBCB53C2347E731009F32B0 /* LaunchScreen.storyboard in Resources */,
 				CF5415D123CFCF2800CFD34A /* Assets.xcassets in Resources */,
 				CFBCB5342347E730009F32B0 /* Main.storyboard in Resources */,
@@ -262,14 +288,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CFA75119234AEC510005559F /* myProfileViewController.swift in Sources */,
-				CF42CC42234ABD3D009EB13E /* configuracionViewController.swift in Sources */,
+				CF852C2723D261CD00A78E7D /* profileViewController.swift in Sources */,
 				CFA75117234AEBAF0005559F /* configuracionTableViewController.swift in Sources */,
 				CFBCB5312347E730009F32B0 /* ViewController.swift in Sources */,
+				CF852C2923D2642F00A78E7D /* pickerDelegate.swift in Sources */,
 				CFBCB5372347E730009F32B0 /* viaSanAngel.xcdatamodeld in Sources */,
 				CF09567D234A749400A7C213 /* signUpViewController.swift in Sources */,
 				CF7532C523CAE4D400C3DFF4 /* baseURL.swift in Sources */,
 				CFBCB52D2347E730009F32B0 /* AppDelegate.swift in Sources */,
+				CF852C2423D23D0900A78E7D /* Extensions.swift in Sources */,
+				CF74A17523D1354400950974 /* tiendasTableViewCell.swift in Sources */,
 				CF095683234A7A8700A7C213 /* StoresViewController.swift in Sources */,
 				CF095680234A7A4100A7C213 /* mainTabBarViewController.swift in Sources */,
 				CFBCB5452347F413009F32B0 /* signInViewController.swift in Sources */,

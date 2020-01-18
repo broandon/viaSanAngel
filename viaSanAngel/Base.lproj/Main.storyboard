@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -141,13 +141,14 @@
                     <connections>
                         <outlet property="mailTextField" destination="5FI-bR-57o" id="foE-bg-r9L"/>
                         <outlet property="passTextField" destination="3hr-a8-p6k" id="eW8-nu-MPo"/>
+                        <outlet property="viaLogo" destination="Hid-d9-GR6" id="b4q-nY-Xcn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="135" y="136.26760563380282"/>
         </scene>
-        <!--View Controller-->
+        <!--Eventos-->
         <scene sceneID="rrD-ha-eok">
             <objects>
                 <viewController id="dwM-Sd-3Kh" sceneMemberID="viewController">
@@ -196,13 +197,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="evC-D8-rPb"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="vía san angel_iconos -22" id="qCm-gj-igC"/>
+                    <tabBarItem key="tabBarItem" title="Eventos" image="eventsIcon" id="qCm-gj-igC"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bPq-Yu-KC9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="135" y="2693.6619718309857"/>
         </scene>
-        <!--View Controller-->
+        <!--Mapa-->
         <scene sceneID="2TM-Zk-dhU">
             <objects>
                 <viewController id="guf-uL-Hee" sceneMemberID="viewController">
@@ -251,7 +252,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="l2K-zu-mMg"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="vía san angel_iconos -23" id="vVy-3A-hvF"/>
+                    <tabBarItem key="tabBarItem" title="Mapa" image="mapsIcon" id="vVy-3A-hvF"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="biQ-YP-2G2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mapas" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="lee-Z8-6wP">
@@ -268,7 +269,7 @@
             </objects>
             <point key="canvasLocation" x="1146.4000000000001" y="2693.3497536945815"/>
         </scene>
-        <!--Configuracion View Controller-->
+        <!--Ajustes-->
         <scene sceneID="fz3-0R-PHw">
             <objects>
                 <viewController storyboardIdentifier="configuracionViewController" id="SMz-yv-sEH" customClass="configuracionViewController" customModule="viaSanAngel" customModuleProvider="target" sceneMemberID="viewController">
@@ -327,19 +328,19 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="7tH-hD-HMv"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="vía san angel_iconos -24" id="fdU-NT-nT4"/>
+                    <tabBarItem key="tabBarItem" title="Ajustes" image="settingsIcon" id="fdU-NT-nT4"/>
                     <navigationItem key="navigationItem" id="1W0-va-Cdb"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wMZ-TV-A5H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2181.5999999999999" y="2693.3497536945815"/>
         </scene>
-        <!--My Profile View Controller-->
+        <!--Profile View Controller-->
         <scene sceneID="VIA-6y-O6j">
             <objects>
-                <viewController storyboardIdentifier="myProfileViewController" modalPresentationStyle="overCurrentContext" id="eRq-94-0XR" customClass="myProfileViewController" customModule="viaSanAngel" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="myProfileViewController" modalPresentationStyle="overCurrentContext" id="eRq-94-0XR" customClass="profileViewController" customModule="viaSanAngel" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wSa-I0-CdR">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="527"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="980"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8W9-81-D4i">
@@ -356,7 +357,7 @@
                                                 <barButtonItem key="leftBarButtonItem" title="Regresar" id="XaC-a6-T8K">
                                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <connections>
-                                                        <action selector="dismiss:" destination="eRq-94-0XR" id="VIk-r4-EMw"/>
+                                                        <action selector="close:" destination="eRq-94-0XR" id="K78-sE-aec"/>
                                                     </connections>
                                                 </barButtonItem>
                                             </navigationItem>
@@ -382,22 +383,97 @@
                                 <color key="textColor" red="0.82359057660000001" green="0.82482308150000005" blue="0.63966494799999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bcn-r1-QxH">
+                                <rect key="frame" x="107" y="132" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Bcn-r1-QxH" secondAttribute="height" multiplier="1:1" id="ciS-7a-4oy"/>
+                                </constraints>
+                                <state key="normal" image="vía san angel_iconos -9"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="pickPhoto:" destination="eRq-94-0XR" eventType="touchUpInside" id="DUj-7O-EtW"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="NOMBRE" placeholder="Nombre" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9ZY-Ta-7m7">
+                                <rect key="frame" x="20" y="340" width="374" height="57"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="57" id="kmN-Jw-Phw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="APELLIDOS" placeholder="Apellido" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bh3-is-HWD">
+                                <rect key="frame" x="20" y="405" width="374" height="57"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="57" id="vc5-Mh-wk3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="222 222 22 2 2" borderStyle="roundedRect" placeholder="Numero" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hrS-75-Tcm">
+                                <rect key="frame" x="20" y="481" width="374" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="kmP-4K-lFB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E1R-HD-TLs">
+                                <rect key="frame" x="20" y="569" width="374" height="56"/>
+                                <color key="backgroundColor" red="0.7516317964" green="0.20203265549999999" blue="0.29020628329999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="KXk-G2-6Kt"/>
+                                </constraints>
+                                <state key="normal" title="Guardar">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="9ZY-Ta-7m7" firstAttribute="leading" secondItem="V5t-il-SD1" secondAttribute="leading" constant="20" id="8Ws-SA-PMp"/>
+                            <constraint firstItem="V5t-il-SD1" firstAttribute="trailing" secondItem="hrS-75-Tcm" secondAttribute="trailing" constant="20" id="8hc-VE-wPX"/>
                             <constraint firstItem="hvR-6Z-Fa3" firstAttribute="trailing" secondItem="V5t-il-SD1" secondAttribute="trailing" id="AgY-Do-jdM"/>
+                            <constraint firstItem="hrS-75-Tcm" firstAttribute="leading" secondItem="V5t-il-SD1" secondAttribute="leading" constant="20" id="BCT-do-Avs"/>
                             <constraint firstItem="8W9-81-D4i" firstAttribute="top" secondItem="wSa-I0-CdR" secondAttribute="top" id="Cy7-3Z-CpC"/>
+                            <constraint firstItem="9ZY-Ta-7m7" firstAttribute="top" secondItem="Bcn-r1-QxH" secondAttribute="bottom" constant="8" id="D8w-i9-rYk"/>
+                            <constraint firstItem="V5t-il-SD1" firstAttribute="trailing" secondItem="Bcn-r1-QxH" secondAttribute="trailing" constant="107" id="FX5-xv-MWo"/>
+                            <constraint firstItem="E1R-HD-TLs" firstAttribute="leading" secondItem="V5t-il-SD1" secondAttribute="leading" constant="20" id="MK5-2u-ryl"/>
+                            <constraint firstItem="bh3-is-HWD" firstAttribute="top" secondItem="9ZY-Ta-7m7" secondAttribute="bottom" constant="8" id="NIU-0S-IEK"/>
+                            <constraint firstItem="V5t-il-SD1" firstAttribute="trailing" secondItem="E1R-HD-TLs" secondAttribute="trailing" constant="20" id="PuD-Mr-DlF"/>
+                            <constraint firstItem="bh3-is-HWD" firstAttribute="leading" secondItem="V5t-il-SD1" secondAttribute="leading" constant="20" id="PwE-yV-Yk4"/>
+                            <constraint firstItem="E1R-HD-TLs" firstAttribute="top" secondItem="hrS-75-Tcm" secondAttribute="bottom" constant="52" id="Tq9-bA-Wyx"/>
                             <constraint firstItem="hvR-6Z-Fa3" firstAttribute="leading" secondItem="V5t-il-SD1" secondAttribute="leading" id="Uhk-on-gy3"/>
                             <constraint firstItem="hvR-6Z-Fa3" firstAttribute="top" secondItem="8W9-81-D4i" secondAttribute="bottom" id="VA6-d1-ixO"/>
+                            <constraint firstItem="V5t-il-SD1" firstAttribute="trailing" secondItem="9ZY-Ta-7m7" secondAttribute="trailing" constant="20" id="agw-aF-F0V"/>
+                            <constraint firstItem="hrS-75-Tcm" firstAttribute="top" secondItem="bh3-is-HWD" secondAttribute="bottom" constant="19" id="bt4-Bq-UB1"/>
+                            <constraint firstItem="V5t-il-SD1" firstAttribute="trailing" secondItem="bh3-is-HWD" secondAttribute="trailing" constant="20" id="ejy-KQ-hAc"/>
                             <constraint firstItem="8W9-81-D4i" firstAttribute="leading" secondItem="V5t-il-SD1" secondAttribute="leading" id="hmG-3B-eGE"/>
                             <constraint firstItem="8W9-81-D4i" firstAttribute="trailing" secondItem="V5t-il-SD1" secondAttribute="trailing" id="r5f-lq-5Rw"/>
+                            <constraint firstItem="Bcn-r1-QxH" firstAttribute="top" secondItem="hvR-6Z-Fa3" secondAttribute="bottom" constant="42" id="taL-3H-Bud"/>
+                            <constraint firstItem="Bcn-r1-QxH" firstAttribute="leading" secondItem="V5t-il-SD1" secondAttribute="leading" constant="107" id="vu1-Iy-aU7"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="V5t-il-SD1"/>
                     </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="414" height="1000"/>
+                    <connections>
+                        <outlet property="apellidoTextfield" destination="bh3-is-HWD" id="kWA-NF-big"/>
+                        <outlet property="nombreTextfield" destination="9ZY-Ta-7m7" id="dY5-1R-hXx"/>
+                        <outlet property="numeroTextfield" destination="hrS-75-Tcm" id="KO3-Ow-zNh"/>
+                        <outlet property="profileImage" destination="Bcn-r1-QxH" id="M7R-gg-lZB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OGT-gC-Pug" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3153" y="3774"/>
+            <point key="canvasLocation" x="4186.9565217391309" y="3339.9456521739135"/>
         </scene>
         <!--Configuracion Table View Controller-->
         <scene sceneID="F6W-DG-kz0">
@@ -471,20 +547,21 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vía san angel_iconos -11" translatesAutoresizingMaskIntoConstraints="NO" id="aa3-zn-NRW">
-                                                    <rect key="frame" x="356" y="11" width="38" height="38"/>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dyP-Ln-EKK">
+                                                    <rect key="frame" x="345" y="15" width="49" height="31"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" secondItem="aa3-zn-NRW" secondAttribute="height" multiplier="1:1" id="lOG-fH-DCf"/>
+                                                        <constraint firstAttribute="width" secondItem="dyP-Ln-EKK" secondAttribute="height" multiplier="47:31" id="lbq-of-Eo8"/>
                                                     </constraints>
-                                                </imageView>
+                                                    <color key="onTintColor" red="0.7516317964" green="0.20203265549999999" blue="0.29020628329999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </switch>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="aa3-zn-NRW" firstAttribute="bottom" secondItem="6BM-nm-PvL" secondAttribute="bottomMargin" id="39j-ax-h3m"/>
                                                 <constraint firstItem="NFy-nY-vxN" firstAttribute="leading" secondItem="6BM-nm-PvL" secondAttribute="leadingMargin" id="Bk9-2U-mRu"/>
-                                                <constraint firstItem="aa3-zn-NRW" firstAttribute="top" secondItem="6BM-nm-PvL" secondAttribute="topMargin" id="dhX-OV-b4i"/>
-                                                <constraint firstItem="aa3-zn-NRW" firstAttribute="trailing" secondItem="6BM-nm-PvL" secondAttribute="trailingMargin" id="dyS-kI-kh4"/>
+                                                <constraint firstItem="dyP-Ln-EKK" firstAttribute="top" secondItem="6BM-nm-PvL" secondAttribute="topMargin" constant="4" id="H3m-xS-gS2"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="NFy-nY-vxN" secondAttribute="bottom" constant="8" id="hd1-s0-z7e"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="dyP-Ln-EKK" secondAttribute="bottom" constant="3" id="kYK-Vg-dCb"/>
                                                 <constraint firstItem="NFy-nY-vxN" firstAttribute="top" secondItem="6BM-nm-PvL" secondAttribute="topMargin" constant="9" id="qaq-aw-QMk"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="dyP-Ln-EKK" secondAttribute="trailing" constant="2" id="tTi-59-r8h"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -510,12 +587,22 @@
                                                         <constraint firstAttribute="width" secondItem="W7b-Nq-ycB" secondAttribute="height" multiplier="1:1" id="1ag-Tw-9DF"/>
                                                     </constraints>
                                                 </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aFL-cr-pAt">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+                                                    <connections>
+                                                        <action selector="terminosYCondiciones:" destination="UJG-yQ-RJq" eventType="touchUpInside" id="3pc-J4-Nd8"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="bottomMargin" secondItem="JUv-W2-tig" secondAttribute="bottom" constant="8" id="4xg-vi-gu7"/>
                                                 <constraint firstItem="JUv-W2-tig" firstAttribute="leading" secondItem="xzC-p5-sLG" secondAttribute="leadingMargin" id="9nY-gX-Nrc"/>
+                                                <constraint firstAttribute="bottom" secondItem="aFL-cr-pAt" secondAttribute="bottom" id="Dxb-u0-bkL"/>
                                                 <constraint firstItem="W7b-Nq-ycB" firstAttribute="trailing" secondItem="xzC-p5-sLG" secondAttribute="trailingMargin" id="MlF-HL-H6e"/>
+                                                <constraint firstItem="aFL-cr-pAt" firstAttribute="top" secondItem="xzC-p5-sLG" secondAttribute="top" id="NB9-Ef-Zzm"/>
+                                                <constraint firstAttribute="trailing" secondItem="aFL-cr-pAt" secondAttribute="trailing" id="V4b-Nn-UJ8"/>
                                                 <constraint firstItem="W7b-Nq-ycB" firstAttribute="bottom" secondItem="xzC-p5-sLG" secondAttribute="bottomMargin" id="cDp-3j-Ady"/>
+                                                <constraint firstItem="aFL-cr-pAt" firstAttribute="leading" secondItem="xzC-p5-sLG" secondAttribute="leading" id="djQ-9d-eNo"/>
                                                 <constraint firstItem="W7b-Nq-ycB" firstAttribute="top" secondItem="xzC-p5-sLG" secondAttribute="topMargin" id="htr-tY-kAY"/>
                                                 <constraint firstItem="JUv-W2-tig" firstAttribute="top" secondItem="xzC-p5-sLG" secondAttribute="topMargin" constant="9" id="nLT-P9-7k3"/>
                                             </constraints>
@@ -571,24 +658,37 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="08l-Ys-zy1">
-                                                    <rect key="frame" x="78.666666666666657" y="9.3333333333333357" width="256.66666666666674" height="71.333333333333314"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="A18-X9-nyD">
+                                                    <rect key="frame" x="154" y="20.666666666666671" width="106" height="49"/>
                                                     <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vía san angel_iconos -25" translatesAutoresizingMaskIntoConstraints="NO" id="QFd-QU-uLe">
-                                                            <rect key="frame" x="0.0" y="0.0" width="71.666666666666671" height="71.333333333333329"/>
-                                                        </imageView>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vía san angel_iconos -26" translatesAutoresizingMaskIntoConstraints="NO" id="AZE-Y7-m0q">
-                                                            <rect key="frame" x="92.666666666666686" y="0.0" width="71.333333333333314" height="71.333333333333329"/>
-                                                        </imageView>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vía san angel_iconos -27" translatesAutoresizingMaskIntoConstraints="NO" id="Yah-vj-23E">
-                                                            <rect key="frame" x="185" y="0.0" width="71.666666666666686" height="71.333333333333329"/>
-                                                        </imageView>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FLh-lt-mMM">
+                                                            <rect key="frame" x="0.0" y="0.0" width="49" height="49"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="49" id="Y4a-CD-coK"/>
+                                                                <constraint firstAttribute="height" constant="49" id="bov-yJ-xze"/>
+                                                            </constraints>
+                                                            <state key="normal" title="Button" image="vía san angel_iconos -25"/>
+                                                            <connections>
+                                                                <action selector="openFacebookProfile:" destination="UJG-yQ-RJq" eventType="touchUpInside" id="iPJ-wS-5G5"/>
+                                                            </connections>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UG7-QC-Gfk">
+                                                            <rect key="frame" x="57" y="0.0" width="49" height="49"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="49" id="T6H-L2-d45"/>
+                                                                <constraint firstAttribute="width" constant="49" id="rdi-EA-b5a"/>
+                                                            </constraints>
+                                                            <state key="normal" title="Button" image="vía san angel_iconos -27"/>
+                                                            <connections>
+                                                                <action selector="openInstagramProfile:" destination="UJG-yQ-RJq" eventType="touchUpInside" id="qAg-24-Ija"/>
+                                                            </connections>
+                                                        </button>
                                                     </subviews>
                                                 </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="08l-Ys-zy1" firstAttribute="centerX" secondItem="XNL-9r-VYK" secondAttribute="centerX" id="LAj-PS-L6d"/>
-                                                <constraint firstItem="08l-Ys-zy1" firstAttribute="centerY" secondItem="XNL-9r-VYK" secondAttribute="centerY" id="bUP-cz-Hyj"/>
+                                                <constraint firstItem="A18-X9-nyD" firstAttribute="centerX" secondItem="XNL-9r-VYK" secondAttribute="centerX" id="Dti-XT-X11"/>
+                                                <constraint firstItem="A18-X9-nyD" firstAttribute="centerY" secondItem="XNL-9r-VYK" secondAttribute="centerY" id="ZQF-9z-Pun"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -874,7 +974,7 @@
             </objects>
             <point key="canvasLocation" x="1149" y="-564"/>
         </scene>
-        <!--Stores View Controller-->
+        <!--Tiendas-->
         <scene sceneID="mLJ-gb-6uz">
             <objects>
                 <viewController storyboardIdentifier="StoresViewController" id="fT7-rP-dNK" customClass="StoresViewController" customModule="viaSanAngel" customModuleProvider="target" sceneMemberID="viewController">
@@ -911,25 +1011,44 @@
                                 <color key="textColor" red="0.82359057664871216" green="0.82482308149337769" blue="0.63966494798660278" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <searchBar contentMode="redraw" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DGh-9Z-haR">
+                                <rect key="frame" x="0.0" y="140" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="m3M-Ry-Hyw">
+                                <rect key="frame" x="0.0" y="196" width="414" height="491"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="xbE-f6-dF1" firstAttribute="leading" secondItem="WDF-O3-606" secondAttribute="leading" id="5qv-2X-Y16"/>
+                            <constraint firstItem="m3M-Ry-Hyw" firstAttribute="leading" secondItem="WDF-O3-606" secondAttribute="leading" id="9mU-eH-T2l"/>
                             <constraint firstItem="MaX-Vu-dqy" firstAttribute="leading" secondItem="WDF-O3-606" secondAttribute="leading" id="Laj-ED-29l"/>
+                            <constraint firstItem="DGh-9Z-haR" firstAttribute="trailing" secondItem="WDF-O3-606" secondAttribute="trailing" id="Mqh-DY-sQ6"/>
                             <constraint firstItem="MaX-Vu-dqy" firstAttribute="top" secondItem="xbE-f6-dF1" secondAttribute="bottom" id="X5K-GK-rm7"/>
+                            <constraint firstItem="DGh-9Z-haR" firstAttribute="leading" secondItem="WDF-O3-606" secondAttribute="leading" id="Z79-o7-KLd"/>
+                            <constraint firstItem="m3M-Ry-Hyw" firstAttribute="top" secondItem="DGh-9Z-haR" secondAttribute="bottom" symbolic="YES" id="aMz-A8-1Fo"/>
                             <constraint firstItem="xbE-f6-dF1" firstAttribute="trailing" secondItem="WDF-O3-606" secondAttribute="trailing" id="aQQ-iT-0EI"/>
+                            <constraint firstItem="m3M-Ry-Hyw" firstAttribute="trailing" secondItem="WDF-O3-606" secondAttribute="trailing" id="ajz-F9-HNX"/>
                             <constraint firstItem="xbE-f6-dF1" firstAttribute="top" secondItem="DbJ-Jh-0Hz" secondAttribute="top" id="caW-sK-yBh"/>
+                            <constraint firstItem="DGh-9Z-haR" firstAttribute="top" secondItem="MaX-Vu-dqy" secondAttribute="bottom" symbolic="YES" id="dhe-jM-afm"/>
+                            <constraint firstItem="m3M-Ry-Hyw" firstAttribute="bottom" secondItem="WDF-O3-606" secondAttribute="bottom" id="sHA-hC-YaO"/>
                             <constraint firstItem="MaX-Vu-dqy" firstAttribute="trailing" secondItem="WDF-O3-606" secondAttribute="trailing" id="uhj-7B-EGh"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="WDF-O3-606"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="vía san angel_iconos -20" id="QNx-zR-yn4"/>
+                    <tabBarItem key="tabBarItem" title="Tiendas" image="storeIcon" id="QNx-zR-yn4"/>
+                    <connections>
+                        <outlet property="searchBar" destination="DGh-9Z-haR" id="Lnb-U7-i3x"/>
+                        <outlet property="tableView" destination="m3M-Ry-Hyw" id="rp9-n6-gwW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RA1-cl-eYg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1964" y="2693.3497536945815"/>
+            <point key="canvasLocation" x="-1965.217391304348" y="2692.663043478261"/>
         </scene>
-        <!--View Controller-->
+        <!--Cupones-->
         <scene sceneID="WMT-7U-2jh">
             <objects>
                 <viewController id="tUl-2m-6Da" sceneMemberID="viewController">
@@ -978,7 +1097,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="95l-K5-DVk"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="vía san angel_iconos -21" id="spB-5U-QIO"/>
+                    <tabBarItem key="tabBarItem" title="Cupones" image="cuponIcon" id="spB-5U-QIO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x67-eE-kVG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -986,20 +1105,18 @@
         </scene>
     </scenes>
     <resources>
+        <image name="cuponIcon" width="25" height="25"/>
         <image name="easycode_firma" width="111.5" height="25.5"/>
+        <image name="eventsIcon" width="25" height="25"/>
         <image name="logo-via-san-angel-2" width="494" height="500"/>
         <image name="logo-via-san-angel-3" width="500" height="116"/>
-        <image name="vía san angel_iconos -11" width="143" height="146"/>
-        <image name="vía san angel_iconos -12" width="143" height="146"/>
-        <image name="vía san angel_iconos -13" width="143" height="146"/>
-        <image name="vía san angel_iconos -20" width="47.666667938232422" height="47.666667938232422"/>
-        <image name="vía san angel_iconos -21" width="47.666667938232422" height="47.666667938232422"/>
-        <image name="vía san angel_iconos -22" width="47.666667938232422" height="47.666667938232422"/>
-        <image name="vía san angel_iconos -23" width="47.666667938232422" height="47.666667938232422"/>
-        <image name="vía san angel_iconos -24" width="47.666667938232422" height="47.666667938232422"/>
-        <image name="vía san angel_iconos -25" width="71.5" height="71.5"/>
-        <image name="vía san angel_iconos -26" width="71.5" height="71.5"/>
-        <image name="vía san angel_iconos -27" width="71.5" height="71.5"/>
+        <image name="mapsIcon" width="25" height="25"/>
+        <image name="settingsIcon" width="25" height="25"/>
+        <image name="storeIcon" width="25" height="25"/>
+        <image name="vía san angel_iconos -12" width="47.666667938232422" height="48.666667938232422"/>
+        <image name="vía san angel_iconos -13" width="47.666667938232422" height="48.666667938232422"/>
+        <image name="vía san angel_iconos -25" width="47.666667938232422" height="47.666667938232422"/>
+        <image name="vía san angel_iconos -27" width="47.666667938232422" height="47.666667938232422"/>
         <image name="vía san angel_iconos -9" width="143" height="146"/>
     </resources>
 </document>

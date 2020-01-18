@@ -25,12 +25,12 @@ class configuracionTableViewController: UITableViewController {
     //MARK: Buttons
     
     @IBAction func closeSession(_ sender: Any) {
-                
+        
         let alert = UIAlertController(title: "Cerrar Sesión", message: "¿De verdad quieres cerrar la sesión? Deberás introducir tu mail y contraseña nuevamente.", preferredStyle: .alert)
-
+        
         alert.addAction(UIAlertAction(title: "No", style: .default, handler: nil))
         alert.addAction(UIAlertAction(title: "Cerrar sesión", style: .destructive, handler: { action in
-                        
+            
             UserDefaults.standard.set(false, forKey: "isLoggedIn")
             
             self.hero.isEnabled = true
@@ -42,8 +42,46 @@ class configuracionTableViewController: UITableViewController {
             self.hero.replaceViewController(with: newViewController)
             
         }))
-
+        
         self.present(alert, animated: true)
+        
+    }
+    
+    @IBAction func terminosYCondiciones(_ sender: Any) {
+        
+        UIApplication.shared.open(URL(string: "https://1.bp.blogspot.com/-ceXwrhGFgyU/XPUiDKupbHI/AAAAAAAAYXw/625TmGowYkAkLAPYUyh7jPE7ie8XSY36wCLcBGAs/s320/2019-06-03_133234.png")!)
+        
+    }
+    
+    
+    @IBAction func openFacebookProfile(_ sender: Any) {
+        
+        var fbURLWeb: NSURL = NSURL(string: "https://www.facebook.com/ccviasanangel/")!
+        var fbURLID: NSURL = NSURL(string: "fb://profile/3076468245700823")!
+        
+        if(UIApplication.shared.canOpenURL(fbURLID as URL)){
+            // FB installed
+            UIApplication.shared.openURL(fbURLID as URL)
+        } else {
+            // FB is not installed, open in safari
+            UIApplication.shared.openURL(fbURLWeb as URL)
+        }
+        
+    }
+    
+    @IBAction func openInstagramProfile(_ sender: Any) {
+        
+        var instaURLWeb: NSURL = NSURL(string: "https://www.instagram.com/via.sanangel/")!
+        var instaURLID: NSURL = NSURL(string: "instagram://user?username=via.sanangel")!
+        
+        if(UIApplication.shared.canOpenURL(instaURLID as URL)){
+            // FB installed
+            UIApplication.shared.openURL(instaURLID as URL)
+        } else {
+            // FB is not installed, open in safari
+            UIApplication.shared.openURL(instaURLWeb as URL)
+        }
+        
         
     }
     

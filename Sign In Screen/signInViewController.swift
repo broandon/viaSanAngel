@@ -9,6 +9,7 @@
 import UIKit
 import Hero
 import NVActivityIndicatorView
+import SDWebImage
 
 class signInViewController: UIViewController, NVActivityIndicatorViewable {
     
@@ -17,6 +18,8 @@ class signInViewController: UIViewController, NVActivityIndicatorViewable {
     @IBOutlet weak var mailTextField: UITextField!
     @IBOutlet weak var passTextField: UITextField!
     @IBOutlet weak var recoverTextField: UITextField!
+    @IBOutlet weak var viaLogo: UIImageView!
+    
     
     let http = HTTPViewController()
     

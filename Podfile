@@ -11,6 +11,6 @@ target 'viaSanAngel' do
   pod 'IQKeyboardManagerSwift'
   pod 'TableViewReloadAnimation'
   pod 'NVActivityIndicatorView'
-  
+  pod 'SDWebImage'
 
 end
