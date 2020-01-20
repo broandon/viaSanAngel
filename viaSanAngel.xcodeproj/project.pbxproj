@@ -11,6 +11,9 @@
 		CF095680234A7A4100A7C213 /* mainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF09567F234A7A4100A7C213 /* mainTabBarViewController.swift */; };
 		CF095683234A7A8700A7C213 /* StoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF095682234A7A8700A7C213 /* StoresViewController.swift */; };
 		CF5415D123CFCF2800CFD34A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF5415D023CFCF2800CFD34A /* Assets.xcassets */; };
+		CF59E4D823D65F6E000FBB25 /* CouponsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF59E4D723D65F6E000FBB25 /* CouponsViewController.swift */; };
+		CF59E4DB23D664F2000FBB25 /* cuponesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF59E4D923D664F2000FBB25 /* cuponesTableViewCell.swift */; };
+		CF59E4DE23D66594000FBB25 /* cuponesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF59E4DD23D66594000FBB25 /* cuponesTableViewCell.xib */; };
 		CF74A17523D1354400950974 /* tiendasTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF74A17323D1354400950974 /* tiendasTableViewCell.swift */; };
 		CF74A17623D1354400950974 /* tiendasTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF74A17423D1354400950974 /* tiendasTableViewCell.xib */; };
 		CF7532C523CAE4D400C3DFF4 /* baseURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7532C423CAE4D400C3DFF4 /* baseURL.swift */; };
@@ -35,6 +38,9 @@
 		CF09567F234A7A4100A7C213 /* mainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainTabBarViewController.swift; sourceTree = "<group>"; };
 		CF095682234A7A8700A7C213 /* StoresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoresViewController.swift; sourceTree = "<group>"; };
 		CF5415D023CFCF2800CFD34A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CF59E4D723D65F6E000FBB25 /* CouponsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponsViewController.swift; sourceTree = "<group>"; };
+		CF59E4D923D664F2000FBB25 /* cuponesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cuponesTableViewCell.swift; sourceTree = "<group>"; };
+		CF59E4DD23D66594000FBB25 /* cuponesTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = cuponesTableViewCell.xib; path = "(Tab 1) Stores/cuponesTableViewCell.xib"; sourceTree = SOURCE_ROOT; };
 		CF74A17323D1354400950974 /* tiendasTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tiendasTableViewCell.swift; sourceTree = "<group>"; };
 		CF74A17423D1354400950974 /* tiendasTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = tiendasTableViewCell.xib; sourceTree = "<group>"; };
 		CF7532C423CAE4D400C3DFF4 /* baseURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = baseURL.swift; sourceTree = "<group>"; };
@@ -97,6 +103,16 @@
 			path = Categories;
 			sourceTree = "<group>";
 		};
+		CF59E4D623D65D3C000FBB25 /* (Tab 2) Coupons */ = {
+			isa = PBXGroup;
+			children = (
+				CF59E4D723D65F6E000FBB25 /* CouponsViewController.swift */,
+				CF59E4D923D664F2000FBB25 /* cuponesTableViewCell.swift */,
+				CF59E4DD23D66594000FBB25 /* cuponesTableViewCell.xib */,
+			);
+			path = "(Tab 2) Coupons";
+			sourceTree = "<group>";
+		};
 		CF7532C323CAE4BC00C3DFF4 /* Misc */ = {
 			isa = PBXGroup;
 			children = (
@@ -118,8 +134,9 @@
 		CFBCB5202347E730009F32B0 = {
 			isa = PBXGroup;
 			children = (
-				CF852C2523D261B200A78E7D /* Profile */,
+				CF59E4D623D65D3C000FBB25 /* (Tab 2) Coupons */,
 				CFBF36E223D12EAB005103DD /* (Tab 1) Stores */,
+				CF852C2523D261B200A78E7D /* Profile */,
 				CF7532C323CAE4BC00C3DFF4 /* Misc */,
 				CF095681234A7A6B00A7C213 /* Categories */,
 				CF09567E234A79C400A7C213 /* Tab Bar */,
@@ -234,6 +251,7 @@
 			files = (
 				CF74A17623D1354400950974 /* tiendasTableViewCell.xib in Resources */,
 				CFBCB53C2347E731009F32B0 /* LaunchScreen.storyboard in Resources */,
+				CF59E4DE23D66594000FBB25 /* cuponesTableViewCell.xib in Resources */,
 				CF5415D123CFCF2800CFD34A /* Assets.xcassets in Resources */,
 				CFBCB5342347E730009F32B0 /* Main.storyboard in Resources */,
 			);
@@ -290,6 +308,7 @@
 			files = (
 				CF852C2723D261CD00A78E7D /* profileViewController.swift in Sources */,
 				CFA75117234AEBAF0005559F /* configuracionTableViewController.swift in Sources */,
+				CF59E4DB23D664F2000FBB25 /* cuponesTableViewCell.swift in Sources */,
 				CFBCB5312347E730009F32B0 /* ViewController.swift in Sources */,
 				CF852C2923D2642F00A78E7D /* pickerDelegate.swift in Sources */,
 				CFBCB5372347E730009F32B0 /* viaSanAngel.xcdatamodeld in Sources */,
@@ -300,6 +319,7 @@
 				CF74A17523D1354400950974 /* tiendasTableViewCell.swift in Sources */,
 				CF095683234A7A8700A7C213 /* StoresViewController.swift in Sources */,
 				CF095680234A7A4100A7C213 /* mainTabBarViewController.swift in Sources */,
+				CF59E4D823D65F6E000FBB25 /* CouponsViewController.swift in Sources */,
 				CFBCB5452347F413009F32B0 /* signInViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

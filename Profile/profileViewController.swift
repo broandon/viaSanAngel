@@ -54,11 +54,11 @@ class profileViewController: UIViewController, NVActivityIndicatorViewable {
     
     func getImageFromInernet(from url: String) {
         guard let imageURL = URL(string: url) else { return }
-
-            // just not to cause a deadlock in UI!
+        
+        // just not to cause a deadlock in UI!
         DispatchQueue.global().async {
             guard let imageData = try? Data(contentsOf: imageURL) else { return }
-
+            
             let image = UIImage(data: imageData)
             DispatchQueue.main.async {
                 self.profileImage.setImage(image, for: .normal)
@@ -115,7 +115,7 @@ class profileViewController: UIViewController, NVActivityIndicatorViewable {
                                 self.nombreTextfield.text! = nombre as! String
                                 self.apellidoTextfield.text! = apellido as! String
                                 self.numeroTextfield.text! = telefono as! String
-                                                                
+                                
                                 self.profileImage.sd_setImage(with: imageURL, for: .normal, completed: nil)
                                 
                             }
@@ -196,6 +196,23 @@ class profileViewController: UIViewController, NVActivityIndicatorViewable {
 
 extension profileViewController : ImagePickerDelegate  {
     
+    func generateBoundaryString() -> String
+    {
+        return "Boundary-\(NSUUID().uuidString)"
+    }
+    
+    func imageTobase64(image: UIImage) -> String {
+        var base64String = ""
+        let  cim = CIImage(image: image)
+        if (cim != nil) {
+            let imageData = image.mediumQualityJPEGNSData
+            base64String = imageData.base64EncodedString()
+            
+        }
+        
+        return base64String
+    }
+    
     func didSelect(image: UIImage?) {
         
         let base64converted = image?.toBase64()
@@ -203,10 +220,11 @@ extension profileViewController : ImagePickerDelegate  {
         let url = URL(string: http.baseURL())!
         
         var request = URLRequest(url: url)
-        request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
+        let boundary = generateBoundaryString()
+        //define the multipart request type
+        request.setValue("multipart/form-data; boundary=\(boundary)", forHTTPHeaderField: "Content-Type")
         request.httpMethod = "POST"
         let postString = "funcion=uploadImage&image="+base64converted!
-        
         print(postString)
         
         request.httpBody = postString.data(using: .utf8)
@@ -216,7 +234,6 @@ extension profileViewController : ImagePickerDelegate  {
             }
             
             do {
-                
                 
                 let json = try? JSONSerialization.jsonObject(with: data, options: .mutableContainers)
                 

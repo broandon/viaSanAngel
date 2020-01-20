@@ -1051,7 +1051,7 @@
         <!--Cupones-->
         <scene sceneID="WMT-7U-2jh">
             <objects>
-                <viewController id="tUl-2m-6Da" sceneMemberID="viewController">
+                <viewController id="tUl-2m-6Da" customClass="CouponsViewController" customModule="viaSanAngel" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1uo-EL-Jtj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1085,23 +1085,44 @@
                                 <color key="textColor" red="0.82359057660000001" green="0.82482308150000005" blue="0.63966494799999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <searchBar contentMode="redraw" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vQq-iY-9ap">
+                                <rect key="frame" x="0.0" y="140" width="414" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="cLl-7P-Tkv"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Mum-Nn-0Wt">
+                                <rect key="frame" x="0.0" y="184" width="414" height="503"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="3Hs-Dh-M2K" firstAttribute="trailing" secondItem="95l-K5-DVk" secondAttribute="trailing" id="01I-M3-Adh"/>
+                            <constraint firstItem="Mum-Nn-0Wt" firstAttribute="top" secondItem="vQq-iY-9ap" secondAttribute="bottom" symbolic="YES" id="0d1-PQ-CXI"/>
                             <constraint firstItem="3Hs-Dh-M2K" firstAttribute="top" secondItem="8nA-yA-qEA" secondAttribute="bottom" id="Bdx-kc-N6s"/>
                             <constraint firstItem="3Hs-Dh-M2K" firstAttribute="leading" secondItem="95l-K5-DVk" secondAttribute="leading" id="GHJ-ou-PG9"/>
+                            <constraint firstItem="Mum-Nn-0Wt" firstAttribute="trailing" secondItem="95l-K5-DVk" secondAttribute="trailing" id="KT4-kV-rjF"/>
                             <constraint firstItem="8nA-yA-qEA" firstAttribute="leading" secondItem="95l-K5-DVk" secondAttribute="leading" id="RXA-Mm-TCY"/>
                             <constraint firstItem="8nA-yA-qEA" firstAttribute="top" secondItem="1uo-EL-Jtj" secondAttribute="top" id="SgP-yy-q2z"/>
+                            <constraint firstItem="vQq-iY-9ap" firstAttribute="leading" secondItem="95l-K5-DVk" secondAttribute="leading" id="Sp8-H6-VT2"/>
+                            <constraint firstItem="Mum-Nn-0Wt" firstAttribute="bottom" secondItem="95l-K5-DVk" secondAttribute="bottom" id="Tik-T2-9aO"/>
+                            <constraint firstItem="vQq-iY-9ap" firstAttribute="trailing" secondItem="95l-K5-DVk" secondAttribute="trailing" id="Yca-nr-FNI"/>
+                            <constraint firstItem="Mum-Nn-0Wt" firstAttribute="leading" secondItem="95l-K5-DVk" secondAttribute="leading" id="Zlt-ii-ARM"/>
                             <constraint firstItem="8nA-yA-qEA" firstAttribute="trailing" secondItem="95l-K5-DVk" secondAttribute="trailing" id="lfw-2q-Jmy"/>
+                            <constraint firstItem="vQq-iY-9ap" firstAttribute="top" secondItem="3Hs-Dh-M2K" secondAttribute="bottom" symbolic="YES" id="qMp-73-1bO"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="95l-K5-DVk"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Cupones" image="cuponIcon" id="spB-5U-QIO"/>
+                    <connections>
+                        <outlet property="tableView" destination="Mum-Nn-0Wt" id="Son-eu-nAF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x67-eE-kVG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-923" y="2694"/>
+            <point key="canvasLocation" x="-923.1884057971015" y="2693.4782608695655"/>
         </scene>
     </scenes>
     <resources>

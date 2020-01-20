@@ -26,6 +26,14 @@ extension UITableView {
 extension UIImage {
     func toBase64() -> String? {
         guard let imageData = self.pngData() else { return nil }
-        return imageData.base64EncodedString(options: Data.Base64EncodingOptions.lineLength64Characters)
+        return imageData.base64EncodedString()
     }
+}
+
+extension UIImage {
+    var highestQualityJPEGNSData:NSData { return self.jpegData(compressionQuality: 1.0)! as NSData }
+    var highQualityJPEGNSData:NSData    { return self.jpegData(compressionQuality: 0.75)! as NSData}
+    var mediumQualityJPEGNSData:NSData  { return self.jpegData(compressionQuality: 0.5)! as NSData }
+    var lowQualityJPEGNSData:NSData     { return self.jpegData(compressionQuality: 0.25)! as NSData}
+    var lowestQualityJPEGNSData:NSData  { return self.jpegData(compressionQuality: 0.0)! as NSData }
 }
