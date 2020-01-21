@@ -37,7 +37,7 @@ class StoresViewController: UIViewController, UITableViewDelegate, UITableViewDa
         tableView.dataSource = self
         searchBar.delegate = self
         tableView.separatorStyle = .none
-        tableView.allowsSelection = false
+        tableView.allowsSelection = true
         tableView.separatorInset = UIEdgeInsets(top: 0,left: 0,bottom: 0,right: 420)
         
         downloadStores()
@@ -54,6 +54,15 @@ class StoresViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     //MARK: Funcs
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        self.hero.isEnabled = true
+        let myViewController = storeDetailViewController(nibName: "storeDetailViewController", bundle: nil)
+        myViewController.hero.modalAnimationType = .zoom
+        self.hero.replaceViewController(with: myViewController)
+        
+    }
     
     func numberOfSections(in tableView: UITableView) -> Int {
         

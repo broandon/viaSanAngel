@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF023EB223D7AF59000D6BDC /* storeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF023EB023D7AF59000D6BDC /* storeDetailViewController.swift */; };
+		CF023EB323D7AF59000D6BDC /* storeDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF023EB123D7AF59000D6BDC /* storeDetailViewController.xib */; };
 		CF09567D234A749400A7C213 /* signUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF09567C234A749400A7C213 /* signUpViewController.swift */; };
 		CF095680234A7A4100A7C213 /* mainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF09567F234A7A4100A7C213 /* mainTabBarViewController.swift */; };
 		CF095683234A7A8700A7C213 /* StoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF095682234A7A8700A7C213 /* StoresViewController.swift */; };
@@ -34,6 +36,8 @@
 		42DB1E5933F9273554AC93DF /* Pods-viaSanAngel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-viaSanAngel.debug.xcconfig"; path = "Target Support Files/Pods-viaSanAngel/Pods-viaSanAngel.debug.xcconfig"; sourceTree = "<group>"; };
 		43FEB4509E4508962807A5E7 /* Pods-viaSanAngel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-viaSanAngel.release.xcconfig"; path = "Target Support Files/Pods-viaSanAngel/Pods-viaSanAngel.release.xcconfig"; sourceTree = "<group>"; };
 		C2E0F7D5664FE877D8C14E35 /* Pods_viaSanAngel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_viaSanAngel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF023EB023D7AF59000D6BDC /* storeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = storeDetailViewController.swift; sourceTree = "<group>"; };
+		CF023EB123D7AF59000D6BDC /* storeDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = storeDetailViewController.xib; sourceTree = "<group>"; };
 		CF09567C234A749400A7C213 /* signUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signUpViewController.swift; sourceTree = "<group>"; };
 		CF09567F234A7A4100A7C213 /* mainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainTabBarViewController.swift; sourceTree = "<group>"; };
 		CF095682234A7A8700A7C213 /* StoresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoresViewController.swift; sourceTree = "<group>"; };
@@ -185,6 +189,8 @@
 				CF095682234A7A8700A7C213 /* StoresViewController.swift */,
 				CF74A17323D1354400950974 /* tiendasTableViewCell.swift */,
 				CF74A17423D1354400950974 /* tiendasTableViewCell.xib */,
+				CF023EB023D7AF59000D6BDC /* storeDetailViewController.swift */,
+				CF023EB123D7AF59000D6BDC /* storeDetailViewController.xib */,
 			);
 			path = "(Tab 1) Stores";
 			sourceTree = "<group>";
@@ -250,6 +256,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF74A17623D1354400950974 /* tiendasTableViewCell.xib in Resources */,
+				CF023EB323D7AF59000D6BDC /* storeDetailViewController.xib in Resources */,
 				CFBCB53C2347E731009F32B0 /* LaunchScreen.storyboard in Resources */,
 				CF59E4DE23D66594000FBB25 /* cuponesTableViewCell.xib in Resources */,
 				CF5415D123CFCF2800CFD34A /* Assets.xcassets in Resources */,
@@ -315,6 +322,7 @@
 				CF09567D234A749400A7C213 /* signUpViewController.swift in Sources */,
 				CF7532C523CAE4D400C3DFF4 /* baseURL.swift in Sources */,
 				CFBCB52D2347E730009F32B0 /* AppDelegate.swift in Sources */,
+				CF023EB223D7AF59000D6BDC /* storeDetailViewController.swift in Sources */,
 				CF852C2423D23D0900A78E7D /* Extensions.swift in Sources */,
 				CF74A17523D1354400950974 /* tiendasTableViewCell.swift in Sources */,
 				CF095683234A7A8700A7C213 /* StoresViewController.swift in Sources */,

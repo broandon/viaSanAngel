@@ -34,11 +34,11 @@ class configuracionTableViewController: UITableViewController {
             UserDefaults.standard.set(false, forKey: "isLoggedIn")
             
             self.hero.isEnabled = true
-            
+
             let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let newViewController = storyBoard.instantiateViewController(withIdentifier: "signInViewController") as! signInViewController
-            newViewController.hero.modalAnimationType = .pageIn(direction: .down)
-            
+            newViewController.hero.modalAnimationType = .push(direction: .down)
+
             self.hero.replaceViewController(with: newViewController)
             
         }))
@@ -56,8 +56,8 @@ class configuracionTableViewController: UITableViewController {
     
     @IBAction func openFacebookProfile(_ sender: Any) {
         
-        var fbURLWeb: NSURL = NSURL(string: "https://www.facebook.com/ccviasanangel/")!
-        var fbURLID: NSURL = NSURL(string: "fb://profile/3076468245700823")!
+        let fbURLWeb: NSURL = NSURL(string: "https://www.facebook.com/ccviasanangel/")!
+        let fbURLID: NSURL = NSURL(string: "fb://profile/3076468245700823")!
         
         if(UIApplication.shared.canOpenURL(fbURLID as URL)){
             // FB installed
@@ -71,8 +71,8 @@ class configuracionTableViewController: UITableViewController {
     
     @IBAction func openInstagramProfile(_ sender: Any) {
         
-        var instaURLWeb: NSURL = NSURL(string: "https://www.instagram.com/via.sanangel/")!
-        var instaURLID: NSURL = NSURL(string: "instagram://user?username=via.sanangel")!
+        let instaURLWeb: NSURL = NSURL(string: "https://www.instagram.com/via.sanangel/")!
+        let instaURLID: NSURL = NSURL(string: "instagram://user?username=via.sanangel")!
         
         if(UIApplication.shared.canOpenURL(instaURLID as URL)){
             // FB installed
