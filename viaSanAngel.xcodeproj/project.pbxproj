@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CF023EB223D7AF59000D6BDC /* storeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF023EB023D7AF59000D6BDC /* storeDetailViewController.swift */; };
-		CF023EB323D7AF59000D6BDC /* storeDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF023EB123D7AF59000D6BDC /* storeDetailViewController.xib */; };
 		CF09567D234A749400A7C213 /* signUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF09567C234A749400A7C213 /* signUpViewController.swift */; };
 		CF095680234A7A4100A7C213 /* mainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF09567F234A7A4100A7C213 /* mainTabBarViewController.swift */; };
 		CF095683234A7A8700A7C213 /* StoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF095682234A7A8700A7C213 /* StoresViewController.swift */; };
@@ -23,6 +21,9 @@
 		CF852C2723D261CD00A78E7D /* profileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF852C2623D261CD00A78E7D /* profileViewController.swift */; };
 		CF852C2923D2642F00A78E7D /* pickerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF852C2823D2642F00A78E7D /* pickerDelegate.swift */; };
 		CFA75117234AEBAF0005559F /* configuracionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA75116234AEBAF0005559F /* configuracionTableViewController.swift */; };
+		CFAB54A323D82A4D005A35DC /* storeDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFAB54A223D82A4D005A35DC /* storeDetail.storyboard */; };
+		CFAB54A523D82E14005A35DC /* storeDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAB54A423D82E14005A35DC /* storeDetailsViewController.swift */; };
+		CFAB54A723D82F2F005A35DC /* storeDetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAB54A623D82F2F005A35DC /* storeDetailsTableViewController.swift */; };
 		CFBCB52D2347E730009F32B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBCB52C2347E730009F32B0 /* AppDelegate.swift */; };
 		CFBCB5312347E730009F32B0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBCB5302347E730009F32B0 /* ViewController.swift */; };
 		CFBCB5342347E730009F32B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFBCB5322347E730009F32B0 /* Main.storyboard */; };
@@ -36,8 +37,6 @@
 		42DB1E5933F9273554AC93DF /* Pods-viaSanAngel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-viaSanAngel.debug.xcconfig"; path = "Target Support Files/Pods-viaSanAngel/Pods-viaSanAngel.debug.xcconfig"; sourceTree = "<group>"; };
 		43FEB4509E4508962807A5E7 /* Pods-viaSanAngel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-viaSanAngel.release.xcconfig"; path = "Target Support Files/Pods-viaSanAngel/Pods-viaSanAngel.release.xcconfig"; sourceTree = "<group>"; };
 		C2E0F7D5664FE877D8C14E35 /* Pods_viaSanAngel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_viaSanAngel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CF023EB023D7AF59000D6BDC /* storeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = storeDetailViewController.swift; sourceTree = "<group>"; };
-		CF023EB123D7AF59000D6BDC /* storeDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = storeDetailViewController.xib; sourceTree = "<group>"; };
 		CF09567C234A749400A7C213 /* signUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signUpViewController.swift; sourceTree = "<group>"; };
 		CF09567F234A7A4100A7C213 /* mainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainTabBarViewController.swift; sourceTree = "<group>"; };
 		CF095682234A7A8700A7C213 /* StoresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoresViewController.swift; sourceTree = "<group>"; };
@@ -52,6 +51,9 @@
 		CF852C2623D261CD00A78E7D /* profileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profileViewController.swift; sourceTree = "<group>"; };
 		CF852C2823D2642F00A78E7D /* pickerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pickerDelegate.swift; sourceTree = "<group>"; };
 		CFA75116234AEBAF0005559F /* configuracionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = configuracionTableViewController.swift; sourceTree = "<group>"; };
+		CFAB54A223D82A4D005A35DC /* storeDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = storeDetail.storyboard; sourceTree = "<group>"; };
+		CFAB54A423D82E14005A35DC /* storeDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = storeDetailsViewController.swift; sourceTree = "<group>"; };
+		CFAB54A623D82F2F005A35DC /* storeDetailsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = storeDetailsTableViewController.swift; sourceTree = "<group>"; };
 		CFBCB5292347E730009F32B0 /* viaSanAngel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = viaSanAngel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFBCB52C2347E730009F32B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CFBCB5302347E730009F32B0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -189,8 +191,9 @@
 				CF095682234A7A8700A7C213 /* StoresViewController.swift */,
 				CF74A17323D1354400950974 /* tiendasTableViewCell.swift */,
 				CF74A17423D1354400950974 /* tiendasTableViewCell.xib */,
-				CF023EB023D7AF59000D6BDC /* storeDetailViewController.swift */,
-				CF023EB123D7AF59000D6BDC /* storeDetailViewController.xib */,
+				CFAB54A223D82A4D005A35DC /* storeDetail.storyboard */,
+				CFAB54A423D82E14005A35DC /* storeDetailsViewController.swift */,
+				CFAB54A623D82F2F005A35DC /* storeDetailsTableViewController.swift */,
 			);
 			path = "(Tab 1) Stores";
 			sourceTree = "<group>";
@@ -256,9 +259,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF74A17623D1354400950974 /* tiendasTableViewCell.xib in Resources */,
-				CF023EB323D7AF59000D6BDC /* storeDetailViewController.xib in Resources */,
 				CFBCB53C2347E731009F32B0 /* LaunchScreen.storyboard in Resources */,
 				CF59E4DE23D66594000FBB25 /* cuponesTableViewCell.xib in Resources */,
+				CFAB54A323D82A4D005A35DC /* storeDetail.storyboard in Resources */,
 				CF5415D123CFCF2800CFD34A /* Assets.xcassets in Resources */,
 				CFBCB5342347E730009F32B0 /* Main.storyboard in Resources */,
 			);
@@ -322,12 +325,13 @@
 				CF09567D234A749400A7C213 /* signUpViewController.swift in Sources */,
 				CF7532C523CAE4D400C3DFF4 /* baseURL.swift in Sources */,
 				CFBCB52D2347E730009F32B0 /* AppDelegate.swift in Sources */,
-				CF023EB223D7AF59000D6BDC /* storeDetailViewController.swift in Sources */,
 				CF852C2423D23D0900A78E7D /* Extensions.swift in Sources */,
+				CFAB54A523D82E14005A35DC /* storeDetailsViewController.swift in Sources */,
 				CF74A17523D1354400950974 /* tiendasTableViewCell.swift in Sources */,
 				CF095683234A7A8700A7C213 /* StoresViewController.swift in Sources */,
 				CF095680234A7A4100A7C213 /* mainTabBarViewController.swift in Sources */,
 				CF59E4D823D65F6E000FBB25 /* CouponsViewController.swift in Sources */,
+				CFAB54A723D82F2F005A35DC /* storeDetailsTableViewController.swift in Sources */,
 				CFBCB5452347F413009F32B0 /* signInViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

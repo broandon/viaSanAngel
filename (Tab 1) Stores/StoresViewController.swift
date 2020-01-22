@@ -57,10 +57,19 @@ class StoresViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+        let document = tiendas[indexPath.row]
+        
+        let couponID = document["Id"] as! String
+        
+        UserDefaults.standard.set(couponID, forKey: "StoreID")
+        
         self.hero.isEnabled = true
-        let myViewController = storeDetailViewController(nibName: "storeDetailViewController", bundle: nil)
-        myViewController.hero.modalAnimationType = .zoom
-        self.hero.replaceViewController(with: myViewController)
+        
+        let storyBoard: UIStoryboard = UIStoryboard(name: "storeDetail", bundle: nil)
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "storeDetailsViewController") as! storeDetailsViewController
+        newViewController.hero.modalAnimationType = .zoom
+        
+        self.hero.replaceViewController(with: newViewController)
         
     }
     
