@@ -17,35 +17,35 @@ class CouponsViewController: UIViewController, UITableViewDelegate, UITableViewD
     //MARK: Outlets
     
     var cupones : [Dictionary<String, Any>] = []
-    
     let reuseDocument = "DocumentoCellCoupons"
-    
     let userInfo = UserDefaults.standard.string(forKey: "userID")
-    
     let http = HTTPViewController()
     
     @IBOutlet weak var tableView: UITableView!
-    
     
     //MARK: viewDid
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        tableView.delegate = self
-        tableView.dataSource = self
-        tableView.separatorInset = UIEdgeInsets(top: 0,left: 0,bottom: 0,right: 420)
-        tableView.allowsSelection = false
-        tableView.separatorStyle = .none
-        
-        let documentXib = UINib(nibName: "cuponesTableViewCell", bundle: nil)
-               tableView.register(documentXib, forCellReuseIdentifier: reuseDocument)
-        
+ 
+        setupTableView()
         downloadCoupons()
         
     }
     
     //MARK: Funcs
+    
+    func setupTableView() {
+        
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.separatorInset = UIEdgeInsets(top: 0,left: 0,bottom: 0,right: 420)
+        tableView.separatorStyle = .none
+        
+        let documentXib = UINib(nibName: "cuponesTableViewCell", bundle: nil)
+               tableView.register(documentXib, forCellReuseIdentifier: reuseDocument)
+        
+    }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 160
@@ -80,6 +80,8 @@ class CouponsViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         let cell = tableView.dequeueReusableCell(withIdentifier: reuseDocument, for: indexPath)
         
+        cell.selectionStyle = .none
+        
         if let cell = cell as? cuponesTableViewCell {
             
             DispatchQueue.main.async {
@@ -95,6 +97,20 @@ class CouponsViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         return UITableViewCell()
         
+        
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let document = cupones[indexPath.row]
+           
+           let couponID = document["Id"] as! String
+           
+           UserDefaults.standard.set(couponID, forKey: "couponID")
+        
+           let storyBoard: UIStoryboard = UIStoryboard(name: "Coupons", bundle: nil)
+           let vc = storyBoard.instantiateViewController(withIdentifier: "couponDetailViewController") as! couponDetailViewController
+           present(vc, animated: true, completion: nil)
         
     }
     

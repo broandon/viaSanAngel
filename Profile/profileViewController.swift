@@ -15,11 +15,9 @@ class profileViewController: UIViewController, NVActivityIndicatorViewable {
     //MARK: Outlets
     
     @IBOutlet weak var profileImage: UIButton!
-    
+
     var imagePicker: ImagePicker!
-    
     var http = HTTPViewController()
-    
     let userInfo = UserDefaults.standard.string(forKey: "userID")
     
     @IBOutlet weak var nombreTextfield: UITextField!

@@ -21,15 +21,14 @@ class storeDetailsViewController: UIViewController, NVActivityIndicatorViewable 
     let http = HTTPViewController()
     let userInfo = UserDefaults.standard.string(forKey: "userID")
     let storeID = UserDefaults.standard.string(forKey: "StoreID")
-
+    
     //MARK: viewDid
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         getCouponDetails()
         
-
     }
     
     //MARK: Funcs
@@ -147,14 +146,8 @@ class storeDetailsViewController: UIViewController, NVActivityIndicatorViewable 
     
     @IBAction func goBack(_ sender: Any) {
         
-        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                                 let newViewController = storyBoard.instantiateViewController(withIdentifier: "mainTabBarViewController") as! UITabBarController
-                                 newViewController.hero.modalAnimationType = .fade
-                                 
-                                 self.hero.replaceViewController(with: newViewController)
-        
+        self.hero.dismissViewController(completion: nil)
         
     }
     
-
 }

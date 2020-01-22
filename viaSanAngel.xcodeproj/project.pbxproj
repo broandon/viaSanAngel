@@ -30,6 +30,12 @@
 		CFBCB5372347E730009F32B0 /* viaSanAngel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CFBCB5352347E730009F32B0 /* viaSanAngel.xcdatamodeld */; };
 		CFBCB53C2347E731009F32B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFBCB53A2347E731009F32B0 /* LaunchScreen.storyboard */; };
 		CFBCB5452347F413009F32B0 /* signInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBCB5442347F413009F32B0 /* signInViewController.swift */; };
+		CFF82BBB23D8BC9700CF76BA /* userDefaults.rtf in Resources */ = {isa = PBXBuildFile; fileRef = CFF82BBA23D8BC9700CF76BA /* userDefaults.rtf */; };
+		CFF82BBD23D8BE1E00CF76BA /* Coupons.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFF82BBC23D8BE1E00CF76BA /* Coupons.storyboard */; };
+		CFF82BBF23D8BFC700CF76BA /* couponDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF82BBE23D8BFC700CF76BA /* couponDetailViewController.swift */; };
+		CFF82BC123D8BFE000CF76BA /* couponDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF82BC023D8BFE000CF76BA /* couponDetailTableViewController.swift */; };
+		CFF82BC423D8EDF600CF76BA /* mapWebViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF82BC323D8EDF600CF76BA /* mapWebViewViewController.swift */; };
+		CFF82BC623D9056300CF76BA /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFF82BC523D9056200CF76BA /* WebKit.framework */; };
 		E023047F2ECF69112C463889 /* Pods_viaSanAngel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2E0F7D5664FE877D8C14E35 /* Pods_viaSanAngel.framework */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +68,12 @@
 		CFBCB53B2347E731009F32B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CFBCB53D2347E731009F32B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CFBCB5442347F413009F32B0 /* signInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signInViewController.swift; sourceTree = "<group>"; };
+		CFF82BBA23D8BC9700CF76BA /* userDefaults.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = userDefaults.rtf; sourceTree = "<group>"; };
+		CFF82BBC23D8BE1E00CF76BA /* Coupons.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Coupons.storyboard; sourceTree = "<group>"; };
+		CFF82BBE23D8BFC700CF76BA /* couponDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = couponDetailViewController.swift; sourceTree = "<group>"; };
+		CFF82BC023D8BFE000CF76BA /* couponDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = couponDetailTableViewController.swift; sourceTree = "<group>"; };
+		CFF82BC323D8EDF600CF76BA /* mapWebViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mapWebViewViewController.swift; sourceTree = "<group>"; };
+		CFF82BC523D9056200CF76BA /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFF82BC623D9056300CF76BA /* WebKit.framework in Frameworks */,
 				E023047F2ECF69112C463889 /* Pods_viaSanAngel.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -79,6 +92,7 @@
 		29556CF08F19B963E8854503 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CFF82BC523D9056200CF76BA /* WebKit.framework */,
 				C2E0F7D5664FE877D8C14E35 /* Pods_viaSanAngel.framework */,
 			);
 			name = Frameworks;
@@ -115,6 +129,9 @@
 				CF59E4D723D65F6E000FBB25 /* CouponsViewController.swift */,
 				CF59E4D923D664F2000FBB25 /* cuponesTableViewCell.swift */,
 				CF59E4DD23D66594000FBB25 /* cuponesTableViewCell.xib */,
+				CFF82BBC23D8BE1E00CF76BA /* Coupons.storyboard */,
+				CFF82BBE23D8BFC700CF76BA /* couponDetailViewController.swift */,
+				CFF82BC023D8BFE000CF76BA /* couponDetailTableViewController.swift */,
 			);
 			path = "(Tab 2) Coupons";
 			sourceTree = "<group>";
@@ -125,6 +142,7 @@
 				CF7532C423CAE4D400C3DFF4 /* baseURL.swift */,
 				CF852C2323D23D0900A78E7D /* Extensions.swift */,
 				CF852C2823D2642F00A78E7D /* pickerDelegate.swift */,
+				CFF82BBA23D8BC9700CF76BA /* userDefaults.rtf */,
 			);
 			path = Misc;
 			sourceTree = "<group>";
@@ -140,6 +158,7 @@
 		CFBCB5202347E730009F32B0 = {
 			isa = PBXGroup;
 			children = (
+				CFF82BC223D8ED8300CF76BA /* (Tab 3) Map */,
 				CF59E4D623D65D3C000FBB25 /* (Tab 2) Coupons */,
 				CFBF36E223D12EAB005103DD /* (Tab 1) Stores */,
 				CF852C2523D261B200A78E7D /* Profile */,
@@ -196,6 +215,14 @@
 				CFAB54A623D82F2F005A35DC /* storeDetailsTableViewController.swift */,
 			);
 			path = "(Tab 1) Stores";
+			sourceTree = "<group>";
+		};
+		CFF82BC223D8ED8300CF76BA /* (Tab 3) Map */ = {
+			isa = PBXGroup;
+			children = (
+				CFF82BC323D8EDF600CF76BA /* mapWebViewViewController.swift */,
+			);
+			path = "(Tab 3) Map";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,6 +285,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFF82BBD23D8BE1E00CF76BA /* Coupons.storyboard in Resources */,
+				CFF82BBB23D8BC9700CF76BA /* userDefaults.rtf in Resources */,
 				CF74A17623D1354400950974 /* tiendasTableViewCell.xib in Resources */,
 				CFBCB53C2347E731009F32B0 /* LaunchScreen.storyboard in Resources */,
 				CF59E4DE23D66594000FBB25 /* cuponesTableViewCell.xib in Resources */,
@@ -324,7 +353,9 @@
 				CFBCB5372347E730009F32B0 /* viaSanAngel.xcdatamodeld in Sources */,
 				CF09567D234A749400A7C213 /* signUpViewController.swift in Sources */,
 				CF7532C523CAE4D400C3DFF4 /* baseURL.swift in Sources */,
+				CFF82BBF23D8BFC700CF76BA /* couponDetailViewController.swift in Sources */,
 				CFBCB52D2347E730009F32B0 /* AppDelegate.swift in Sources */,
+				CFF82BC123D8BFE000CF76BA /* couponDetailTableViewController.swift in Sources */,
 				CF852C2423D23D0900A78E7D /* Extensions.swift in Sources */,
 				CFAB54A523D82E14005A35DC /* storeDetailsViewController.swift in Sources */,
 				CF74A17523D1354400950974 /* tiendasTableViewCell.swift in Sources */,
@@ -333,6 +364,7 @@
 				CF59E4D823D65F6E000FBB25 /* CouponsViewController.swift in Sources */,
 				CFAB54A723D82F2F005A35DC /* storeDetailsTableViewController.swift in Sources */,
 				CFBCB5452347F413009F32B0 /* signInViewController.swift in Sources */,
+				CFF82BC423D8EDF600CF76BA /* mapWebViewViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -485,7 +517,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Broandon.viaSanAngel;
+				PRODUCT_BUNDLE_IDENTIFIER = com.viasanangel.broandon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -505,7 +537,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Broandon.viaSanAngel;
+				PRODUCT_BUNDLE_IDENTIFIER = com.viasanangel.broandon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;

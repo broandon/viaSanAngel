@@ -1,60 +1,39 @@
 //
-//  storeDetailsTableViewController.swift
+//  couponDetailViewController.swift
 //  viaSanAngel
 //
-//  Created by Brandon Gonzalez on 1/22/20.
+//  Created by Brandon Gonzalez on 22/01/20.
 //  Copyright © 2020 Brandon Gonzalez. All rights reserved.
 //
 
 import UIKit
 import NVActivityIndicatorView
 
-class storeDetailsTableViewController: UITableViewController, NVActivityIndicatorViewable {
+class couponDetailViewController: UIViewController, NVActivityIndicatorViewable {
     
     //MARK: Outlets
     
     let http = HTTPViewController()
     let userInfo = UserDefaults.standard.string(forKey: "userID")
-    let storeID = UserDefaults.standard.string(forKey: "StoreID")
+    let couponID = UserDefaults.standard.string(forKey: "couponID")
     
-    @IBOutlet weak var categoryLabel: UILabel!
-    @IBOutlet weak var openFrom: UILabel!
-    @IBOutlet weak var openTo: UILabel!
-    @IBOutlet weak var minimunPrice: UILabel!
-    @IBOutlet weak var descriptionStore: UITextView!
+    @IBOutlet weak var topLabel: UILabel!
     
     //MARK: viewDid
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         getCouponDetails()
-        tableView.dataSource = self
-        tableView.delegate = self
-        tableView.rowHeight = UITableView.automaticDimension
         
     }
-
-    // MARK: Funcs
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 1
-    }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 3
-    }
     
-    override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableView.automaticDimension
-    }
+    //MARK: Funcs
     
     func getCouponDetails() {
         
         startAnimating(type: .ballClipRotatePulse)
-
+        
         // POST REQUEST
         
         let url = URL(string: http.baseURL())!
@@ -63,7 +42,7 @@ class storeDetailsTableViewController: UITableViewController, NVActivityIndicato
         request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type") // Headers
         request.httpMethod = "POST" // Metodo
         
-        let postString = "funcion=getStoreDetail&id_user="+userInfo!+"&id_store="+storeID! // Parametros
+        let postString = "funcion=getCouponDetail&id_user="+userInfo!+"&id_coupon="+couponID! // Parametros
         
         print(postString)
         
@@ -92,24 +71,13 @@ class storeDetailsTableViewController: UITableViewController, NVActivityIndicato
                         
                         if let info = data["info"] as? Dictionary<String, Any> {
                             
-                            let categoria = info["categoria"] as! String
-                            let openFrom = info["horario_inicio"] as! String
-                            let openTo = info["horario_fin"] as! String
-                            let minimum = info["precio"] as! String
-                            let description = info["descripcion"] as! String
+                            let nombreMarca = info["nombre"] as! String
                             
-                            print("THIS IS THE MINIMTN")
-                            print(minimum)
+                            print(nombreMarca)
                             
                             DispatchQueue.main.async {
                                 
-                                self.stopAnimating()
-                                
-                                self.categoryLabel.text! = categoria
-                                self.openFrom.text! = openFrom
-                                self.openTo.text! = openTo
-                                self.minimunPrice.text! = minimum
-                                self.descriptionStore.text! = description
+                                self.topLabel.text = nombreMarca
                                 
                             }
                             
@@ -126,7 +94,7 @@ class storeDetailsTableViewController: UITableViewController, NVActivityIndicato
                             DispatchQueue.main.async {
                                 
                                 self.stopAnimating()
-                                                                
+                                
                             }
                             
                         } else if stateString == "101" {
@@ -148,7 +116,7 @@ class storeDetailsTableViewController: UITableViewController, NVActivityIndicato
                             DispatchQueue.main.async {
                                 
                                 self.stopAnimating()
-                                                                
+                                
                                 let alert = UIAlertController(title: "Error", message: "Hay un problema con el servidor, inténtalo de nuevo más tarde.", preferredStyle: .alert)
                                 
                                 alert.addAction(UIAlertAction(title: "Entendido", style: .default, handler: nil))
@@ -167,5 +135,10 @@ class storeDetailsTableViewController: UITableViewController, NVActivityIndicato
         task.resume()
         
     }
-
+    @IBAction func goBack(_ sender: Any) {
+    
+        self.dismiss(animated: true, completion: nil)
+        
+    }
+    
 }

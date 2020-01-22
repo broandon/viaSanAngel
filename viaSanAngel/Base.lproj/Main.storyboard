@@ -206,7 +206,7 @@
         <!--Mapa-->
         <scene sceneID="2TM-Zk-dhU">
             <objects>
-                <viewController id="guf-uL-Hee" sceneMemberID="viewController">
+                <viewController id="guf-uL-Hee" customClass="mapWebViewViewController" customModule="viaSanAngel" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YQg-sA-kO9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -240,19 +240,34 @@
                                 <color key="textColor" red="0.82359057660000001" green="0.82482308150000005" blue="0.63966494799999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <wkWebView contentMode="scaleAspectFill" allowsLinkPreview="NO" translatesAutoresizingMaskIntoConstraints="NO" id="too-1k-UCm">
+                                <rect key="frame" x="0.0" y="140" width="414" height="673"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <wkWebViewConfiguration key="configuration" allowsAirPlayForMediaPlayback="NO" allowsPictureInPictureMediaPlayback="NO" suppressesIncrementalRendering="YES">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences" minimumFontSize="9"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="too-1k-UCm" firstAttribute="trailing" secondItem="l2K-zu-mMg" secondAttribute="trailing" id="9Y2-ry-jfg"/>
                             <constraint firstItem="WGe-cn-fb2" firstAttribute="leading" secondItem="l2K-zu-mMg" secondAttribute="leading" id="Str-Rf-j7g"/>
                             <constraint firstItem="WGe-cn-fb2" firstAttribute="top" secondItem="YQg-sA-kO9" secondAttribute="top" id="cBi-SZ-MIc"/>
                             <constraint firstItem="ZC5-WD-afe" firstAttribute="top" secondItem="WGe-cn-fb2" secondAttribute="bottom" id="cdZ-cJ-3yo"/>
+                            <constraint firstItem="too-1k-UCm" firstAttribute="bottom" secondItem="l2K-zu-mMg" secondAttribute="bottom" id="eS9-J8-1ye"/>
                             <constraint firstItem="ZC5-WD-afe" firstAttribute="trailing" secondItem="l2K-zu-mMg" secondAttribute="trailing" id="erd-vj-EiK"/>
+                            <constraint firstItem="too-1k-UCm" firstAttribute="leading" secondItem="l2K-zu-mMg" secondAttribute="leading" id="lX4-hI-Wgj"/>
+                            <constraint firstItem="too-1k-UCm" firstAttribute="top" secondItem="ZC5-WD-afe" secondAttribute="bottom" id="okP-dT-bkJ"/>
                             <constraint firstItem="WGe-cn-fb2" firstAttribute="trailing" secondItem="l2K-zu-mMg" secondAttribute="trailing" id="vi3-Bf-reI"/>
                             <constraint firstItem="ZC5-WD-afe" firstAttribute="leading" secondItem="l2K-zu-mMg" secondAttribute="leading" id="zfL-NV-qkB"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="l2K-zu-mMg"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Mapa" image="mapsIcon" id="vVy-3A-hvF"/>
+                    <connections>
+                        <outlet property="webView" destination="too-1k-UCm" id="3Qh-L9-qQb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="biQ-YP-2G2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mapas" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="lee-Z8-6wP">
@@ -267,7 +282,7 @@
                     <nil key="highlightedColor"/>
                 </label>
             </objects>
-            <point key="canvasLocation" x="1146.4000000000001" y="2693.3497536945815"/>
+            <point key="canvasLocation" x="1146.376811594203" y="2692.6339285714284"/>
         </scene>
         <!--Ajustes-->
         <scene sceneID="fz3-0R-PHw">

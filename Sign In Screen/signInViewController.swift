@@ -20,7 +20,6 @@ class signInViewController: UIViewController, NVActivityIndicatorViewable {
     @IBOutlet weak var recoverTextField: UITextField!
     @IBOutlet weak var viaLogo: UIImageView!
     
-    
     let http = HTTPViewController()
     
     //MARK: viewDid

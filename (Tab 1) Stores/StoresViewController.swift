@@ -17,33 +17,20 @@ class StoresViewController: UIViewController, UITableViewDelegate, UITableViewDa
     //MARK: Outlets
     
     var tiendas : [Dictionary<String, Any>] = []
-    
     let reuseDocument = "DocumentoCellStores"
-    
     let userInfo = UserDefaults.standard.string(forKey: "userID")
-    
     let http = HTTPViewController()
     
     @IBOutlet weak var tableView : UITableView!
-    
     @IBOutlet weak var searchBar: UISearchBar!
     
     //MARK: viewDidLoad
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        tableView.delegate = self
-        tableView.dataSource = self
-        searchBar.delegate = self
-        tableView.separatorStyle = .none
-        tableView.allowsSelection = true
-        tableView.separatorInset = UIEdgeInsets(top: 0,left: 0,bottom: 0,right: 420)
-        
+
+        setupTableView()
         downloadStores()
-        
-        let documentXib = UINib(nibName: "tiendasTableViewCell", bundle: nil)
-        tableView.register(documentXib, forCellReuseIdentifier: reuseDocument)
         
     }
     
@@ -54,6 +41,20 @@ class StoresViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     //MARK: Funcs
+    
+    func setupTableView() {
+        
+        tableView.delegate = self
+          tableView.dataSource = self
+          searchBar.delegate = self
+          tableView.separatorStyle = .none
+          tableView.allowsSelection = true
+          tableView.separatorInset = UIEdgeInsets(top: 0,left: 0,bottom: 0,right: 420)
+                    
+          let documentXib = UINib(nibName: "tiendasTableViewCell", bundle: nil)
+          tableView.register(documentXib, forCellReuseIdentifier: reuseDocument)
+        
+    }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
@@ -67,9 +68,13 @@ class StoresViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         let storyBoard: UIStoryboard = UIStoryboard(name: "storeDetail", bundle: nil)
         let newViewController = storyBoard.instantiateViewController(withIdentifier: "storeDetailsViewController") as! storeDetailsViewController
+        newViewController.modalPresentationStyle = .formSheet
         newViewController.hero.modalAnimationType = .zoom
         
-        self.hero.replaceViewController(with: newViewController)
+        present(newViewController, animated: true, completion: nil)
+        
+//
+//        self.hero.replaceViewController(with: newViewController)
         
     }
     
@@ -96,6 +101,8 @@ class StoresViewController: UIViewController, UITableViewDelegate, UITableViewDa
         let furl2 = URL(string: imagenMarca)
         
         let cell = tableView.dequeueReusableCell(withIdentifier: reuseDocument, for: indexPath)
+        
+        cell.selectionStyle = .none
         
         if let cell = cell as? tiendasTableViewCell {
             
