@@ -9,13 +9,15 @@
 import UIKit
 import SDWebImage
 import NVActivityIndicatorView
+import Alamofire
+import Hero
 
 class profileViewController: UIViewController, NVActivityIndicatorViewable {
     
     //MARK: Outlets
     
     @IBOutlet weak var profileImage: UIButton!
-
+    
     var imagePicker: ImagePicker!
     var http = HTTPViewController()
     let userInfo = UserDefaults.standard.string(forKey: "userID")
@@ -101,6 +103,9 @@ class profileViewController: UIViewController, NVActivityIndicatorViewable {
                         
                         if let info = data["info"] as? Dictionary<String, Any> {
                             
+                            print("INFO")
+                            print(info)
+                            
                             let nombre = info["nombre"]
                             let apellido = info["apellidos"]
                             let telefono = info ["telefono"]
@@ -175,6 +180,112 @@ class profileViewController: UIViewController, NVActivityIndicatorViewable {
     
     //MARK: Buttons
     
+    @IBAction func saveAllInfo(_ sender: Any) {
+        
+        startAnimating(type: .ballClipRotatePulse)
+        
+        // -------
+        
+        let url = URL(string: self.http.baseURL())!
+        
+        var request = URLRequest(url: url)
+        request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type") // Headers
+        request.httpMethod = "POST" // Metodo
+        
+        let postString = "funcion=updateUser&id_user="+self.userInfo!+"&phone="+self.numeroTextfield.text!+"&first_name="+self.nombreTextfield.text!+"&last_name="+self.apellidoTextfield.text!  // Parametros
+        
+        print(postString)
+        
+        request.httpBody = postString.data(using: .utf8) // SE codifica a UTF-8
+        
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            
+            // Validacion para errores de Red
+            
+            guard let data = data, error == nil else {
+                print("error=\(String(describing: error))")
+                return
+            }
+            
+            do {
+                
+                let json = try? JSONSerialization.jsonObject(with: data, options: []) as? NSDictionary
+                
+                if let dictionary = json as? Dictionary<String, AnyObject>
+                    
+                {
+                    print(dictionary)
+                    
+                    if let state = dictionary["state"]{
+                        
+                        let stateString = "\(state)"
+                        
+                        if stateString == "200" {
+                            
+                            DispatchQueue.main.async {
+                                
+                                let alert = UIAlertController(title: "¡Exito!", message: "Tu información ha sido actualizada.", preferredStyle: .alert)
+                                alert.addAction(UIAlertAction(title: "Muy bien", style: .cancel, handler: { action in
+                                    
+                                    self.hero.isEnabled = true
+                                    
+                                    let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                                    let newViewController = storyBoard.instantiateViewController(withIdentifier: "configuracionViewController") as! configuracionViewController
+                                    newViewController.hero.modalAnimationType = .auto
+                                    
+                                    self.hero.replaceViewController(with: newViewController)
+                                    
+                                }))
+                                
+                                self.present(alert, animated: true)
+                                
+                                self.stopAnimating()
+                                
+                                
+                            }
+                            
+                        } else if stateString == "101" {
+                            
+                            DispatchQueue.main.async {
+                                
+                                self.stopAnimating()
+                                
+                                let alert = UIAlertController(title: "Error", message: "El usuario no ha sido encontrado. Verifica que tus datos estén bien escritos o la contraseña sea la correcta.", preferredStyle: .alert)
+                                
+                                alert.addAction(UIAlertAction(title: "Volver a intentar", style: .default, handler: nil))
+                                
+                                self.present(alert, animated: true)
+                                
+                            }
+                            
+                        } else {
+                            
+                            DispatchQueue.main.async {
+                                
+                                self.stopAnimating()
+                                
+                                let alert = UIAlertController(title: "Error", message: "Hay un problema con el servidor, inténtalo de nuevo más tarde.", preferredStyle: .alert)
+                                
+                                alert.addAction(UIAlertAction(title: "Entendido", style: .default, handler: nil))
+                                
+                                self.present(alert, animated: true)
+                                
+                            }
+                            
+                        }
+                        
+                    }
+                }
+            }
+        }
+        
+        task.resume()
+        
+        // ---------
+        
+    }
+    
+    
     
     @IBAction func pickPhoto(_ sender: UIButton) {
         
@@ -184,7 +295,14 @@ class profileViewController: UIViewController, NVActivityIndicatorViewable {
     
     @IBAction func close(_ sender: Any) {
         
-        self.dismiss(animated: true, completion: nil)
+        self.hero.isEnabled = true
+        
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "configuracionViewController") as! configuracionViewController
+        
+        newViewController.hero.modalAnimationType = .auto
+        
+        self.hero.replaceViewController(with: newViewController)
         
     }
     
@@ -194,61 +312,153 @@ class profileViewController: UIViewController, NVActivityIndicatorViewable {
 
 extension profileViewController : ImagePickerDelegate  {
     
-    func generateBoundaryString() -> String
-    {
-        return "Boundary-\(NSUUID().uuidString)"
-    }
-    
-    func imageTobase64(image: UIImage) -> String {
-        var base64String = ""
-        let  cim = CIImage(image: image)
-        if (cim != nil) {
-            let imageData = image.mediumQualityJPEGNSData
-            base64String = imageData.base64EncodedString()
-            
-        }
-        
-        return base64String
-    }
-    
     func didSelect(image: UIImage?) {
         
-        let base64converted = image?.toBase64()
         
-        let url = URL(string: http.baseURL())!
+        // -----------------------------------------------------------------
         
-        var request = URLRequest(url: url)
-        let boundary = generateBoundaryString()
-        //define the multipart request type
-        request.setValue("multipart/form-data; boundary=\(boundary)", forHTTPHeaderField: "Content-Type")
-        request.httpMethod = "POST"
-        let postString = "funcion=uploadImage&image="+base64converted!
-        print(postString)
+        startAnimating(type: .ballClipRotatePulse)
         
-        request.httpBody = postString.data(using: .utf8)
-        URLSession.shared.dataTask(with: request) { data, response, error in
-            guard let data = data, error == nil, response != nil else {
-                return
-            }
+        let headers: HTTPHeaders = [
+            "Content-type": "multipart/form-data"
+        ]
+        Alamofire.upload(
+            multipartFormData: { MultipartFormData in
+                MultipartFormData.append("uploadImage".data(using: String.Encoding.utf8)!, withName: "funcion")
+                let imgString = image?.toBase64()
+                MultipartFormData.append(imgString!.data(using: String.Encoding.utf8)!, withName: "image")
+        }, to: "http://easycode.mx/viasanangel/webservice/controller_last.php", method: .post, headers: headers) { (result) in
             
-            do {
+            // print("just before the switch")
+            
+            switch result {
                 
-                let json = try? JSONSerialization.jsonObject(with: data, options: .mutableContainers)
-                
-                if let dictionary = json as? Dictionary<String, AnyObject>
+            case .success(let upload, _, _):
+                upload.responseJSON { response in
                     
-                {
-                    
-                    print("Link")
-                    print(dictionary)
-                    print("*********")
-                    
+                    if let resultImage = response.result.value as? Dictionary<String, Any> {
+                        
+                        if let data = resultImage["data"] as? Dictionary<String, Any>{
+                            
+                            if let imageForProfile = data["image_name"] {
+                                
+                                let finalImage = imageForProfile as! String
+                                
+                                let finalImageURL = URL(string: finalImage)
+                                
+                                DispatchQueue.main.async {
+                                    
+                                    self.profileImage.sd_setImage(with: finalImageURL, for: .normal, completed: nil)
+                                    
+                                }
+                                
+                                // -----------------
+                                
+                                let url = URL(string: self.http.baseURL())!
+                                
+                                var request = URLRequest(url: url)
+                                request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type") // Headers
+                                request.httpMethod = "POST" // Metodo
+                                
+                                let postString = "funcion=updateUser&id_user="+self.userInfo!+"&image="+finalImage+"&phone="+self.numeroTextfield.text!+"&first_name="+self.nombreTextfield.text!+"&last_name="+self.apellidoTextfield.text!  // Parametros
+                                
+                                print(postString)
+                                
+                                request.httpBody = postString.data(using: .utf8) // SE codifica a UTF-8
+                                
+                                let task = URLSession.shared.dataTask(with: request) { data, response, error in
+                                    
+                                    // Validacion para errores de Red
+                                    
+                                    guard let data = data, error == nil else {
+                                        print("error=\(String(describing: error))")
+                                        return
+                                    }
+                                    
+                                    do {
+                                        
+                                        let json = try? JSONSerialization.jsonObject(with: data, options: []) as? NSDictionary
+                                        
+                                        if let dictionary = json as? Dictionary<String, AnyObject>
+                                            
+                                        {
+                                            print(dictionary)
+                                            
+                                            if let state = dictionary["state"]{
+                                                
+                                                let stateString = "\(state)"
+                                                
+                                                if stateString == "200" {
+                                                    
+                                                    DispatchQueue.main.async {
+                                                        
+                                                        print("Uploaded 2")
+                                                        
+                                                        self.stopAnimating()
+                                                        
+                                                    }
+                                                    
+                                                } else if stateString == "101" {
+                                                    
+                                                    DispatchQueue.main.async {
+                                                        
+                                                        self.stopAnimating()
+                                                        
+                                                        let alert = UIAlertController(title: "Error", message: "El usuario no ha sido encontrado. Verifica que tus datos estén bien escritos o la contraseña sea la correcta.", preferredStyle: .alert)
+                                                        
+                                                        alert.addAction(UIAlertAction(title: "Volver a intentar", style: .default, handler: nil))
+                                                        
+                                                        self.present(alert, animated: true)
+                                                        
+                                                    }
+                                                    
+                                                } else {
+                                                    
+                                                    DispatchQueue.main.async {
+                                                        
+                                                        self.stopAnimating()
+                                                        
+                                                        let alert = UIAlertController(title: "Error", message: "Hay un problema con el servidor, inténtalo de nuevo más tarde.", preferredStyle: .alert)
+                                                        
+                                                        alert.addAction(UIAlertAction(title: "Entendido", style: .default, handler: nil))
+                                                        
+                                                        self.present(alert, animated: true)
+                                                        
+                                                    }
+                                                    
+                                                }
+                                                
+                                            }
+                                        }
+                                    }
+                                }
+                                
+                                task.resume()
+                                
+                                // ---------
+                                
+                            }
+                        }
+                        
+                    }
+                        
+                    else {
+                        
+                        print("Ocurrio un error al procesar la imagen.")
+                        return
+                        
+                    }
                     
                 }
                 
+            case .failure(let encodingError):
+                
+                break
+                
             }
             
-        }.resume()
+        }
         
     }
+    
 }

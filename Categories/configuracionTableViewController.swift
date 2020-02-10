@@ -88,4 +88,17 @@ class configuracionTableViewController: UITableViewController {
     
     //MARK: Funcs
     
+    @IBAction func openProfile(_ sender: Any) {
+        
+        self.hero.isEnabled = true
+
+              let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+              let newViewController = storyBoard.instantiateViewController(withIdentifier: "myProfileViewController") as! profileViewController
+        newViewController.hero.modalAnimationType = .auto
+
+              self.hero.replaceViewController(with: newViewController)
+        
+    }
+    
+    
 }

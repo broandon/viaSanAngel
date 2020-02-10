@@ -8,6 +8,7 @@
 
 import UIKit
 import NVActivityIndicatorView
+import SDWebImage
 
 class storeDetailsTableViewController: UITableViewController, NVActivityIndicatorViewable {
     
@@ -22,6 +23,8 @@ class storeDetailsTableViewController: UITableViewController, NVActivityIndicato
     @IBOutlet weak var openTo: UILabel!
     @IBOutlet weak var minimunPrice: UILabel!
     @IBOutlet weak var descriptionStore: UITextView!
+    @IBOutlet weak var backgroundImage: UIImageView!
+    @IBOutlet weak var profileImage: UIImageView!
     
     //MARK: viewDid
 
@@ -32,11 +35,19 @@ class storeDetailsTableViewController: UITableViewController, NVActivityIndicato
         tableView.dataSource = self
         tableView.delegate = self
         tableView.rowHeight = UITableView.automaticDimension
-        
+        configureView()
     }
 
     // MARK: Funcs
 
+    func configureView() {
+        
+        profileImage.layer.cornerRadius = 15
+        profileImage.layer.borderWidth = 2
+        profileImage.layer.borderColor = UIColor.lightGray.cgColor
+        
+    }
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
@@ -97,9 +108,16 @@ class storeDetailsTableViewController: UITableViewController, NVActivityIndicato
                             let openTo = info["horario_fin"] as! String
                             let minimum = info["precio"] as! String
                             let description = info["descripcion"] as! String
+                            let backgroundImage = info["imagen_marca"] as! String
+                            let logoMarca = info["logo_marca"] as! String
+                            
+                            let backgroundImageURL = URL(string: backgroundImage)
+                            let logoMarcaURL = URL(string: logoMarca)
                             
                             print("THIS IS THE MINIMTN")
                             print(minimum)
+                            
+                            let str = String(describing: description.cString(using: String.Encoding.utf8))
                             
                             DispatchQueue.main.async {
                                 
@@ -109,7 +127,9 @@ class storeDetailsTableViewController: UITableViewController, NVActivityIndicato
                                 self.openFrom.text! = openFrom
                                 self.openTo.text! = openTo
                                 self.minimunPrice.text! = minimum
-                                self.descriptionStore.text! = description
+                                self.descriptionStore.text! = str
+                                self.backgroundImage.sd_setImage(with: backgroundImageURL, completed: nil)
+                                self.profileImage.sd_setImage(with: logoMarcaURL, completed: nil)
                                 
                             }
                             

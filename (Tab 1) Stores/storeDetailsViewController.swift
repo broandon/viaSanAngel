@@ -74,18 +74,11 @@ class storeDetailsViewController: UIViewController, NVActivityIndicatorViewable 
                         
                         if let info = data["info"] as? Dictionary<String, Any> {
                             
-                            let imagenMarca = info["imagen_marca"]
-                            let logoMarca = info["logo_marca"]
                             let nombreMarca = info["nombre"] as! String
-                            
-                            let imagenMarcaURL = URL(string: imagenMarca as! String)
-                            let logoMarcaURL = URL(string: logoMarca as! String)
                             
                             DispatchQueue.main.async {
                                 
                                 self.topLabel.text = nombreMarca
-                                self.backImage.sd_setImage(with: imagenMarcaURL, completed: nil)
-                                self.frontImage.sd_setImage(with: logoMarcaURL, completed: nil)
                                 
                             }
                             

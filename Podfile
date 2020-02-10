@@ -12,5 +12,7 @@ target 'viaSanAngel' do
   pod 'TableViewReloadAnimation'
   pod 'NVActivityIndicatorView'
   pod 'SDWebImage'
+  pod 'Alamofire'
+  pod 'FSCalendar'
 
 end

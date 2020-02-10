@@ -48,7 +48,7 @@ class CouponsViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 160
+        return 123
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {

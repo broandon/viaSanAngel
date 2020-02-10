@@ -1,4 +1,6 @@
 PODS:
+  - Alamofire (4.9.1)
+  - FSCalendar (2.8.1)
   - Hero (1.4.0)
   - IQKeyboardManagerSwift (6.5.4)
   - NVActivityIndicatorView (4.8.0):
@@ -10,6 +12,8 @@ PODS:
   - TableViewReloadAnimation (0.0.5)
 
 DEPENDENCIES:
+  - Alamofire
+  - FSCalendar
   - Hero
   - IQKeyboardManagerSwift
   - NVActivityIndicatorView
@@ -18,6 +22,8 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - Alamofire
+    - FSCalendar
     - Hero
     - IQKeyboardManagerSwift
     - NVActivityIndicatorView
@@ -25,12 +31,14 @@ SPEC REPOS:
     - TableViewReloadAnimation
 
 SPEC CHECKSUMS:
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  FSCalendar: 5245140456fcbcac5824c203b98bd8068bdfee1a
   Hero: bac92350d7201a1a940003e0767c7b52ce7c99a1
   IQKeyboardManagerSwift: 2dde0fc70110e8eac7ccce2a46fdbec6a850b414
   NVActivityIndicatorView: d24b7ebcf80af5dcd994adb650e2b6c93379270f
   SDWebImage: 86589f0d47a7de15827640c71813e23fd428965c
   TableViewReloadAnimation: f3a4c4048efbc56331be98075f26a2e533a14c16
 
-PODFILE CHECKSUM: c3e46e9b15ef2119be6bdfffe68a02cf714f2ebc
+PODFILE CHECKSUM: bfaeb8d85e8b75a42b7948574fa4570d155bb3f7
 
 COCOAPODS: 1.8.4

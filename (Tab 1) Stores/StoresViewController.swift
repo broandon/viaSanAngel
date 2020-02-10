@@ -68,7 +68,6 @@ class StoresViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         let storyBoard: UIStoryboard = UIStoryboard(name: "storeDetail", bundle: nil)
         let newViewController = storyBoard.instantiateViewController(withIdentifier: "storeDetailsViewController") as! storeDetailsViewController
-        newViewController.modalPresentationStyle = .formSheet
         newViewController.hero.modalAnimationType = .zoom
         
         present(newViewController, animated: true, completion: nil)
@@ -86,7 +85,7 @@ class StoresViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
-        return 160
+        return 123
         
     }
     

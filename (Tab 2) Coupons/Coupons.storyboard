@@ -17,10 +17,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QrB-bH-Fc6">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
                                 <subviews>
                                     <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="244-Um-07b">
-                                        <rect key="frame" x="0.0" y="56" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="16" width="414" height="44"/>
                                         <color key="barTintColor" red="0.7516317964" green="0.20203265549999999" blue="0.29020628329999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <items>
                                             <navigationItem id="Puv-GN-DsR">
@@ -39,11 +39,11 @@
                                     <constraint firstAttribute="bottom" secondItem="244-Um-07b" secondAttribute="bottom" symbolic="YES" id="3W9-X8-h27"/>
                                     <constraint firstItem="244-Um-07b" firstAttribute="leading" secondItem="QrB-bH-Fc6" secondAttribute="leading" symbolic="YES" id="F2Q-Wc-Sun"/>
                                     <constraint firstAttribute="trailing" secondItem="244-Um-07b" secondAttribute="trailing" symbolic="YES" id="ODn-lM-jnB"/>
-                                    <constraint firstAttribute="height" constant="100" id="h5j-9q-AHf"/>
+                                    <constraint firstAttribute="height" constant="60" id="h5j-9q-AHf"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pMf-Sg-bVl">
-                                <rect key="frame" x="0.0" y="100" width="414" height="30"/>
+                                <rect key="frame" x="0.0" y="60" width="414" height="30"/>
                                 <color key="backgroundColor" red="0.527624011" green="0.0091705629599999998" blue="0.23930650949999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="EFi-YX-w6V"/>
@@ -53,7 +53,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0we-Iv-M7t">
-                                <rect key="frame" x="0.0" y="130" width="414" height="766"/>
+                                <rect key="frame" x="0.0" y="90" width="414" height="806"/>
                                 <connections>
                                     <segue destination="lTQ-ak-UJe" kind="embed" id="zI7-PJ-Ye7"/>
                                 </connections>
@@ -320,27 +320,27 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I59-zI-HT4">
-                                                    <rect key="frame" x="20" y="11" width="374" height="70"/>
+                                                    <rect key="frame" x="73" y="18" width="268" height="56"/>
                                                     <color key="backgroundColor" red="0.7516317964" green="0.20203265549999999" blue="0.29020628329999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" secondItem="I59-zI-HT4" secondAttribute="height" multiplier="187:35" id="0Oa-Wl-US8"/>
+                                                        <constraint firstAttribute="width" secondItem="I59-zI-HT4" secondAttribute="height" multiplier="67:14" id="7Ix-RK-zM4"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                     <state key="normal" title="Utilizar cupon">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                            <integer key="value" value="25"/>
+                                                            <integer key="value" value="15"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="I59-zI-HT4" firstAttribute="top" secondItem="Pul-UX-Fh2" secondAttribute="topMargin" id="0RO-Xw-7Uu"/>
-                                                <constraint firstItem="I59-zI-HT4" firstAttribute="bottom" secondItem="Pul-UX-Fh2" secondAttribute="bottomMargin" id="6bX-nP-o6H"/>
-                                                <constraint firstItem="I59-zI-HT4" firstAttribute="trailing" secondItem="Pul-UX-Fh2" secondAttribute="trailingMargin" id="Zut-Uf-POs"/>
-                                                <constraint firstItem="I59-zI-HT4" firstAttribute="leading" secondItem="Pul-UX-Fh2" secondAttribute="leadingMargin" id="uOg-Md-C3Q"/>
+                                                <constraint firstItem="I59-zI-HT4" firstAttribute="top" secondItem="Pul-UX-Fh2" secondAttribute="topMargin" constant="7" id="Ckg-bA-lLI"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="I59-zI-HT4" secondAttribute="trailing" constant="53" id="IOw-fq-p2T"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="I59-zI-HT4" secondAttribute="bottom" constant="7" id="OJk-Pc-dZw"/>
+                                                <constraint firstItem="I59-zI-HT4" firstAttribute="leading" secondItem="Pul-UX-Fh2" secondAttribute="leadingMargin" constant="53" id="pr7-Fj-Y0l"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
