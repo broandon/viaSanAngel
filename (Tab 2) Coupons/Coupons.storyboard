@@ -17,10 +17,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QrB-bH-Fc6">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
                                 <subviews>
                                     <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="244-Um-07b">
-                                        <rect key="frame" x="0.0" y="16" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="56" width="414" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="Yte-Y6-zlN"/>
+                                        </constraints>
                                         <color key="barTintColor" red="0.7516317964" green="0.20203265549999999" blue="0.29020628329999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <items>
                                             <navigationItem id="Puv-GN-DsR">
@@ -36,39 +39,39 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.7516317964" green="0.20203265549999999" blue="0.29020628329999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="244-Um-07b" secondAttribute="bottom" symbolic="YES" id="3W9-X8-h27"/>
-                                    <constraint firstItem="244-Um-07b" firstAttribute="leading" secondItem="QrB-bH-Fc6" secondAttribute="leading" symbolic="YES" id="F2Q-Wc-Sun"/>
-                                    <constraint firstAttribute="trailing" secondItem="244-Um-07b" secondAttribute="trailing" symbolic="YES" id="ODn-lM-jnB"/>
-                                    <constraint firstAttribute="height" constant="60" id="h5j-9q-AHf"/>
+                                    <constraint firstAttribute="bottom" secondItem="244-Um-07b" secondAttribute="bottom" symbolic="YES" id="btc-UY-dfm"/>
+                                    <constraint firstAttribute="trailing" secondItem="244-Um-07b" secondAttribute="trailing" symbolic="YES" id="eHo-Zi-lFy"/>
+                                    <constraint firstAttribute="height" constant="100" id="h5j-9q-AHf"/>
+                                    <constraint firstItem="244-Um-07b" firstAttribute="leading" secondItem="QrB-bH-Fc6" secondAttribute="leading" symbolic="YES" id="oR5-AV-RSi"/>
                                 </constraints>
                             </view>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0we-Iv-M7t">
+                                <rect key="frame" x="0.0" y="130" width="414" height="766"/>
+                                <connections>
+                                    <segue destination="lTQ-ak-UJe" kind="embed" id="zI7-PJ-Ye7"/>
+                                </connections>
+                            </containerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pMf-Sg-bVl">
-                                <rect key="frame" x="0.0" y="60" width="414" height="30"/>
+                                <rect key="frame" x="0.0" y="100" width="414" height="30"/>
                                 <color key="backgroundColor" red="0.527624011" green="0.0091705629599999998" blue="0.23930650949999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="EFi-YX-w6V"/>
+                                    <constraint firstAttribute="height" constant="30" id="1Wn-zQ-A6Z"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" red="0.79925620559999999" green="0.80303329229999998" blue="0.59972459079999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0we-Iv-M7t">
-                                <rect key="frame" x="0.0" y="90" width="414" height="806"/>
-                                <connections>
-                                    <segue destination="lTQ-ak-UJe" kind="embed" id="zI7-PJ-Ye7"/>
-                                </connections>
-                            </containerView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="0we-Iv-M7t" firstAttribute="top" secondItem="pMf-Sg-bVl" secondAttribute="bottom" id="1bu-9M-6it"/>
                             <constraint firstAttribute="bottom" secondItem="0we-Iv-M7t" secondAttribute="bottom" id="8Gs-Pm-jmg"/>
+                            <constraint firstItem="pMf-Sg-bVl" firstAttribute="top" secondItem="QrB-bH-Fc6" secondAttribute="bottom" id="8kI-Hc-bGJ"/>
                             <constraint firstItem="QrB-bH-Fc6" firstAttribute="top" secondItem="tBz-4V-9iY" secondAttribute="top" id="Bts-4S-fiT"/>
-                            <constraint firstItem="0we-Iv-M7t" firstAttribute="top" secondItem="pMf-Sg-bVl" secondAttribute="bottom" id="INT-z1-Wv7"/>
-                            <constraint firstAttribute="trailing" secondItem="pMf-Sg-bVl" secondAttribute="trailing" id="Lgh-iQ-aoF"/>
-                            <constraint firstItem="pMf-Sg-bVl" firstAttribute="top" secondItem="QrB-bH-Fc6" secondAttribute="bottom" id="Plf-dD-AnS"/>
+                            <constraint firstItem="pMf-Sg-bVl" firstAttribute="leading" secondItem="1e1-X0-ruG" secondAttribute="leading" id="CDv-k9-WKG"/>
+                            <constraint firstItem="pMf-Sg-bVl" firstAttribute="trailing" secondItem="1e1-X0-ruG" secondAttribute="trailing" id="e94-Db-TML"/>
                             <constraint firstAttribute="trailing" secondItem="0we-Iv-M7t" secondAttribute="trailing" id="izC-j8-gn6"/>
                             <constraint firstItem="0we-Iv-M7t" firstAttribute="leading" secondItem="tBz-4V-9iY" secondAttribute="leading" id="mkm-QR-bqu"/>
-                            <constraint firstItem="pMf-Sg-bVl" firstAttribute="leading" secondItem="tBz-4V-9iY" secondAttribute="leading" id="oQo-4f-kul"/>
                             <constraint firstItem="QrB-bH-Fc6" firstAttribute="leading" secondItem="1e1-X0-ruG" secondAttribute="leading" id="ouQ-Q1-19S"/>
                             <constraint firstItem="QrB-bH-Fc6" firstAttribute="trailing" secondItem="1e1-X0-ruG" secondAttribute="trailing" id="sH2-dv-I7u"/>
                         </constraints>
@@ -334,6 +337,9 @@
                                                             <integer key="value" value="15"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="abrirCupon:" destination="lTQ-ak-UJe" eventType="touchUpInside" id="wdc-Qp-TRm"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>

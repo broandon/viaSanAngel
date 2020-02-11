@@ -27,6 +27,9 @@
 		CF852C2723D261CD00A78E7D /* profileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF852C2623D261CD00A78E7D /* profileViewController.swift */; };
 		CF852C2923D2642F00A78E7D /* pickerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF852C2823D2642F00A78E7D /* pickerDelegate.swift */; };
 		CFA75117234AEBAF0005559F /* configuracionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA75116234AEBAF0005559F /* configuracionTableViewController.swift */; };
+		CFA9104A23F3611C00131DA6 /* folio.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFA9104923F3611C00131DA6 /* folio.storyboard */; };
+		CFA9104C23F3621A00131DA6 /* folioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA9104B23F3621A00131DA6 /* folioViewController.swift */; };
+		CFA9104E23F3623600131DA6 /* folioTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA9104D23F3623600131DA6 /* folioTableViewController.swift */; };
 		CFAB54A323D82A4D005A35DC /* storeDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFAB54A223D82A4D005A35DC /* storeDetail.storyboard */; };
 		CFAB54A523D82E14005A35DC /* storeDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAB54A423D82E14005A35DC /* storeDetailsViewController.swift */; };
 		CFAB54A723D82F2F005A35DC /* storeDetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAB54A623D82F2F005A35DC /* storeDetailsTableViewController.swift */; };
@@ -70,6 +73,9 @@
 		CF852C2623D261CD00A78E7D /* profileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profileViewController.swift; sourceTree = "<group>"; };
 		CF852C2823D2642F00A78E7D /* pickerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pickerDelegate.swift; sourceTree = "<group>"; };
 		CFA75116234AEBAF0005559F /* configuracionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = configuracionTableViewController.swift; sourceTree = "<group>"; };
+		CFA9104923F3611C00131DA6 /* folio.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = folio.storyboard; sourceTree = "<group>"; };
+		CFA9104B23F3621A00131DA6 /* folioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = folioViewController.swift; sourceTree = "<group>"; };
+		CFA9104D23F3623600131DA6 /* folioTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = folioTableViewController.swift; sourceTree = "<group>"; };
 		CFAB54A223D82A4D005A35DC /* storeDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = storeDetail.storyboard; sourceTree = "<group>"; };
 		CFAB54A423D82E14005A35DC /* storeDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = storeDetailsViewController.swift; sourceTree = "<group>"; };
 		CFAB54A623D82F2F005A35DC /* storeDetailsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = storeDetailsTableViewController.swift; sourceTree = "<group>"; };
@@ -154,6 +160,7 @@
 		CF59E4D623D65D3C000FBB25 /* (Tab 2) Coupons */ = {
 			isa = PBXGroup;
 			children = (
+				CFA9104823F3610800131DA6 /* Folio */,
 				CF59E4D723D65F6E000FBB25 /* CouponsViewController.swift */,
 				CF59E4D923D664F2000FBB25 /* cuponesTableViewCell.swift */,
 				CF59E4DD23D66594000FBB25 /* cuponesTableViewCell.xib */,
@@ -181,6 +188,16 @@
 				CF852C2623D261CD00A78E7D /* profileViewController.swift */,
 			);
 			path = Profile;
+			sourceTree = "<group>";
+		};
+		CFA9104823F3610800131DA6 /* Folio */ = {
+			isa = PBXGroup;
+			children = (
+				CFA9104923F3611C00131DA6 /* folio.storyboard */,
+				CFA9104B23F3621A00131DA6 /* folioViewController.swift */,
+				CFA9104D23F3623600131DA6 /* folioTableViewController.swift */,
+			);
+			path = Folio;
 			sourceTree = "<group>";
 		};
 		CFBCB5202347E730009F32B0 = {
@@ -319,6 +336,7 @@
 				CF74A17623D1354400950974 /* tiendasTableViewCell.xib in Resources */,
 				CFBCB53C2347E731009F32B0 /* LaunchScreen.storyboard in Resources */,
 				CF1223ED23F216D3006A93B0 /* eventosTableViewCell.xib in Resources */,
+				CFA9104A23F3611C00131DA6 /* folio.storyboard in Resources */,
 				CF59E4DE23D66594000FBB25 /* cuponesTableViewCell.xib in Resources */,
 				CF1223E523F20240006A93B0 /* Events.storyboard in Resources */,
 				CFAB54A323D82A4D005A35DC /* storeDetail.storyboard in Resources */,
@@ -376,6 +394,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFA9104E23F3623600131DA6 /* folioTableViewController.swift in Sources */,
 				CF852C2723D261CD00A78E7D /* profileViewController.swift in Sources */,
 				CFA75117234AEBAF0005559F /* configuracionTableViewController.swift in Sources */,
 				CF1223E923F21102006A93B0 /* eventosTableViewController.swift in Sources */,
@@ -392,6 +411,7 @@
 				CFBCB52D2347E730009F32B0 /* AppDelegate.swift in Sources */,
 				CFF82BC123D8BFE000CF76BA /* couponDetailTableViewController.swift in Sources */,
 				CF852C2423D23D0900A78E7D /* Extensions.swift in Sources */,
+				CFA9104C23F3621A00131DA6 /* folioViewController.swift in Sources */,
 				CFAB54A523D82E14005A35DC /* storeDetailsViewController.swift in Sources */,
 				CF74A17523D1354400950974 /* tiendasTableViewCell.swift in Sources */,
 				CF1223EF23F22079006A93B0 /* calendarViewController.swift in Sources */,

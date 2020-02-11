@@ -239,15 +239,15 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="326" id="Zjm-iy-uxz">
-                                        <rect key="frame" x="0.0" y="607" width="414" height="326"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="157" id="Zjm-iy-uxz">
+                                        <rect key="frame" x="0.0" y="607" width="414" height="157"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Zjm-iy-uxz" id="eYr-m9-UpA">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="326"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="157"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VGE-S4-Bhx">
-                                                    <rect key="frame" x="20" y="11" width="374" height="304"/>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j9H-JV-OUN">
+                                                    <rect key="frame" x="20" y="11" width="374" height="135"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                     <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -255,10 +255,10 @@
                                                 </textView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="VGE-S4-Bhx" firstAttribute="top" secondItem="eYr-m9-UpA" secondAttribute="topMargin" id="9WC-2S-yOW"/>
-                                                <constraint firstItem="VGE-S4-Bhx" firstAttribute="bottom" secondItem="eYr-m9-UpA" secondAttribute="bottomMargin" id="K8H-Xz-NaZ"/>
-                                                <constraint firstItem="VGE-S4-Bhx" firstAttribute="leading" secondItem="eYr-m9-UpA" secondAttribute="leadingMargin" id="nQw-Kd-c9X"/>
-                                                <constraint firstItem="VGE-S4-Bhx" firstAttribute="trailing" secondItem="eYr-m9-UpA" secondAttribute="trailingMargin" id="qoW-3L-Wm8"/>
+                                                <constraint firstItem="j9H-JV-OUN" firstAttribute="top" secondItem="eYr-m9-UpA" secondAttribute="topMargin" id="A4O-kE-oJu"/>
+                                                <constraint firstItem="j9H-JV-OUN" firstAttribute="bottom" secondItem="eYr-m9-UpA" secondAttribute="bottomMargin" id="AWs-8T-Y8W"/>
+                                                <constraint firstItem="j9H-JV-OUN" firstAttribute="trailing" secondItem="eYr-m9-UpA" secondAttribute="trailingMargin" id="ExZ-XP-GmI"/>
+                                                <constraint firstItem="j9H-JV-OUN" firstAttribute="leading" secondItem="eYr-m9-UpA" secondAttribute="leadingMargin" id="wEL-PF-f1D"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -274,7 +274,7 @@
                     <connections>
                         <outlet property="backgroundImage" destination="vrM-bw-F1K" id="KnR-Ma-7PC"/>
                         <outlet property="categoryLabel" destination="LFd-ap-YwB" id="Joi-aE-X4W"/>
-                        <outlet property="descriptionStore" destination="VGE-S4-Bhx" id="oIH-g9-kX6"/>
+                        <outlet property="descriptionStore" destination="j9H-JV-OUN" id="VTG-JQ-KXt"/>
                         <outlet property="minimunPrice" destination="fq2-rn-e5p" id="ch8-Sz-CkE"/>
                         <outlet property="openFrom" destination="PMy-KO-XUr" id="Ubm-AB-iPf"/>
                         <outlet property="openTo" destination="V9p-2H-2d6" id="BYH-Lf-6tH"/>

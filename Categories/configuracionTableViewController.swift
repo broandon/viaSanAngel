@@ -34,11 +34,11 @@ class configuracionTableViewController: UITableViewController {
             UserDefaults.standard.set(false, forKey: "isLoggedIn")
             
             self.hero.isEnabled = true
-
+            
             let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let newViewController = storyBoard.instantiateViewController(withIdentifier: "signInViewController") as! signInViewController
             newViewController.hero.modalAnimationType = .push(direction: .down)
-
+            
             self.hero.replaceViewController(with: newViewController)
             
         }))
@@ -91,12 +91,12 @@ class configuracionTableViewController: UITableViewController {
     @IBAction func openProfile(_ sender: Any) {
         
         self.hero.isEnabled = true
-
-              let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-              let newViewController = storyBoard.instantiateViewController(withIdentifier: "myProfileViewController") as! profileViewController
+        
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "myProfileViewController") as! profileViewController
         newViewController.hero.modalAnimationType = .auto
-
-              self.hero.replaceViewController(with: newViewController)
+        
+        self.hero.replaceViewController(with: newViewController)
         
     }
     

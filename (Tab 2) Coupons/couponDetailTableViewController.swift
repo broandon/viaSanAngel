@@ -188,5 +188,13 @@ class couponDetailTableViewController: UITableViewController, NVActivityIndicato
         task.resume()
         
     }
-
+    @IBAction func abrirCupon(_ sender: Any) {
+        
+        let storyBoard: UIStoryboard = UIStoryboard(name: "folio", bundle: nil)
+                  let vc = storyBoard.instantiateViewController(withIdentifier: "folioViewController") as! folioViewController
+                  vc.modalPresentationStyle = .fullScreen
+                  present(vc, animated: true, completion: nil)
+        
+    }
+    
 }

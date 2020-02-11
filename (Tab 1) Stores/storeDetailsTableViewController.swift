@@ -55,7 +55,8 @@ class storeDetailsTableViewController: UITableViewController, NVActivityIndicato
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 3
+        return 4
+        
     }
     
     override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -114,11 +115,6 @@ class storeDetailsTableViewController: UITableViewController, NVActivityIndicato
                             let backgroundImageURL = URL(string: backgroundImage)
                             let logoMarcaURL = URL(string: logoMarca)
                             
-                            print("THIS IS THE MINIMTN")
-                            print(minimum)
-                            
-                            let str = String(describing: description.cString(using: String.Encoding.utf8))
-                            
                             DispatchQueue.main.async {
                                 
                                 self.stopAnimating()
@@ -127,7 +123,7 @@ class storeDetailsTableViewController: UITableViewController, NVActivityIndicato
                                 self.openFrom.text! = openFrom
                                 self.openTo.text! = openTo
                                 self.minimunPrice.text! = minimum
-                                self.descriptionStore.text! = str
+                                self.descriptionStore.text! = description
                                 self.backgroundImage.sd_setImage(with: backgroundImageURL, completed: nil)
                                 self.profileImage.sd_setImage(with: logoMarcaURL, completed: nil)
                                 

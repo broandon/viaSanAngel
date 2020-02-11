@@ -83,6 +83,9 @@
                                                 <integer key="value" value="15"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="loginWithFacebook:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mj4-Uc-XB9"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mP1-gP-Wsd">
                                         <rect key="frame" x="20" y="377" width="360" height="30"/>
@@ -1138,7 +1141,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="m3M-Ry-Hyw">
-                                <rect key="frame" x="0.0" y="196" width="414" height="491"/>
+                                <rect key="frame" x="0.0" y="140" width="414" height="547"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </tableView>
                         </subviews>
@@ -1146,11 +1149,11 @@
                         <constraints>
                             <constraint firstItem="xbE-f6-dF1" firstAttribute="leading" secondItem="WDF-O3-606" secondAttribute="leading" id="5qv-2X-Y16"/>
                             <constraint firstItem="m3M-Ry-Hyw" firstAttribute="leading" secondItem="WDF-O3-606" secondAttribute="leading" id="9mU-eH-T2l"/>
+                            <constraint firstItem="m3M-Ry-Hyw" firstAttribute="top" secondItem="MaX-Vu-dqy" secondAttribute="bottom" id="G5j-4b-52S"/>
                             <constraint firstItem="MaX-Vu-dqy" firstAttribute="leading" secondItem="WDF-O3-606" secondAttribute="leading" id="Laj-ED-29l"/>
                             <constraint firstItem="DGh-9Z-haR" firstAttribute="trailing" secondItem="WDF-O3-606" secondAttribute="trailing" id="Mqh-DY-sQ6"/>
                             <constraint firstItem="MaX-Vu-dqy" firstAttribute="top" secondItem="xbE-f6-dF1" secondAttribute="bottom" id="X5K-GK-rm7"/>
                             <constraint firstItem="DGh-9Z-haR" firstAttribute="leading" secondItem="WDF-O3-606" secondAttribute="leading" id="Z79-o7-KLd"/>
-                            <constraint firstItem="m3M-Ry-Hyw" firstAttribute="top" secondItem="DGh-9Z-haR" secondAttribute="bottom" symbolic="YES" id="aMz-A8-1Fo"/>
                             <constraint firstItem="xbE-f6-dF1" firstAttribute="trailing" secondItem="WDF-O3-606" secondAttribute="trailing" id="aQQ-iT-0EI"/>
                             <constraint firstItem="m3M-Ry-Hyw" firstAttribute="trailing" secondItem="WDF-O3-606" secondAttribute="trailing" id="ajz-F9-HNX"/>
                             <constraint firstItem="xbE-f6-dF1" firstAttribute="top" secondItem="DbJ-Jh-0Hz" secondAttribute="top" id="caW-sK-yBh"/>
@@ -1207,33 +1210,23 @@
                                 <color key="textColor" red="0.82359057660000001" green="0.82482308150000005" blue="0.63966494799999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <searchBar contentMode="redraw" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vQq-iY-9ap">
-                                <rect key="frame" x="0.0" y="140" width="414" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="cLl-7P-Tkv"/>
-                                </constraints>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Mum-Nn-0Wt">
-                                <rect key="frame" x="0.0" y="184" width="414" height="503"/>
+                                <rect key="frame" x="0.0" y="140" width="414" height="547"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="3Hs-Dh-M2K" firstAttribute="trailing" secondItem="95l-K5-DVk" secondAttribute="trailing" id="01I-M3-Adh"/>
-                            <constraint firstItem="Mum-Nn-0Wt" firstAttribute="top" secondItem="vQq-iY-9ap" secondAttribute="bottom" symbolic="YES" id="0d1-PQ-CXI"/>
                             <constraint firstItem="3Hs-Dh-M2K" firstAttribute="top" secondItem="8nA-yA-qEA" secondAttribute="bottom" id="Bdx-kc-N6s"/>
                             <constraint firstItem="3Hs-Dh-M2K" firstAttribute="leading" secondItem="95l-K5-DVk" secondAttribute="leading" id="GHJ-ou-PG9"/>
                             <constraint firstItem="Mum-Nn-0Wt" firstAttribute="trailing" secondItem="95l-K5-DVk" secondAttribute="trailing" id="KT4-kV-rjF"/>
                             <constraint firstItem="8nA-yA-qEA" firstAttribute="leading" secondItem="95l-K5-DVk" secondAttribute="leading" id="RXA-Mm-TCY"/>
                             <constraint firstItem="8nA-yA-qEA" firstAttribute="top" secondItem="1uo-EL-Jtj" secondAttribute="top" id="SgP-yy-q2z"/>
-                            <constraint firstItem="vQq-iY-9ap" firstAttribute="leading" secondItem="95l-K5-DVk" secondAttribute="leading" id="Sp8-H6-VT2"/>
                             <constraint firstItem="Mum-Nn-0Wt" firstAttribute="bottom" secondItem="95l-K5-DVk" secondAttribute="bottom" id="Tik-T2-9aO"/>
-                            <constraint firstItem="vQq-iY-9ap" firstAttribute="trailing" secondItem="95l-K5-DVk" secondAttribute="trailing" id="Yca-nr-FNI"/>
+                            <constraint firstItem="Mum-Nn-0Wt" firstAttribute="top" secondItem="3Hs-Dh-M2K" secondAttribute="bottom" id="V2V-IL-4TW"/>
                             <constraint firstItem="Mum-Nn-0Wt" firstAttribute="leading" secondItem="95l-K5-DVk" secondAttribute="leading" id="Zlt-ii-ARM"/>
                             <constraint firstItem="8nA-yA-qEA" firstAttribute="trailing" secondItem="95l-K5-DVk" secondAttribute="trailing" id="lfw-2q-Jmy"/>
-                            <constraint firstItem="vQq-iY-9ap" firstAttribute="top" secondItem="3Hs-Dh-M2K" secondAttribute="bottom" symbolic="YES" id="qMp-73-1bO"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="95l-K5-DVk"/>
                     </view>
@@ -1339,19 +1332,10 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Screen Shot 2020-02-10 at 17.52.38" translatesAutoresizingMaskIntoConstraints="NO" id="KWP-Hg-IPa">
-                                <rect key="frame" x="0.0" y="358" width="414" height="114"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="114" id="5lq-Xq-GM1"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="KWP-Hg-IPa" firstAttribute="top" secondItem="fGo-RK-RWq" secondAttribute="bottom" constant="8" id="10T-ru-jsg"/>
                             <constraint firstItem="fGo-RK-RWq" firstAttribute="leading" secondItem="jMe-UO-sdJ" secondAttribute="leading" id="5gP-nS-6Qp"/>
-                            <constraint firstItem="KWP-Hg-IPa" firstAttribute="trailing" secondItem="jMe-UO-sdJ" secondAttribute="trailing" id="DDQ-qa-kfz"/>
-                            <constraint firstItem="KWP-Hg-IPa" firstAttribute="leading" secondItem="jMe-UO-sdJ" secondAttribute="leading" id="K5M-VF-cdh"/>
                             <constraint firstItem="fGo-RK-RWq" firstAttribute="trailing" secondItem="jMe-UO-sdJ" secondAttribute="trailing" id="Y9O-zE-f4R"/>
                             <constraint firstItem="fGo-RK-RWq" firstAttribute="top" secondItem="jMe-UO-sdJ" secondAttribute="top" id="eHj-Po-MVG"/>
                         </constraints>
@@ -1386,7 +1370,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Screen Shot 2020-02-10 at 17.52.38" width="1268" height="218"/>
         <image name="cuponIcon" width="25" height="25"/>
         <image name="easycode_firma" width="111.5" height="25.5"/>
         <image name="eventsIcon" width="25" height="25"/>

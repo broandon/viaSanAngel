@@ -29,6 +29,7 @@ class StoresViewController: UIViewController, UITableViewDelegate, UITableViewDa
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        searchBar.isHidden = true
         setupTableView()
         downloadStores()
         
@@ -68,6 +69,7 @@ class StoresViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         let storyBoard: UIStoryboard = UIStoryboard(name: "storeDetail", bundle: nil)
         let newViewController = storyBoard.instantiateViewController(withIdentifier: "storeDetailsViewController") as! storeDetailsViewController
+        newViewController.modalPresentationStyle = .fullScreen
         newViewController.hero.modalAnimationType = .zoom
         
         present(newViewController, animated: true, completion: nil)

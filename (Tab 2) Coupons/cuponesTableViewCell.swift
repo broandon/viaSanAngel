@@ -10,15 +10,15 @@ import UIKit
 
 class cuponesTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var imagenCupon: UIImageView!
-    @IBOutlet weak var tituloCupon: UILabel!
-    @IBOutlet weak var thisOtherView: UIView!
+    @IBOutlet weak var imagenDeCupon: UIImageView!
+    @IBOutlet weak var typeOfFood: UIImageView!
+    @IBOutlet weak var nameOfCoupon: UILabel!
+    @IBOutlet weak var textOfCoupon: UILabel!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        thisOtherView.layer.borderWidth = 2
-        thisOtherView.layer.borderColor = UIColor(red: 0.96, green: 0.96, blue: 0.96, alpha: 1.00).cgColor
         
     }
     

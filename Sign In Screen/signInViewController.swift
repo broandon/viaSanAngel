@@ -11,6 +11,7 @@ import Hero
 import NVActivityIndicatorView
 import SDWebImage
 
+
 class signInViewController: UIViewController, NVActivityIndicatorViewable {
     
     //MARK: Outlets
@@ -32,6 +33,13 @@ class signInViewController: UIViewController, NVActivityIndicatorViewable {
     }
     
     //MARK: Buttons
+    
+    @IBAction func loginWithFacebook(_ sender: Any) {
+        
+        
+        
+    }
+    
     
     @IBAction func forgottenAccountButton(_ sender: Any) {
         

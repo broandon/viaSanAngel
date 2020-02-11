@@ -230,8 +230,9 @@ class profileViewController: UIViewController, NVActivityIndicatorViewable {
                                     self.hero.isEnabled = true
                                     
                                     let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                                    let newViewController = storyBoard.instantiateViewController(withIdentifier: "configuracionViewController") as! configuracionViewController
-                                    newViewController.hero.modalAnimationType = .auto
+                                    let newViewController = storyBoard.instantiateViewController(withIdentifier: "mainTabBarViewController") as! UITabBarController
+                                    newViewController.hero.modalAnimationType = .fade
+                                    newViewController.selectedIndex = 4
                                     
                                     self.hero.replaceViewController(with: newViewController)
                                     
@@ -298,9 +299,9 @@ class profileViewController: UIViewController, NVActivityIndicatorViewable {
         self.hero.isEnabled = true
         
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let newViewController = storyBoard.instantiateViewController(withIdentifier: "configuracionViewController") as! configuracionViewController
-        
-        newViewController.hero.modalAnimationType = .auto
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "mainTabBarViewController") as! UITabBarController
+        newViewController.hero.modalAnimationType = .fade
+        newViewController.selectedIndex = 4
         
         self.hero.replaceViewController(with: newViewController)
         
@@ -315,6 +316,12 @@ extension profileViewController : ImagePickerDelegate  {
     func didSelect(image: UIImage?) {
         
         
+        if image == nil {
+            
+            print("there was no image")
+            return
+        }
+        
         // -----------------------------------------------------------------
         
         startAnimating(type: .ballClipRotatePulse)
@@ -328,9 +335,7 @@ extension profileViewController : ImagePickerDelegate  {
                 let imgString = image?.toBase64()
                 MultipartFormData.append(imgString!.data(using: String.Encoding.utf8)!, withName: "image")
         }, to: "http://easycode.mx/viasanangel/webservice/controller_last.php", method: .post, headers: headers) { (result) in
-            
-            // print("just before the switch")
-            
+                        
             switch result {
                 
             case .success(let upload, _, _):

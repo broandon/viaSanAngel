@@ -48,7 +48,7 @@ class CouponsViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 123
+        return 400
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -75,8 +75,11 @@ class CouponsViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         let imagen = document["imagen_cupon"] as! String
         let titulo = document["nombre"] as! String
+        let texto = document["promocion_detalle"] as! String
+        let type = document["imagen_categoria"] as! String
         
         let furl = URL(string: imagen)
+        let furl2 = URL(string: type)
         
         let cell = tableView.dequeueReusableCell(withIdentifier: reuseDocument, for: indexPath)
         
@@ -86,8 +89,10 @@ class CouponsViewController: UIViewController, UITableViewDelegate, UITableViewD
             
             DispatchQueue.main.async {
                 
-                cell.imagenCupon.sd_setImage(with: furl, completed: nil)
-                cell.tituloCupon.text = titulo
+                cell.imagenDeCupon.sd_setImage(with: furl, completed: nil)
+                cell.nameOfCoupon.text = titulo
+                cell.typeOfFood.sd_setImage(with: furl2, completed: nil)
+                cell.textOfCoupon.text = texto
                 
             }
             
@@ -110,6 +115,7 @@ class CouponsViewController: UIViewController, UITableViewDelegate, UITableViewD
         
            let storyBoard: UIStoryboard = UIStoryboard(name: "Coupons", bundle: nil)
            let vc = storyBoard.instantiateViewController(withIdentifier: "couponDetailViewController") as! couponDetailViewController
+           vc.modalPresentationStyle = .fullScreen
            present(vc, animated: true, completion: nil)
         
     }

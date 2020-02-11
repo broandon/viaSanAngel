@@ -1,5 +1,15 @@
 PODS:
   - Alamofire (4.9.1)
+  - FBSDKCoreKit (6.0.0):
+    - FBSDKCoreKit/Basics (= 6.0.0)
+    - FBSDKCoreKit/Core (= 6.0.0)
+  - FBSDKCoreKit/Basics (6.0.0)
+  - FBSDKCoreKit/Core (6.0.0):
+    - FBSDKCoreKit/Basics
+  - FBSDKLoginKit (6.0.0):
+    - FBSDKLoginKit/Login (= 6.0.0)
+  - FBSDKLoginKit/Login (6.0.0):
+    - FBSDKCoreKit (~> 6.0.0)
   - FSCalendar (2.8.1)
   - Hero (1.4.0)
   - IQKeyboardManagerSwift (6.5.4)
@@ -13,6 +23,8 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
+  - FBSDKCoreKit
+  - FBSDKLoginKit
   - FSCalendar
   - Hero
   - IQKeyboardManagerSwift
@@ -23,6 +35,8 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
+    - FBSDKCoreKit
+    - FBSDKLoginKit
     - FSCalendar
     - Hero
     - IQKeyboardManagerSwift
@@ -32,6 +46,8 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  FBSDKCoreKit: fe738b172590e622c86735b45e20d196848b54df
+  FBSDKLoginKit: fa57df1b967fe0e147b25bede6ea4e9cdf4d64be
   FSCalendar: 5245140456fcbcac5824c203b98bd8068bdfee1a
   Hero: bac92350d7201a1a940003e0767c7b52ce7c99a1
   IQKeyboardManagerSwift: 2dde0fc70110e8eac7ccce2a46fdbec6a850b414
@@ -39,6 +55,6 @@ SPEC CHECKSUMS:
   SDWebImage: 86589f0d47a7de15827640c71813e23fd428965c
   TableViewReloadAnimation: f3a4c4048efbc56331be98075f26a2e533a14c16
 
-PODFILE CHECKSUM: bfaeb8d85e8b75a42b7948574fa4570d155bb3f7
+PODFILE CHECKSUM: ca344e5e8ae557198660013d1567e3957a35cdbd
 
 COCOAPODS: 1.8.4

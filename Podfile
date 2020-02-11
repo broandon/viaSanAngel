@@ -14,5 +14,7 @@ target 'viaSanAngel' do
   pod 'SDWebImage'
   pod 'Alamofire'
   pod 'FSCalendar'
+  pod 'FBSDKCoreKit'
+  pod 'FBSDKLoginKit'
 
 end

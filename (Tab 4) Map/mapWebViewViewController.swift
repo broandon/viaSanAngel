@@ -34,7 +34,7 @@ class mapWebViewViewController: UIViewController, WKNavigationDelegate, NVActivi
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         
         stopAnimating()
-        webView.scrollView.setZoomScale(-300, animated: true)
+        webView.scrollView.setZoomScale(-3000, animated: true)
         
     }
     
