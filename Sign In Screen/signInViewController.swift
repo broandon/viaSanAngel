@@ -34,6 +34,22 @@ class signInViewController: UIViewController, NVActivityIndicatorViewable {
     
     //MARK: Buttons
     
+    @IBAction func asGuest(_ sender: Any) {
+        
+        self.hero.isEnabled = true
+        
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "mainTabBarViewController") as! UITabBarController
+        newViewController.hero.modalAnimationType = .uncover(direction: .down)
+        
+        self.hero.replaceViewController(with: newViewController)
+        
+        UserDefaults.standard.set("0", forKey: "userID")
+        
+        
+    }
+    
+    
     @IBAction func loginWithFacebook(_ sender: Any) {
         
         

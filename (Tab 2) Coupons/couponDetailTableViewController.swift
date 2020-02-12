@@ -24,17 +24,18 @@ class couponDetailTableViewController: UITableViewController, NVActivityIndicato
     @IBOutlet weak var categoriaLabel: UILabel!
     @IBOutlet weak var promocionText: UITextView!
     @IBOutlet weak var terminosText: UITextView!
+    @IBOutlet weak var categoryImage: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupTableView()
         getCouponDetails()
-
+        
     }
     
     func setupTableView() {
-       
+        
         tableView.separatorStyle = .none
         tableView.allowsSelection = false
         logoMarca.layer.borderWidth = 2
@@ -43,19 +44,19 @@ class couponDetailTableViewController: UITableViewController, NVActivityIndicato
         
         
     }
-
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
-
+        
         return 1
-
+        
     }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-
+        
         return 5
-
+        
     }
-
+    
     override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         
         if indexPath.row == 0 {
@@ -70,7 +71,7 @@ class couponDetailTableViewController: UITableViewController, NVActivityIndicato
     func getCouponDetails() {
         
         startAnimating(type: .ballClipRotatePulse)
-
+        
         // POST REQUEST
         
         let url = URL(string: http.baseURL())!
@@ -116,22 +117,25 @@ class couponDetailTableViewController: UITableViewController, NVActivityIndicato
                             let categoria = info["nombre"] as! String
                             let promocion = info["promocion"] as! String
                             let condiciones = info["condiciones"] as! String
+                            let categoriaImagen = info["imagen_categoria"] as! String
+                            
                             
                             let imageMainURL = URL(string: imageMain)
                             let logoURL = URL(string: logo)
+                            let imagenCategoria = URL(string: categoriaImagen)
                             
                             DispatchQueue.main.async {
-                            
+                                
                                 self.imagenCupon.sd_setImage(with: imageMainURL, completed: nil)
                                 self.logoMarca.sd_setImage(with: logoURL, completed: nil)
                                 self.fechaCupon.text = vigencia
                                 self.descuentoCupon.text = descuento
-                                self.categoriaLabel.text = categoria
                                 self.promocionText.text = promocion
                                 self.terminosText.text = condiciones
+                                self.categoryImage.sd_setImage(with: imagenCategoria, completed: nil)
                                 
                                 self.stopAnimating()
-        
+                                
                             }
                             
                         }
@@ -147,7 +151,7 @@ class couponDetailTableViewController: UITableViewController, NVActivityIndicato
                             DispatchQueue.main.async {
                                 
                                 self.stopAnimating()
-                                                                
+                                
                             }
                             
                         } else if stateString == "101" {
@@ -169,7 +173,7 @@ class couponDetailTableViewController: UITableViewController, NVActivityIndicato
                             DispatchQueue.main.async {
                                 
                                 self.stopAnimating()
-                                                                
+                                
                                 let alert = UIAlertController(title: "Error", message: "Hay un problema con el servidor, inténtalo de nuevo más tarde.", preferredStyle: .alert)
                                 
                                 alert.addAction(UIAlertAction(title: "Entendido", style: .default, handler: nil))
@@ -190,10 +194,37 @@ class couponDetailTableViewController: UITableViewController, NVActivityIndicato
     }
     @IBAction func abrirCupon(_ sender: Any) {
         
+        if userInfo == "0" {
+            
+            // Alert with action
+            
+            let alert = UIAlertController(title: "¡Error!", message: "Para usar cupones debes iniciar sesión o crear una cuenta", preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
+
+            
+//            alert.addAction(UIAlertAction(title: "Entendido", style: .cancel, handler: { action in
+//                
+//                self.hero.isEnabled = true
+//                
+//                let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+//                let newViewController = storyBoard.instantiateViewController(withIdentifier: "signInViewController") as! signInViewController
+//                newViewController.hero.modalAnimationType = .fade
+//                
+//                self.hero.replaceViewController(with: newViewController)
+//                
+//            }))
+            
+            self.present(alert, animated: true)
+            
+            return
+            
+        }
+        
         let storyBoard: UIStoryboard = UIStoryboard(name: "folio", bundle: nil)
-                  let vc = storyBoard.instantiateViewController(withIdentifier: "folioViewController") as! folioViewController
-                  vc.modalPresentationStyle = .fullScreen
-                  present(vc, animated: true, completion: nil)
+        let vc = storyBoard.instantiateViewController(withIdentifier: "folioViewController") as! folioViewController
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true, completion: nil)
         
     }
     

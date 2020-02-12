@@ -115,7 +115,6 @@ class CouponsViewController: UIViewController, UITableViewDelegate, UITableViewD
         
            let storyBoard: UIStoryboard = UIStoryboard(name: "Coupons", bundle: nil)
            let vc = storyBoard.instantiateViewController(withIdentifier: "couponDetailViewController") as! couponDetailViewController
-           vc.modalPresentationStyle = .fullScreen
            present(vc, animated: true, completion: nil)
         
     }

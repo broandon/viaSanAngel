@@ -17,10 +17,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="smy-sd-i9F">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="65"/>
                                 <subviews>
                                     <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0WZ-AW-yyH">
-                                        <rect key="frame" x="0.0" y="56" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="21" width="414" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="gvV-oe-vad"/>
                                         </constraints>
@@ -39,14 +39,14 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.7516317964" green="0.20203265549999999" blue="0.29020628329999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="GQC-ne-bwG"/>
+                                    <constraint firstAttribute="height" constant="65" id="GQC-ne-bwG"/>
                                     <constraint firstItem="0WZ-AW-yyH" firstAttribute="leading" secondItem="smy-sd-i9F" secondAttribute="leading" symbolic="YES" id="cRB-Ec-wgE"/>
                                     <constraint firstAttribute="trailing" secondItem="0WZ-AW-yyH" secondAttribute="trailing" symbolic="YES" id="lF5-nH-Eme"/>
                                     <constraint firstAttribute="bottom" secondItem="0WZ-AW-yyH" secondAttribute="bottom" symbolic="YES" id="vzE-Bu-gMR"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Folio de canje" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0W7-Qi-s3U">
-                                <rect key="frame" x="0.0" y="100" width="414" height="30"/>
+                                <rect key="frame" x="0.0" y="65" width="414" height="30"/>
                                 <color key="backgroundColor" red="0.46063125129999999" green="0.093966849150000004" blue="0.23144558069999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="URC-UD-VGZ"/>
@@ -56,7 +56,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Euw-RC-cHf">
-                                <rect key="frame" x="0.0" y="130" width="414" height="766"/>
+                                <rect key="frame" x="0.0" y="95" width="414" height="801"/>
                                 <connections>
                                     <segue destination="S21-Mg-x5f" kind="embed" id="wDU-WR-Wkh"/>
                                 </connections>
@@ -145,7 +145,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FOLIO:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ea2-ih-JJh">
-                                                    <rect key="frame" x="142" y="19" width="130" height="41"/>
+                                                    <rect key="frame" x="70" y="19" width="274" height="41"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="41" id="g4O-Pl-h6g"/>
                                                     </constraints>
@@ -163,10 +163,10 @@
                                             <constraints>
                                                 <constraint firstItem="jRL-7j-XJr" firstAttribute="trailing" secondItem="qd6-73-u0M" secondAttribute="trailingMargin" id="FO0-P9-Vzb"/>
                                                 <constraint firstItem="ea2-ih-JJh" firstAttribute="top" secondItem="qd6-73-u0M" secondAttribute="topMargin" constant="8" id="NV1-x5-czK"/>
-                                                <constraint firstItem="ea2-ih-JJh" firstAttribute="leading" secondItem="qd6-73-u0M" secondAttribute="leadingMargin" constant="122" id="aoM-QP-NeG"/>
+                                                <constraint firstItem="ea2-ih-JJh" firstAttribute="leading" secondItem="qd6-73-u0M" secondAttribute="leadingMargin" constant="50" id="aoM-QP-NeG"/>
                                                 <constraint firstItem="jRL-7j-XJr" firstAttribute="leading" secondItem="qd6-73-u0M" secondAttribute="leadingMargin" id="h4Q-hl-ucd"/>
                                                 <constraint firstItem="jRL-7j-XJr" firstAttribute="top" secondItem="ea2-ih-JJh" secondAttribute="bottom" constant="12" id="oPI-5w-wmn"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="ea2-ih-JJh" secondAttribute="trailing" constant="122" id="pWW-uV-gZS"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="ea2-ih-JJh" secondAttribute="trailing" constant="50" id="pWW-uV-gZS"/>
                                                 <constraint firstItem="jRL-7j-XJr" firstAttribute="bottom" secondItem="qd6-73-u0M" secondAttribute="bottomMargin" id="xCM-nS-h0K"/>
                                             </constraints>
                                         </tableViewCellContentView>

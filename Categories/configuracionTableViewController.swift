@@ -13,18 +13,39 @@ class configuracionTableViewController: UITableViewController {
     
     //MARK: Outlets
     
+    @IBOutlet weak var cerrarSesionText: UILabel!
+    let userInfo = UserDefaults.standard.string(forKey: "userID")
+    
     //MARK: viewDid
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        if userInfo == "0" {
+            
+            cerrarSesionText.text = "Iniciar Sesión"
+            
+        }
         
     }
     
     //MARK: Buttons
     
     @IBAction func closeSession(_ sender: Any) {
+        
+        if userInfo == "0" {
+            
+            self.hero.isEnabled = true
+            
+            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let newViewController = storyBoard.instantiateViewController(withIdentifier: "signInViewController") as! signInViewController
+            newViewController.hero.modalAnimationType = .push(direction: .down)
+            
+            self.hero.replaceViewController(with: newViewController)
+            
+            return
+            
+        }
         
         let alert = UIAlertController(title: "Cerrar Sesión", message: "¿De verdad quieres cerrar la sesión? Deberás introducir tu mail y contraseña nuevamente.", preferredStyle: .alert)
         
@@ -89,6 +110,30 @@ class configuracionTableViewController: UITableViewController {
     //MARK: Funcs
     
     @IBAction func openProfile(_ sender: Any) {
+        
+        if userInfo == "0" {
+                 
+                 // Alert with action
+                 
+                 let alert = UIAlertController(title: "¡Error!", message: "Para ver tu perfil debes iniciar sesión o crear una cuenta", preferredStyle: .alert)
+                 
+                 alert.addAction(UIAlertAction(title: "Entendido", style: .cancel, handler: { action in
+                     
+                     self.hero.isEnabled = true
+                     
+                     let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                     let newViewController = storyBoard.instantiateViewController(withIdentifier: "signInViewController") as! signInViewController
+                     newViewController.hero.modalAnimationType = .fade
+                     
+                     self.hero.replaceViewController(with: newViewController)
+                     
+                 }))
+                 
+                 self.present(alert, animated: true)
+            
+                 return
+                 
+             }
         
         self.hero.isEnabled = true
         

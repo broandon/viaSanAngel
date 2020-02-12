@@ -46,7 +46,7 @@ class eventosTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
-        return 123
+        return 223
         
     }
     

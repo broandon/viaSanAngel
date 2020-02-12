@@ -23,6 +23,7 @@ class storeDetailsTableViewController: UITableViewController, NVActivityIndicato
     @IBOutlet weak var openTo: UILabel!
     @IBOutlet weak var minimunPrice: UILabel!
     @IBOutlet weak var descriptionStore: UITextView!
+    @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var backgroundImage: UIImageView!
     @IBOutlet weak var profileImage: UIImageView!
     
@@ -35,6 +36,8 @@ class storeDetailsTableViewController: UITableViewController, NVActivityIndicato
         tableView.dataSource = self
         tableView.delegate = self
         tableView.rowHeight = UITableView.automaticDimension
+        tableView.separatorStyle = .none
+ 
         configureView()
     }
 
@@ -57,10 +60,6 @@ class storeDetailsTableViewController: UITableViewController, NVActivityIndicato
         // #warning Incomplete implementation, return the number of rows
         return 4
         
-    }
-    
-    override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableView.automaticDimension
     }
     
     func getCouponDetails() {
@@ -123,7 +122,7 @@ class storeDetailsTableViewController: UITableViewController, NVActivityIndicato
                                 self.openFrom.text! = openFrom
                                 self.openTo.text! = openTo
                                 self.minimunPrice.text! = minimum
-                                self.descriptionStore.text! = description
+                                self.descriptionLabel.text = description
                                 self.backgroundImage.sd_setImage(with: backgroundImageURL, completed: nil)
                                 self.profileImage.sd_setImage(with: logoMarcaURL, completed: nil)
                                 
