@@ -10,18 +10,18 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="400" id="KGk-i7-Jjw" customClass="cuponesTableViewCell" customModule="viaSanAngel" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="400"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="420" id="KGk-i7-Jjw" customClass="cuponesTableViewCell" customModule="viaSanAngel" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="420"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="400"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="420"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="vía san angel_iconos -26" translatesAutoresizingMaskIntoConstraints="NO" id="O5w-wv-lUt">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="253"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vía san angel_iconos -26" translatesAutoresizingMaskIntoConstraints="NO" id="O5w-wv-lUt">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="320"/>
                     </imageView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AV0-IM-Smr">
-                        <rect key="frame" x="0.0" y="300" width="320" height="100"/>
+                        <rect key="frame" x="0.0" y="320" width="320" height="100"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CFe-7f-fwh">
                                 <rect key="frame" x="8" y="18" width="66" height="65"/>
@@ -76,11 +76,12 @@
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="O5w-wv-lUt" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="36B-Bz-7Mz"/>
                     <constraint firstAttribute="bottom" secondItem="AV0-IM-Smr" secondAttribute="bottom" id="GEQ-c1-DeP"/>
                     <constraint firstAttribute="trailing" secondItem="AV0-IM-Smr" secondAttribute="trailing" id="KbH-OJ-kgK"/>
                     <constraint firstAttribute="trailing" secondItem="O5w-wv-lUt" secondAttribute="trailing" id="L3k-3t-84g"/>
+                    <constraint firstItem="O5w-wv-lUt" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="T1L-rn-zGd"/>
                     <constraint firstItem="O5w-wv-lUt" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="nHf-db-L6o"/>
+                    <constraint firstItem="AV0-IM-Smr" firstAttribute="top" secondItem="O5w-wv-lUt" secondAttribute="bottom" id="nJh-ff-Etj"/>
                     <constraint firstItem="AV0-IM-Smr" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="szd-82-iq4"/>
                 </constraints>
             </tableViewCellContentView>
@@ -91,7 +92,7 @@
                 <outlet property="textOfCoupon" destination="z1h-yN-Xfw" id="CNl-JQ-dss"/>
                 <outlet property="typeOfFood" destination="CFe-7f-fwh" id="fkO-Xb-WtX"/>
             </connections>
-            <point key="canvasLocation" x="137.68115942028987" y="99.776785714285708"/>
+            <point key="canvasLocation" x="137.68115942028987" y="106.47321428571428"/>
         </tableViewCell>
     </objects>
     <resources>
