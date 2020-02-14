@@ -21,7 +21,6 @@ class couponDetailTableViewController: UITableViewController, NVActivityIndicato
     @IBOutlet weak var logoMarca: UIImageView!
     @IBOutlet weak var fechaCupon: UILabel!
     @IBOutlet weak var descuentoCupon: UILabel!
-    @IBOutlet weak var categoriaLabel: UILabel!
     @IBOutlet weak var promocionText: UITextView!
     @IBOutlet weak var terminosText: UITextView!
     @IBOutlet weak var categoryImage: UIImageView!
@@ -41,8 +40,6 @@ class couponDetailTableViewController: UITableViewController, NVActivityIndicato
         logoMarca.layer.borderWidth = 2
         logoMarca.layer.borderColor = UIColor(red: 0.96, green: 0.96, blue: 0.96, alpha: 1.00).cgColor
         
-        
-        
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -57,16 +54,16 @@ class couponDetailTableViewController: UITableViewController, NVActivityIndicato
         
     }
     
-    override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-        
-        if indexPath.row == 0 {
-            
-            return 200
-            
-        }
-        
-        return UITableView.automaticDimension
-    }
+    //    override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+    //
+    ////        if indexPath.row == 0 {
+    ////
+    ////            return 340
+    ////
+    ////        }
+    //
+    //        return UITableView.automaticDimension
+    //    }
     
     func getCouponDetails() {
         
@@ -140,6 +137,12 @@ class couponDetailTableViewController: UITableViewController, NVActivityIndicato
                             
                         }
                         
+                        DispatchQueue.main.async {
+                            
+                            self.tableView.reloadData()
+                            
+                        }
+                        
                     }
                     
                     if let state = dictionary["state"]{
@@ -192,28 +195,14 @@ class couponDetailTableViewController: UITableViewController, NVActivityIndicato
         task.resume()
         
     }
+    
     @IBAction func abrirCupon(_ sender: Any) {
         
         if userInfo == "0" {
             
-            // Alert with action
-            
             let alert = UIAlertController(title: "¡Error!", message: "Para usar cupones debes iniciar sesión o crear una cuenta", preferredStyle: .alert)
             
             alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
-
-            
-//            alert.addAction(UIAlertAction(title: "Entendido", style: .cancel, handler: { action in
-//                
-//                self.hero.isEnabled = true
-//                
-//                let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-//                let newViewController = storyBoard.instantiateViewController(withIdentifier: "signInViewController") as! signInViewController
-//                newViewController.hero.modalAnimationType = .fade
-//                
-//                self.hero.replaceViewController(with: newViewController)
-//                
-//            }))
             
             self.present(alert, animated: true)
             

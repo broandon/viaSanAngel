@@ -37,8 +37,7 @@ class storeDetailsTableViewController: UITableViewController, NVActivityIndicato
         tableView.delegate = self
         tableView.rowHeight = UITableView.automaticDimension
         tableView.separatorStyle = .none
- 
-        configureView()
+         configureView()
     }
 
     // MARK: Funcs
@@ -177,6 +176,13 @@ class storeDetailsTableViewController: UITableViewController, NVActivityIndicato
                     }
                 }
             }
+            
+            DispatchQueue.main.async {
+                
+                self.tableView.reloadData()
+                
+            }
+            
         }
         
         task.resume()

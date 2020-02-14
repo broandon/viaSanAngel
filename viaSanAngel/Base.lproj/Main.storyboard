@@ -169,6 +169,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="facebookLogin" destination="u0g-ly-CBk" id="s9I-ix-vX8"/>
                         <outlet property="mailTextField" destination="5FI-bR-57o" id="foE-bg-r9L"/>
                         <outlet property="passTextField" destination="3hr-a8-p6k" id="eW8-nu-MPo"/>
                         <outlet property="viaLogo" destination="Hid-d9-GR6" id="b4q-nY-Xcn"/>
@@ -429,21 +430,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8W9-81-D4i">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8W9-81-D4i">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="65"/>
                                 <subviews>
-                                    <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tFi-wA-Y6z">
-                                        <rect key="frame" x="0.0" y="30" width="414" height="50"/>
+                                    <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r4f-Xi-rA5">
+                                        <rect key="frame" x="0.0" y="21" width="414" height="44"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="vb8-ya-xxb"/>
+                                            <constraint firstAttribute="height" constant="44" id="I7g-nc-l8u"/>
                                         </constraints>
-                                        <color key="barTintColor" red="0.82026982309999996" green="0.1177081242" blue="0.27689903970000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="barTintColor" red="0.7516317964" green="0.20203265549999999" blue="0.29020628329999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <items>
-                                            <navigationItem id="0ym-WN-XLS">
-                                                <barButtonItem key="leftBarButtonItem" title="Regresar" id="XaC-a6-T8K">
+                                            <navigationItem id="s1W-YM-pY9">
+                                                <barButtonItem key="leftBarButtonItem" title="Cerrar" id="C89-C0-kmT">
                                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <connections>
-                                                        <action selector="close:" destination="eRq-94-0XR" id="K78-sE-aec"/>
+                                                        <action selector="close:" destination="eRq-94-0XR" id="gHI-Ks-bJf"/>
                                                     </connections>
                                                 </barButtonItem>
                                             </navigationItem>
@@ -452,15 +453,15 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.82026982309999996" green="0.1177081242" blue="0.27689903970000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="6kt-84-pzQ"/>
-                                    <constraint firstItem="tFi-wA-Y6z" firstAttribute="leading" secondItem="bUt-Ah-P92" secondAttribute="leading" id="LnU-4h-nVO"/>
-                                    <constraint firstItem="tFi-wA-Y6z" firstAttribute="trailing" secondItem="bUt-Ah-P92" secondAttribute="trailing" id="U8O-EI-dZ8"/>
-                                    <constraint firstItem="tFi-wA-Y6z" firstAttribute="bottom" secondItem="bUt-Ah-P92" secondAttribute="bottom" id="mMz-z3-rm6"/>
+                                    <constraint firstAttribute="height" constant="65" id="6kt-84-pzQ"/>
+                                    <constraint firstItem="r4f-Xi-rA5" firstAttribute="bottom" secondItem="bUt-Ah-P92" secondAttribute="bottom" id="LEw-gS-Ja4"/>
+                                    <constraint firstItem="r4f-Xi-rA5" firstAttribute="leading" secondItem="bUt-Ah-P92" secondAttribute="leading" id="ThZ-eC-miq"/>
+                                    <constraint firstItem="r4f-Xi-rA5" firstAttribute="trailing" secondItem="bUt-Ah-P92" secondAttribute="trailing" id="UGd-Uy-3d5"/>
                                 </constraints>
                                 <viewLayoutGuide key="safeArea" id="bUt-Ah-P92"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mi perfil" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hvR-6Z-Fa3">
-                                <rect key="frame" x="0.0" y="80" width="414" height="30"/>
+                                <rect key="frame" x="0.0" y="65" width="414" height="30"/>
                                 <color key="backgroundColor" red="0.50690233709999999" green="0.021699357780000001" blue="0.2326350808" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="bv9-5A-nvO"/>
@@ -470,7 +471,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bcn-r1-QxH">
-                                <rect key="frame" x="107" y="152" width="200" height="200"/>
+                                <rect key="frame" x="107" y="137" width="200" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Bcn-r1-QxH" secondAttribute="height" multiplier="1:1" id="ciS-7a-4oy"/>
                                 </constraints>
@@ -483,7 +484,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Escribe tu nombre aqui." textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9ZY-Ta-7m7">
-                                <rect key="frame" x="20" y="360" width="374" height="57"/>
+                                <rect key="frame" x="20" y="345" width="374" height="57"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="57" id="kmN-Jw-Phw"/>
                                 </constraints>
@@ -491,7 +492,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Escribe tu apellido aqui." textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bh3-is-HWD">
-                                <rect key="frame" x="20" y="425" width="374" height="57"/>
+                                <rect key="frame" x="20" y="410" width="374" height="57"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="57" id="vc5-Mh-wk3"/>
                                 </constraints>
@@ -499,7 +500,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Compartenos tu numero" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hrS-75-Tcm">
-                                <rect key="frame" x="20" y="501" width="374" height="36"/>
+                                <rect key="frame" x="20" y="486" width="374" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="kmP-4K-lFB"/>
                                 </constraints>
@@ -507,7 +508,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E1R-HD-TLs">
-                                <rect key="frame" x="107" y="588" width="200" height="45"/>
+                                <rect key="frame" x="107" y="573" width="200" height="45"/>
                                 <color key="backgroundColor" red="0.7516317964" green="0.20203265549999999" blue="0.29020628329999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="E1R-HD-TLs" secondAttribute="height" multiplier="40:9" id="eEX-kc-63G"/>

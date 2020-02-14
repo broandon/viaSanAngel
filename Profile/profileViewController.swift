@@ -16,7 +16,7 @@ class profileViewController: UIViewController, NVActivityIndicatorViewable {
     
     //MARK: Outlets
     
-    @IBOutlet weak var profileImage: UIButton!
+            @IBOutlet weak var profileImage: UIButton!
     
     var imagePicker: ImagePicker!
     var http = HTTPViewController()

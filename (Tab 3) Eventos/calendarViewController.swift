@@ -9,7 +9,7 @@
 import UIKit
 import FSCalendar
 
-class calendarViewController: UIViewController {
+class calendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDataSource {
     
     //MARK: Outlets
 
@@ -18,8 +18,10 @@ class calendarViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        calendar.dataSource = self
+        calendar.delegate = self
 
     }
+    
     
 }

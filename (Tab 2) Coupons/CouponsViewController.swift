@@ -117,6 +117,8 @@ class CouponsViewController: UIViewController, UITableViewDelegate, UITableViewD
            let vc = storyBoard.instantiateViewController(withIdentifier: "couponDetailViewController") as! couponDetailViewController
            present(vc, animated: true, completion: nil)
         
+        
+        
     }
     
     func downloadCoupons() {

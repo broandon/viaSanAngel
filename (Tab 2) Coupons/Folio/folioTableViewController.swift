@@ -25,7 +25,6 @@ class folioTableViewController: UITableViewController {
         
         setupTableView()
         getFolio()
-        
         folio.alpha = 0
         
     }
@@ -159,6 +158,13 @@ class folioTableViewController: UITableViewController {
                     }
                 }
             }
+            
+            DispatchQueue.main.async {
+                
+                self.tableView.reloadData()
+                
+            }
+            
         }
         
         task.resume()

@@ -71,7 +71,7 @@ class couponDetailViewController: UIViewController, NVActivityIndicatorViewable 
                         
                         if let info = data["info"] as? Dictionary<String, Any> {
                             
-                            let nombreMarca = info["nombre"] as! String
+                            let nombreMarca = info["nombre_marca"] as! String
                             
                             print(nombreMarca)
                             
