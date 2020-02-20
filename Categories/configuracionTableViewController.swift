@@ -33,19 +33,6 @@ class configuracionTableViewController: UITableViewController {
     
     @IBAction func closeSession(_ sender: Any) {
         
-        if userInfo == "0" {
-            
-            self.hero.isEnabled = true
-            
-            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let newViewController = storyBoard.instantiateViewController(withIdentifier: "signInViewController") as! signInViewController
-            newViewController.hero.modalAnimationType = .push(direction: .down)
-            
-            self.hero.replaceViewController(with: newViewController)
-            
-            return
-            
-        }
         
         let alert = UIAlertController(title: "Cerrar Sesión", message: "¿De verdad quieres cerrar la sesión? Deberás introducir tu mail y contraseña nuevamente.", preferredStyle: .alert)
         
