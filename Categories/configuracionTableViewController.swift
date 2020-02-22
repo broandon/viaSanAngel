@@ -23,7 +23,7 @@ class configuracionTableViewController: UITableViewController {
         
         if userInfo == "0" {
             
-            cerrarSesionText.text = "Iniciar Sesión"
+            cerrarSesionText.text = "Cerrar sesión de invitado"
             
         }
         
@@ -40,7 +40,8 @@ class configuracionTableViewController: UITableViewController {
         alert.addAction(UIAlertAction(title: "Cerrar sesión", style: .destructive, handler: { action in
             
             UserDefaults.standard.set(false, forKey: "isLoggedIn")
-            
+            UserDefaults.standard.removeObject(forKey: "userID")
+  
             self.hero.isEnabled = true
             
             let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
@@ -105,11 +106,14 @@ class configuracionTableViewController: UITableViewController {
                  let alert = UIAlertController(title: "¡Error!", message: "Para ver tu perfil debes iniciar sesión o crear una cuenta", preferredStyle: .alert)
                  
                  alert.addAction(UIAlertAction(title: "Entendido", style: .cancel, handler: { action in
-                     
+                    
+                    UserDefaults.standard.set(false, forKey: "isLoggedIn")
+
                      self.hero.isEnabled = true
                      
                      let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                      let newViewController = storyBoard.instantiateViewController(withIdentifier: "signInViewController") as! signInViewController
+                    newViewController.modalPresentationStyle = .fullScreen
                      newViewController.hero.modalAnimationType = .fade
                      
                      self.hero.replaceViewController(with: newViewController)

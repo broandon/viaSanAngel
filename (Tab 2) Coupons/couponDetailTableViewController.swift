@@ -11,6 +11,8 @@ import NVActivityIndicatorView
 
 class couponDetailTableViewController: UITableViewController, NVActivityIndicatorViewable {
     
+    
+    
     //MARK: Outlets
     
     let http = HTTPViewController()
@@ -202,7 +204,17 @@ class couponDetailTableViewController: UITableViewController, NVActivityIndicato
             
             let alert = UIAlertController(title: "¡Error!", message: "Para usar cupones debes iniciar sesión o crear una cuenta", preferredStyle: .alert)
             
-            alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
+            alert.addAction(UIAlertAction(title: "Crear cuenta", style: .cancel, handler: { action in
+                
+                UserDefaults.standard.set(false, forKey: "isLoggedIn")
+
+                
+                let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                let goBackVC = storyBoard.instantiateViewController(withIdentifier: "signInViewController") as! signInViewController
+                goBackVC.modalPresentationStyle = .fullScreen
+                self.present(goBackVC, animated: true, completion: nil)
+                
+            }))
             
             self.present(alert, animated: true)
             

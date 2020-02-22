@@ -23,12 +23,15 @@ class signInViewController: UIViewController, NVActivityIndicatorViewable {
     @IBOutlet weak var facebookLogin: UIButton!
     
     let http = HTTPViewController()
+    let userInfo = UserDefaults.standard.string(forKey: "userID")
     
     //MARK: viewDid
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
+        print("Starting ID")
+        print(userInfo)
         LogginCheckup()
         
     }
@@ -45,6 +48,7 @@ class signInViewController: UIViewController, NVActivityIndicatorViewable {
         
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let newViewController = storyBoard.instantiateViewController(withIdentifier: "mainTabBarViewController") as! UITabBarController
+        newViewController.modalPresentationStyle = .fullScreen
         newViewController.hero.modalAnimationType = .uncover(direction: .down)
         
         self.hero.replaceViewController(with: newViewController)
@@ -460,6 +464,7 @@ class signInViewController: UIViewController, NVActivityIndicatorViewable {
     
     func LogginCheckup() {
         
+        
         if UserDefaults.standard.bool(forKey: "isLoggedIn") == true {
             
             print("is true")
@@ -469,6 +474,12 @@ class signInViewController: UIViewController, NVActivityIndicatorViewable {
             appDelegate?.window??.rootViewController = homePage
             
         }
+        
+        if userInfo ==  "0" {
+                
+                UserDefaults.standard.set(true, forKey: "isLoggedIn")
+                
+            }
         
     }
     

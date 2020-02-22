@@ -79,7 +79,7 @@
 		CFAB54A223D82A4D005A35DC /* storeDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = storeDetail.storyboard; sourceTree = "<group>"; };
 		CFAB54A423D82E14005A35DC /* storeDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = storeDetailsViewController.swift; sourceTree = "<group>"; };
 		CFAB54A623D82F2F005A35DC /* storeDetailsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = storeDetailsTableViewController.swift; sourceTree = "<group>"; };
-		CFBCB5292347E730009F32B0 /* viaSanAngel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = viaSanAngel.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFBCB5292347E730009F32B0 /* Vía.SanÁngel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Vía.SanÁngel.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFBCB52C2347E730009F32B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CFBCB5302347E730009F32B0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CFBCB5332347E730009F32B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -222,7 +222,7 @@
 		CFBCB52A2347E730009F32B0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CFBCB5292347E730009F32B0 /* viaSanAngel.app */,
+				CFBCB5292347E730009F32B0 /* Vía.SanÁngel.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -290,7 +290,7 @@
 			);
 			name = viaSanAngel;
 			productName = viaSanAngel;
-			productReference = CFBCB5292347E730009F32B0 /* viaSanAngel.app */;
+			productReference = CFBCB5292347E730009F32B0 /* Vía.SanÁngel.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -574,7 +574,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.viasanangel.broandon;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Vía.SanÁngel";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -594,7 +594,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.viasanangel.broandon;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Vía.SanÁngel";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
