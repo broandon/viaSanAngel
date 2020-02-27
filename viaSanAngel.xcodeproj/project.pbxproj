@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9D95EC722407D9B100934CBB /* eventsDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D95EC712407D9B100934CBB /* eventsDetails.storyboard */; };
+		9D95EC742407DAC600934CBB /* eventsDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D95EC732407DAC600934CBB /* eventsDetailsViewController.swift */; };
+		9D95EC762407DB0400934CBB /* eventsDetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D95EC752407DB0300934CBB /* eventsDetailsTableViewController.swift */; };
 		CF09567D234A749400A7C213 /* signUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF09567C234A749400A7C213 /* signUpViewController.swift */; };
 		CF095680234A7A4100A7C213 /* mainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF09567F234A7A4100A7C213 /* mainTabBarViewController.swift */; };
 		CF095683234A7A8700A7C213 /* StoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF095682234A7A8700A7C213 /* StoresViewController.swift */; };
@@ -53,6 +56,9 @@
 /* Begin PBXFileReference section */
 		42DB1E5933F9273554AC93DF /* Pods-viaSanAngel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-viaSanAngel.debug.xcconfig"; path = "Target Support Files/Pods-viaSanAngel/Pods-viaSanAngel.debug.xcconfig"; sourceTree = "<group>"; };
 		43FEB4509E4508962807A5E7 /* Pods-viaSanAngel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-viaSanAngel.release.xcconfig"; path = "Target Support Files/Pods-viaSanAngel/Pods-viaSanAngel.release.xcconfig"; sourceTree = "<group>"; };
+		9D95EC712407D9B100934CBB /* eventsDetails.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = eventsDetails.storyboard; sourceTree = "<group>"; };
+		9D95EC732407DAC600934CBB /* eventsDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eventsDetailsViewController.swift; sourceTree = "<group>"; };
+		9D95EC752407DB0300934CBB /* eventsDetailsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eventsDetailsTableViewController.swift; sourceTree = "<group>"; };
 		C2E0F7D5664FE877D8C14E35 /* Pods_viaSanAngel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_viaSanAngel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF09567C234A749400A7C213 /* signUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signUpViewController.swift; sourceTree = "<group>"; };
 		CF09567F234A7A4100A7C213 /* mainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainTabBarViewController.swift; sourceTree = "<group>"; };
@@ -82,7 +88,7 @@
 		CFAB54A223D82A4D005A35DC /* storeDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = storeDetail.storyboard; sourceTree = "<group>"; };
 		CFAB54A423D82E14005A35DC /* storeDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = storeDetailsViewController.swift; sourceTree = "<group>"; };
 		CFAB54A623D82F2F005A35DC /* storeDetailsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = storeDetailsTableViewController.swift; sourceTree = "<group>"; };
-		CFBCB5292347E730009F32B0 /* Vía.SanÁngel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Vía.SanÁngel.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFBCB5292347E730009F32B0 /* ViaSanAngel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ViaSanAngel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFBCB52C2347E730009F32B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CFBCB5302347E730009F32B0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CFBCB5332347E730009F32B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -156,6 +162,9 @@
 				CF1223EA23F216D3006A93B0 /* eventosTableViewCell.swift */,
 				CF1223EB23F216D3006A93B0 /* eventosTableViewCell.xib */,
 				CF1223EE23F22079006A93B0 /* calendarViewController.swift */,
+				9D95EC712407D9B100934CBB /* eventsDetails.storyboard */,
+				9D95EC732407DAC600934CBB /* eventsDetailsViewController.swift */,
+				9D95EC752407DB0300934CBB /* eventsDetailsTableViewController.swift */,
 			);
 			path = "(Tab 3) Eventos";
 			sourceTree = "<group>";
@@ -225,7 +234,7 @@
 		CFBCB52A2347E730009F32B0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CFBCB5292347E730009F32B0 /* Vía.SanÁngel.app */,
+				CFBCB5292347E730009F32B0 /* ViaSanAngel.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -295,7 +304,7 @@
 			);
 			name = viaSanAngel;
 			productName = viaSanAngel;
-			productReference = CFBCB5292347E730009F32B0 /* Vía.SanÁngel.app */;
+			productReference = CFBCB5292347E730009F32B0 /* ViaSanAngel.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -338,6 +347,7 @@
 			files = (
 				CFF82BBD23D8BE1E00CF76BA /* Coupons.storyboard in Resources */,
 				CFF82BBB23D8BC9700CF76BA /* userDefaults.rtf in Resources */,
+				9D95EC722407D9B100934CBB /* eventsDetails.storyboard in Resources */,
 				CF74A17623D1354400950974 /* tiendasTableViewCell.xib in Resources */,
 				CFBCB53C2347E731009F32B0 /* LaunchScreen.storyboard in Resources */,
 				CF1223ED23F216D3006A93B0 /* eventosTableViewCell.xib in Resources */,
@@ -410,6 +420,7 @@
 				CFBCB5312347E730009F32B0 /* ViewController.swift in Sources */,
 				CF852C2923D2642F00A78E7D /* pickerDelegate.swift in Sources */,
 				CFBCB5372347E730009F32B0 /* viaSanAngel.xcdatamodeld in Sources */,
+				9D95EC762407DB0400934CBB /* eventsDetailsTableViewController.swift in Sources */,
 				CF09567D234A749400A7C213 /* signUpViewController.swift in Sources */,
 				CF7532C523CAE4D400C3DFF4 /* baseURL.swift in Sources */,
 				CFF82BBF23D8BFC700CF76BA /* couponDetailViewController.swift in Sources */,
@@ -422,6 +433,7 @@
 				CF74A17523D1354400950974 /* tiendasTableViewCell.swift in Sources */,
 				CF1223EF23F22079006A93B0 /* calendarViewController.swift in Sources */,
 				CF095683234A7A8700A7C213 /* StoresViewController.swift in Sources */,
+				9D95EC742407DAC600934CBB /* eventsDetailsViewController.swift in Sources */,
 				CF095680234A7A4100A7C213 /* mainTabBarViewController.swift in Sources */,
 				CF59E4D823D65F6E000FBB25 /* CouponsViewController.swift in Sources */,
 				CFAB54A723D82F2F005A35DC /* storeDetailsTableViewController.swift in Sources */,
@@ -573,15 +585,17 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "viaSanAngel/Vía.SanÁngel.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = W4MERUEP35;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = 6RW3S42MR2;
 				INFOPLIST_FILE = viaSanAngel/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.viasanangel.easycode;
-				PRODUCT_NAME = "Vía.SanÁngel";
+				MARKETING_VERSION = 1.1.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.viasanangel.broandon;
+				PRODUCT_NAME = ViaSanAngel;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -594,15 +608,17 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "viaSanAngel/Vía.SanÁngel.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = W4MERUEP35;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = 6RW3S42MR2;
 				INFOPLIST_FILE = viaSanAngel/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.viasanangel.easycode;
-				PRODUCT_NAME = "Vía.SanÁngel";
+				MARKETING_VERSION = 1.1.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.viasanangel.broandon;
+				PRODUCT_NAME = ViaSanAngel;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

@@ -11,7 +11,7 @@
         <!--Sign In View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="signInViewController" id="BYZ-38-t0r" customClass="signInViewController" customModule="viaSanAngel" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="signInViewController" id="BYZ-38-t0r" customClass="signInViewController" customModule="ViaSanAngel" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -182,7 +182,7 @@
         <!--Eventos-->
         <scene sceneID="rrD-ha-eok">
             <objects>
-                <viewController storyboardIdentifier="eventsViewController" id="dwM-Sd-3Kh" customClass="eventsViewController" customModule="viaSanAngel" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="eventsViewController" id="dwM-Sd-3Kh" customClass="eventsViewController" customModule="ViaSanAngel" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="D6X-iE-yPb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -217,7 +217,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ecU-te-nux">
-                                <rect key="frame" x="0.0" y="148" width="414" height="31"/>
+                                <rect key="frame" x="23" y="148" width="368" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="gu2-nD-8zf"/>
                                 </constraints>
@@ -254,9 +254,9 @@
                             <constraint firstItem="4Ob-vC-twz" firstAttribute="trailing" secondItem="evC-D8-rPb" secondAttribute="trailing" id="TT5-QY-m9T"/>
                             <constraint firstItem="Goc-J0-hDJ" firstAttribute="leading" secondItem="D6X-iE-yPb" secondAttribute="leading" id="XEs-tF-V6B"/>
                             <constraint firstItem="ecU-te-nux" firstAttribute="top" secondItem="vAZ-MI-amS" secondAttribute="bottom" constant="8" id="bPS-xN-FHO"/>
-                            <constraint firstItem="ecU-te-nux" firstAttribute="leading" secondItem="evC-D8-rPb" secondAttribute="leading" id="dRh-AM-Kzq"/>
+                            <constraint firstItem="ecU-te-nux" firstAttribute="leading" secondItem="evC-D8-rPb" secondAttribute="leading" constant="23" id="dRh-AM-Kzq"/>
                             <constraint firstAttribute="bottom" secondItem="4Ob-vC-twz" secondAttribute="bottom" id="g64-tq-kml"/>
-                            <constraint firstItem="ecU-te-nux" firstAttribute="trailing" secondItem="evC-D8-rPb" secondAttribute="trailing" id="kcE-nA-z6Z"/>
+                            <constraint firstItem="ecU-te-nux" firstAttribute="trailing" secondItem="evC-D8-rPb" secondAttribute="trailing" constant="-23" id="kcE-nA-z6Z"/>
                             <constraint firstItem="4Ob-vC-twz" firstAttribute="leading" secondItem="evC-D8-rPb" secondAttribute="leading" id="t6M-yP-TTm"/>
                             <constraint firstItem="4Ob-vC-twz" firstAttribute="top" secondItem="ecU-te-nux" secondAttribute="bottom" constant="8" id="w6N-d6-vHI"/>
                             <constraint firstItem="oVg-tN-HO1" firstAttribute="top" secondItem="D6X-iE-yPb" secondAttribute="top" id="yNy-06-r2M"/>
@@ -278,7 +278,7 @@
         <!--Mapa-->
         <scene sceneID="2TM-Zk-dhU">
             <objects>
-                <viewController id="guf-uL-Hee" customClass="mapWebViewViewController" customModule="viaSanAngel" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="guf-uL-Hee" customClass="mapWebViewViewController" customModule="ViaSanAngel" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YQg-sA-kO9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -359,7 +359,7 @@
         <!--Ajustes-->
         <scene sceneID="fz3-0R-PHw">
             <objects>
-                <viewController storyboardIdentifier="configuracionViewController" id="SMz-yv-sEH" customClass="configuracionViewController" customModule="viaSanAngel" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="configuracionViewController" id="SMz-yv-sEH" customClass="configuracionViewController" customModule="ViaSanAngel" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LSY-dl-qsC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -425,7 +425,7 @@
         <!--Profile View Controller-->
         <scene sceneID="VIA-6y-O6j">
             <objects>
-                <viewController storyboardIdentifier="myProfileViewController" modalPresentationStyle="overCurrentContext" id="eRq-94-0XR" customClass="profileViewController" customModule="viaSanAngel" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="myProfileViewController" modalPresentationStyle="overCurrentContext" id="eRq-94-0XR" customClass="profileViewController" customModule="ViaSanAngel" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wSa-I0-CdR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -475,7 +475,6 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Bcn-r1-QxH" secondAttribute="height" multiplier="1:1" id="ciS-7a-4oy"/>
                                 </constraints>
-                                <state key="normal" image="vía san angel_iconos -9"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
                                 </userDefinedRuntimeAttributes>
@@ -569,7 +568,7 @@
         <!--Store Details Table View Controller-->
         <scene sceneID="0gm-G4-1Os">
             <objects>
-                <tableViewController storyboardIdentifier="storeDetailsTableViewController" id="RZR-IJ-8Dc" customClass="storeDetailsTableViewController" customModule="viaSanAngel" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="storeDetailsTableViewController" id="RZR-IJ-8Dc" customClass="storeDetailsTableViewController" customModule="ViaSanAngel" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="SBO-uf-8qf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -623,7 +622,7 @@
         <!--Configuracion Table View Controller-->
         <scene sceneID="F6W-DG-kz0">
             <objects>
-                <tableViewController modalTransitionStyle="crossDissolve" id="UJG-yQ-RJq" customClass="configuracionTableViewController" customModule="viaSanAngel" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController modalTransitionStyle="crossDissolve" id="UJG-yQ-RJq" customClass="configuracionTableViewController" customModule="ViaSanAngel" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="static" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="LcS-5b-fUb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="547"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -647,7 +646,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vía san angel_iconos -9" translatesAutoresizingMaskIntoConstraints="NO" id="lMB-rx-lJq">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imagenRojaPerfil" translatesAutoresizingMaskIntoConstraints="NO" id="lMB-rx-lJq">
                                                     <rect key="frame" x="364" y="11" width="30" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="11g-gS-Wf7"/>
@@ -726,7 +725,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vía san angel_iconos -12" translatesAutoresizingMaskIntoConstraints="NO" id="W7b-Nq-ycB">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="balanceRed" translatesAutoresizingMaskIntoConstraints="NO" id="W7b-Nq-ycB">
                                                     <rect key="frame" x="356" y="11" width="38" height="38"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="W7b-Nq-ycB" secondAttribute="height" multiplier="1:1" id="1ag-Tw-9DF"/>
@@ -769,7 +768,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vía san angel_iconos -13" translatesAutoresizingMaskIntoConstraints="NO" id="dym-xp-UWw">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="doorRed" translatesAutoresizingMaskIntoConstraints="NO" id="dym-xp-UWw">
                                                     <rect key="frame" x="356" y="11" width="38" height="38"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="dym-xp-UWw" secondAttribute="height" multiplier="1:1" id="7Pz-qW-pCv"/>
@@ -812,7 +811,7 @@
                                                                 <constraint firstAttribute="width" constant="49" id="Y4a-CD-coK"/>
                                                                 <constraint firstAttribute="height" constant="49" id="bov-yJ-xze"/>
                                                             </constraints>
-                                                            <state key="normal" title="Button" image="vía san angel_iconos -25"/>
+                                                            <state key="normal" title="Button" image="facebookIcon"/>
                                                             <connections>
                                                                 <action selector="openFacebookProfile:" destination="UJG-yQ-RJq" eventType="touchUpInside" id="iPJ-wS-5G5"/>
                                                             </connections>
@@ -823,7 +822,7 @@
                                                                 <constraint firstAttribute="height" constant="49" id="T6H-L2-d45"/>
                                                                 <constraint firstAttribute="width" constant="49" id="rdi-EA-b5a"/>
                                                             </constraints>
-                                                            <state key="normal" title="Button" image="vía san angel_iconos -27"/>
+                                                            <state key="normal" title="Button" image="instagramIcon"/>
                                                             <connections>
                                                                 <action selector="openInstagramProfile:" destination="UJG-yQ-RJq" eventType="touchUpInside" id="qAg-24-Ija"/>
                                                             </connections>
@@ -877,7 +876,7 @@
         <!--Main Tab Bar View Controller-->
         <scene sceneID="GKT-ND-hEZ">
             <objects>
-                <tabBarController storyboardIdentifier="mainTabBarViewController" id="QPs-Wi-Hth" customClass="mainTabBarViewController" customModule="viaSanAngel" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="mainTabBarViewController" id="QPs-Wi-Hth" customClass="mainTabBarViewController" customModule="ViaSanAngel" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="1oN-6l-sTX"/>
                     <tabBar key="tabBar" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" itemPositioning="fill" id="tiR-mz-PGg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
@@ -902,7 +901,7 @@
         <!--Sign In View Controller-->
         <scene sceneID="H1T-Y6-V0w">
             <objects>
-                <viewController storyboardIdentifier="recoverAccount" id="Gku-tR-eGM" customClass="signInViewController" customModule="viaSanAngel" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="recoverAccount" id="Gku-tR-eGM" customClass="signInViewController" customModule="ViaSanAngel" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sr9-Xs-EWS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -994,7 +993,7 @@
         <!--Sign Up View Controller-->
         <scene sceneID="nnp-uD-AbF">
             <objects>
-                <viewController storyboardIdentifier="signUp" id="LaB-kK-nn6" customClass="signUpViewController" customModule="viaSanAngel" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="signUp" id="LaB-kK-nn6" customClass="signUpViewController" customModule="ViaSanAngel" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FlN-hO-cnZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1128,7 +1127,7 @@
         <!--Tiendas-->
         <scene sceneID="mLJ-gb-6uz">
             <objects>
-                <viewController storyboardIdentifier="StoresViewController" id="fT7-rP-dNK" customClass="StoresViewController" customModule="viaSanAngel" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="StoresViewController" id="fT7-rP-dNK" customClass="StoresViewController" customModule="ViaSanAngel" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DbJ-Jh-0Hz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1202,7 +1201,7 @@
         <!--Cupones-->
         <scene sceneID="WMT-7U-2jh">
             <objects>
-                <viewController id="tUl-2m-6Da" customClass="CouponsViewController" customModule="viaSanAngel" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="tUl-2m-6Da" customClass="CouponsViewController" customModule="ViaSanAngel" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1uo-EL-Jtj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1268,7 +1267,7 @@
         <!--Eventos Table View Controller-->
         <scene sceneID="y5f-bu-DKQ">
             <objects>
-                <tableViewController storyboardIdentifier="eventosTableViewController" id="etp-lD-RZ0" customClass="eventosTableViewController" customModule="viaSanAngel" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="eventosTableViewController" id="etp-lD-RZ0" customClass="eventosTableViewController" customModule="ViaSanAngel" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="DBp-BO-MhO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="501"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1296,7 +1295,7 @@
         <!--Calendar View Controller-->
         <scene sceneID="9tb-Ym-Wxj">
             <objects>
-                <viewController storyboardIdentifier="calendarViewController" id="2yM-Xj-0p0" customClass="calendarViewController" customModule="viaSanAngel" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="calendarViewController" id="2yM-Xj-0p0" customClass="calendarViewController" customModule="ViaSanAngel" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lzB-f1-wb9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="501"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1396,18 +1395,18 @@
         </scene>
     </scenes>
     <resources>
+        <image name="balanceRed" width="47.666667938232422" height="48.666667938232422"/>
         <image name="cuponIcon" width="32.5" height="32.5"/>
+        <image name="doorRed" width="47.666667938232422" height="48.666667938232422"/>
         <image name="easycode_firma" width="111.5" height="25.5"/>
         <image name="eventsIcon" width="25" height="25"/>
+        <image name="facebookIcon" width="47.666667938232422" height="47.666667938232422"/>
+        <image name="imagenRojaPerfil" width="143" height="146"/>
+        <image name="instagramIcon" width="47.666667938232422" height="47.666667938232422"/>
         <image name="logo-via-san-angel-2" width="494" height="500"/>
         <image name="logo-via-san-angel-3" width="500" height="116"/>
         <image name="mapsIcon" width="25" height="25"/>
         <image name="settingsIcon" width="25" height="25"/>
         <image name="storeIcon" width="25" height="25"/>
-        <image name="vía san angel_iconos -12" width="47.666667938232422" height="48.666667938232422"/>
-        <image name="vía san angel_iconos -13" width="47.666667938232422" height="48.666667938232422"/>
-        <image name="vía san angel_iconos -25" width="47.666667938232422" height="47.666667938232422"/>
-        <image name="vía san angel_iconos -27" width="47.666667938232422" height="47.666667938232422"/>
-        <image name="vía san angel_iconos -9" width="143" height="146"/>
     </resources>
 </document>

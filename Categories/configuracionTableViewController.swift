@@ -21,11 +21,7 @@ class configuracionTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if userInfo == "0" {
-            
-            cerrarSesionText.text = "Cerrar sesión de invitado"
-            
-        }
+        
         
     }
     

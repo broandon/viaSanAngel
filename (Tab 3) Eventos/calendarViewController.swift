@@ -17,34 +17,106 @@ class calendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDa
     var reuseDocument = "DocumentoCellEventosCalendar"
     let userInfo = UserDefaults.standard.string(forKey: "userID")
     let http = HTTPViewController()
-
+    var eventosParaCalendario : Array<String> = []
+    
+    fileprivate lazy var dateFormatter2: DateFormatter = {
+        
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd"
+        return formatter
+        
+    }()
+    
     @IBOutlet weak var calendar: FSCalendar!
     
     //MARK: viewDid
     
     override func viewDidLoad() {
         super.viewDidLoad()
-                
+        
+        
+        downloadAllDates()
+        
         calendar.dataSource = self
         calendar.delegate = self
         
-        downloadAllDates()
-
+        var dateComponents = DateComponents()
+        dateComponents.year = 2020
+        dateComponents.month = 01
+        dateComponents.day = 01
+        let userCalendar = Calendar.current
+        calendar.setCurrentPage(userCalendar.date(from: dateComponents)!, animated: false)                
+        
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+        let date = Date()
+        
+        let calendar2 = Calendar.current
+        
+        var dateComponents = DateComponents()
+        dateComponents.year = calendar2.component(.year, from: date)
+        dateComponents.month = calendar2.component(.month, from: date)
+        dateComponents.day = calendar2.component(.day, from: date)
+        
+        let userCalendar = Calendar.current
+        
+        calendar.setCurrentPage(userCalendar.date(from: dateComponents)!, animated: true)
+                
+    }
+    
     
     //MARK: Func
     
-    func calendar(_ calendar: FSCalendar, numberOfEventsFor date: Date) -> Int {
-          let dateFormatter = DateFormatter()
-          dateFormatter.dateFormat = "yyyy/MM/dd"
-          dateFormatter.locale = Locale.init(identifier: "es_MX")
+    internal func calendar(_ calendar: FSCalendar, numberOfEventsFor date: Date) -> Int {
         
-        return 1
+        let dateString = self.dateFormatter2.string(from: date)
+        
+        if self.eventosParaCalendario.contains(dateString) {
+            return 1
+        }
+        
+        if self.eventosParaCalendario.contains(dateString) {
+            return 3
+        }
+        
+        return 0
+    }
+
+
+    
+    func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
+        
+        let dateString = self.dateFormatter2.string(from: date)
+        
+        if self.eventosParaCalendario.contains(dateString) {
+            
+            print(self.dateFormatter2.string(from: date))
+            print("this contains stuff")
+            
+        } else {
+            
+            print("Nothing here")
+            
+        }
+        
+    }
+    
+    func calendar(_ calendar: FSCalendar, willDisplay cell: FSCalendarCell, for date: Date, at monthPosition: FSCalendarMonthPosition) {
+        
+        let dateString = self.dateFormatter2.string(from: date)
+        
+        if self.eventosParaCalendario.contains(dateString) {
+            
+            cell.eventIndicator.numberOfEvents = 1
+            
+        }
         
     }
     
     func downloadAllDates() {
-        
+                
         let url = URL(string: http.baseURL())!
         
         var request = URLRequest(url: url)
@@ -60,44 +132,47 @@ class calendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDa
             
             do {
                 
-                
                 let json = try? JSONSerialization.jsonObject(with: data, options: .mutableContainers)
                 
-                if let dictionary = json as? Dictionary<String, Any>
+                if let dictionary = json as? [String: Any]
                     
                 {
-                    if let items = dictionary["data"] as? Dictionary<String, Any> {
+                    
+                    if let items = dictionary["data"] as? [Dictionary<String, Any>] {
                         
-                        print("ITEMS HERE")
-                        print(items)
-                        
-                        if let fechas = items["fecha"] as? [Dictionary<String, Any>] {
-
-                        print(fechas)
-
-
+                        for d in items {
+                            
+                            self.eventos.append(d)
+                            
+                            print(self.eventos.count)
                         }
                         
-//                        if let fechasReales = items["fecha"] as? [Dictionary<String, Any>] {
-//
-//                            print("FECHAS")
-//                            print(fechasReales)
-//
-//                        }
-//
-//                        for d in items {
-//
-//                          //  self.eventos.append(d)
-//
-//                        }
+                    }
+                    
+                    if let data = dictionary["data"] as? [[String: Any]] {
+                        
+                        
+                        for datas in data {
+                                                        
+                            if let fechaReal = datas["fecha"] as? String {
+                                
+                                self.eventosParaCalendario.append(fechaReal)
+
+                                
+                            }
+                            
+                        }
                         
                     }
                     
                 }
                 
+                
             }
             
         }.resume()
+        
+        DispatchQueue.main.async { self.calendar.reloadData() }
         
     }
     
