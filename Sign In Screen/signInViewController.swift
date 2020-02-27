@@ -11,6 +11,7 @@ import Hero
 import NVActivityIndicatorView
 import SDWebImage
 import FBSDKLoginKit
+import Firebase
 
 class signInViewController: UIViewController, NVActivityIndicatorViewable {
     
@@ -24,6 +25,7 @@ class signInViewController: UIViewController, NVActivityIndicatorViewable {
     
     let http = HTTPViewController()
     let userInfo = UserDefaults.standard.string(forKey: "userID")
+    let elMeroToken = UserDefaults.standard.string(forKey: "tokenFCM")
     
     //MARK: viewDid
     
@@ -33,6 +35,7 @@ class signInViewController: UIViewController, NVActivityIndicatorViewable {
         print("Starting ID")
         print(userInfo)
         LogginCheckup()
+    
         
     }
     
@@ -292,6 +295,12 @@ class signInViewController: UIViewController, NVActivityIndicatorViewable {
           })
         }
         
+        if elMeroToken == nil  {
+                  
+                  getNewToken()
+                  
+              } else {print("Token already asigned")}
+        
     }
     
     
@@ -403,6 +412,12 @@ class signInViewController: UIViewController, NVActivityIndicatorViewable {
                                 
                             }
                             
+                            if self.elMeroToken == nil  {
+                                      
+                                self.getNewToken()
+                                      
+                                  } else {print("Token already asigned")}
+                            
                         } else if stateString == "101" {
                             
                             DispatchQueue.main.async {
@@ -461,6 +476,65 @@ class signInViewController: UIViewController, NVActivityIndicatorViewable {
     
     
     //MARK: Funcs
+    
+    func getNewToken() {
+        
+        
+        print("started")
+        InstanceID.instanceID().instanceID { (result, error) in
+            if let error = error {
+                print("Error fetching remote instange ID: \(error)")
+            } else if let result = result {
+                print("Remote instance ID token: \(result.token)")
+                
+                let tokenFCM = result.token
+                
+                UserDefaults.standard.set(tokenFCM, forKey: "tokenFCM")
+                
+                let url = URL(string: self.http.baseURL())!
+                
+                var request = URLRequest(url: url)
+                request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type") // Headers
+                request.httpMethod = "POST" // Metodo
+                
+                
+                let strin1 = "funcion=sendToken&id_user="+self.userInfo!
+                let string2 = "&token="+tokenFCM
+                let string3 = "&type_device=1"
+                
+                let postString = strin1+string2+string3
+                
+                print(postString)
+                
+                request.httpBody = postString.data(using: .utf8) // SE codifica a UTF-8
+                
+                let task = URLSession.shared.dataTask(with: request) { data, response, error in
+                    
+                    // Validacion para errores de Red
+                    
+                    guard let data = data, error == nil else {
+                        print("error=\(String(describing: error))")
+                        return
+                    }
+                    
+                    do {
+                        
+                        let json = try? JSONSerialization.jsonObject(with: data, options: []) as? NSDictionary
+                        print(" \n\n Respuesta: ")
+                        print(" ============ ")
+                        print(json as Any)
+                        print(" ============ ")
+                        
+                    }
+                    
+                }
+                
+              task.resume()
+                
+            }
+        }
+
+    }
     
     func LogginCheckup() {
         

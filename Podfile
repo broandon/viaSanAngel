@@ -16,5 +16,7 @@ target 'viaSanAngel' do
   pod 'FSCalendar'
   pod 'FBSDKCoreKit'
   pod 'FBSDKLoginKit'
-
+  pod 'Firebase/Messaging'
+  pod 'Firebase/Analytics'
+  
 end
