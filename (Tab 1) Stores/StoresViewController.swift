@@ -28,7 +28,7 @@ class StoresViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         searchBar.isHidden = true
         setupTableView()
         downloadStores()
@@ -46,14 +46,14 @@ class StoresViewController: UIViewController, UITableViewDelegate, UITableViewDa
     func setupTableView() {
         
         tableView.delegate = self
-          tableView.dataSource = self
-          searchBar.delegate = self
-          tableView.separatorStyle = .none
-          tableView.allowsSelection = true
-          tableView.separatorInset = UIEdgeInsets(top: 0,left: 0,bottom: 0,right: 420)
-                    
-          let documentXib = UINib(nibName: "tiendasTableViewCell", bundle: nil)
-          tableView.register(documentXib, forCellReuseIdentifier: reuseDocument)
+        tableView.dataSource = self
+        searchBar.delegate = self
+        tableView.separatorStyle = .none
+        tableView.allowsSelection = true
+        tableView.separatorInset = UIEdgeInsets(top: 0,left: 0,bottom: 0,right: 420)
+        
+        let documentXib = UINib(nibName: "tiendasTableViewCell", bundle: nil)
+        tableView.register(documentXib, forCellReuseIdentifier: reuseDocument)
         
     }
     
@@ -73,8 +73,8 @@ class StoresViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         present(newViewController, animated: true, completion: nil)
         
-//
-//        self.hero.replaceViewController(with: newViewController)
+        //
+        //        self.hero.replaceViewController(with: newViewController)
         
     }
     
@@ -108,7 +108,14 @@ class StoresViewController: UIViewController, UITableViewDelegate, UITableViewDa
             
             DispatchQueue.main.async {
                 
-                cell.imagenComida.sd_setImage(with: furl2, completed: nil)
+                cell.imagenComida.sd_imageIndicator = SDWebImageActivityIndicator.grayLarge
+                cell.imagenComida.sd_imageTransition = .curlDown
+                cell.imagenComida.sd_setImage(with: URL(string: imagenMarca))
+                
+                cell.logoTienda.sd_imageIndicator = SDWebImageActivityIndicator.grayLarge
+                cell.logoTienda.sd_imageTransition = .fade
+                cell.logoTienda.sd_setImage(with: URL(string: logo))
+                
                 cell.logoTienda.sd_setImage(with: furl, completed: nil)
                 
             }

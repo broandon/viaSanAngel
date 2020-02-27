@@ -89,7 +89,11 @@ class CouponsViewController: UIViewController, UITableViewDelegate, UITableViewD
             
             DispatchQueue.main.async {
                 
-                cell.imagenDeCupon.sd_setImage(with: furl, completed: nil)
+                cell.imagenDeCupon.sd_imageIndicator = SDWebImageActivityIndicator.gray
+                cell.imagenDeCupon.sd_imageTransition = .flipFromBottom
+                cell.imagenDeCupon.sd_setImage(with: URL(string: imagen))
+                
+                
                 cell.nameOfCoupon.text = titulo
                 cell.typeOfFood.sd_setImage(with: furl2, completed: nil)
                 cell.textOfCoupon.text = texto

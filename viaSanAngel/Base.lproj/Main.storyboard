@@ -32,7 +32,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LIY-re-tWF">
                                 <rect key="frame" x="7" y="5" width="400" height="595"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-via-san-angel-2" translatesAutoresizingMaskIntoConstraints="NO" id="Hid-d9-GR6">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoViaSanAngelRojo" translatesAutoresizingMaskIntoConstraints="NO" id="Hid-d9-GR6">
                                         <rect key="frame" x="89" y="20" width="223" height="130"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="130" id="APG-dg-YI3"/>
@@ -190,7 +190,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oVg-tN-HO1">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="110"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-via-san-angel-3" translatesAutoresizingMaskIntoConstraints="NO" id="Dfk-sG-RxM">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoViaSanAngelCompleto" translatesAutoresizingMaskIntoConstraints="NO" id="Dfk-sG-RxM">
                                         <rect key="frame" x="36" y="46" width="342" height="49"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="49" id="djI-Iq-v1I"/>
@@ -264,7 +264,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="evC-D8-rPb"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Eventos" image="eventsIcon" id="qCm-gj-igC"/>
+                    <tabBarItem key="tabBarItem" title="Eventos" image="eventosBarra" id="qCm-gj-igC"/>
                     <connections>
                         <outlet property="calendarSwitch" destination="ecU-te-nux" id="tt5-fA-tgN"/>
                         <outlet property="containerViewCalendario" destination="Goc-J0-hDJ" id="SQ9-0d-dhZ"/>
@@ -286,7 +286,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WGe-cn-fb2">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="110"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-via-san-angel-3" translatesAutoresizingMaskIntoConstraints="NO" id="oTD-kn-khd">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoViaSanAngelCompleto" translatesAutoresizingMaskIntoConstraints="NO" id="oTD-kn-khd">
                                         <rect key="frame" x="36" y="46" width="342" height="49"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="49" id="KMS-dZ-g9z"/>
@@ -336,7 +336,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="l2K-zu-mMg"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Mapa" image="mapsIcon" id="vVy-3A-hvF"/>
+                    <tabBarItem key="tabBarItem" title="Mapa" image="mapaBarra" id="vVy-3A-hvF"/>
                     <connections>
                         <outlet property="webView" destination="too-1k-UCm" id="3Qh-L9-qQb"/>
                     </connections>
@@ -367,7 +367,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sAV-TK-R3A">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="110"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-via-san-angel-3" translatesAutoresizingMaskIntoConstraints="NO" id="MgI-3U-ZBQ">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoViaSanAngelCompleto" translatesAutoresizingMaskIntoConstraints="NO" id="MgI-3U-ZBQ">
                                         <rect key="frame" x="36" y="46" width="342" height="49"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="49" id="AHD-jW-X3T"/>
@@ -415,7 +415,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="7tH-hD-HMv"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Ajustes" image="settingsIcon" id="fdU-NT-nT4"/>
+                    <tabBarItem key="tabBarItem" title="Ajustes" image="ajustesBarra" id="fdU-NT-nT4"/>
                     <navigationItem key="navigationItem" id="1W0-va-Cdb"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wMZ-TV-A5H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -646,7 +646,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imagenRojaPerfil" translatesAutoresizingMaskIntoConstraints="NO" id="lMB-rx-lJq">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="perfilRojo" translatesAutoresizingMaskIntoConstraints="NO" id="lMB-rx-lJq">
                                                     <rect key="frame" x="364" y="11" width="30" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="11g-gS-Wf7"/>
@@ -725,7 +725,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="balanceRed" translatesAutoresizingMaskIntoConstraints="NO" id="W7b-Nq-ycB">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="balanzaRoja" translatesAutoresizingMaskIntoConstraints="NO" id="W7b-Nq-ycB">
                                                     <rect key="frame" x="356" y="11" width="38" height="38"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="W7b-Nq-ycB" secondAttribute="height" multiplier="1:1" id="1ag-Tw-9DF"/>
@@ -768,7 +768,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="doorRed" translatesAutoresizingMaskIntoConstraints="NO" id="dym-xp-UWw">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="puertaRoja" translatesAutoresizingMaskIntoConstraints="NO" id="dym-xp-UWw">
                                                     <rect key="frame" x="356" y="11" width="38" height="38"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="dym-xp-UWw" secondAttribute="height" multiplier="1:1" id="7Pz-qW-pCv"/>
@@ -811,7 +811,7 @@
                                                                 <constraint firstAttribute="width" constant="49" id="Y4a-CD-coK"/>
                                                                 <constraint firstAttribute="height" constant="49" id="bov-yJ-xze"/>
                                                             </constraints>
-                                                            <state key="normal" title="Button" image="facebookIcon"/>
+                                                            <state key="normal" title="Button" image="logoFacebook"/>
                                                             <connections>
                                                                 <action selector="openFacebookProfile:" destination="UJG-yQ-RJq" eventType="touchUpInside" id="iPJ-wS-5G5"/>
                                                             </connections>
@@ -822,7 +822,7 @@
                                                                 <constraint firstAttribute="height" constant="49" id="T6H-L2-d45"/>
                                                                 <constraint firstAttribute="width" constant="49" id="rdi-EA-b5a"/>
                                                             </constraints>
-                                                            <state key="normal" title="Button" image="instagramIcon"/>
+                                                            <state key="normal" title="Button" image="logoInstagram"/>
                                                             <connections>
                                                                 <action selector="openInstagramProfile:" destination="UJG-yQ-RJq" eventType="touchUpInside" id="qAg-24-Ija"/>
                                                             </connections>
@@ -843,7 +843,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="easycode_firma" translatesAutoresizingMaskIntoConstraints="NO" id="3x1-IS-zJ1">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoEasycode" translatesAutoresizingMaskIntoConstraints="NO" id="3x1-IS-zJ1">
                                                     <rect key="frame" x="107.66666666666669" y="11" width="199" height="81"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="3x1-IS-zJ1" secondAttribute="height" multiplier="113:46" id="DXu-G0-wxL"/>
@@ -1135,7 +1135,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xbE-f6-dF1">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="110"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-via-san-angel-3" translatesAutoresizingMaskIntoConstraints="NO" id="Fjb-HJ-bF9">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoViaSanAngelCompleto" translatesAutoresizingMaskIntoConstraints="NO" id="Fjb-HJ-bF9">
                                         <rect key="frame" x="36" y="46" width="342" height="49"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="49" id="vvj-M3-C45"/>
@@ -1188,7 +1188,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="WDF-O3-606"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Tiendas" image="storeIcon" id="QNx-zR-yn4"/>
+                    <tabBarItem key="tabBarItem" title="Tiendas" image="tiendasBarra" id="QNx-zR-yn4"/>
                     <connections>
                         <outlet property="searchBar" destination="DGh-9Z-haR" id="Lnb-U7-i3x"/>
                         <outlet property="tableView" destination="m3M-Ry-Hyw" id="rp9-n6-gwW"/>
@@ -1209,7 +1209,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8nA-yA-qEA">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="110"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-via-san-angel-3" translatesAutoresizingMaskIntoConstraints="NO" id="Odm-oT-iJD">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoViaSanAngelCompleto" translatesAutoresizingMaskIntoConstraints="NO" id="Odm-oT-iJD">
                                         <rect key="frame" x="36" y="46" width="342" height="49"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="49" id="qB9-ro-f87"/>
@@ -1255,7 +1255,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="95l-K5-DVk"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Cupones" image="cuponIcon" id="spB-5U-QIO"/>
+                    <tabBarItem key="tabBarItem" title="Cupones" image="cuponIcon" selectedImage="cuponesBarra" id="spB-5U-QIO"/>
                     <connections>
                         <outlet property="tableView" destination="Mum-Nn-0Wt" id="Son-eu-nAF"/>
                     </connections>
@@ -1395,18 +1395,19 @@
         </scene>
     </scenes>
     <resources>
-        <image name="balanceRed" width="47.666667938232422" height="48.666667938232422"/>
+        <image name="ajustesBarra" width="25" height="25"/>
+        <image name="balanzaRoja" width="143" height="146"/>
         <image name="cuponIcon" width="32.5" height="32.5"/>
-        <image name="doorRed" width="47.666667938232422" height="48.666667938232422"/>
-        <image name="easycode_firma" width="111.5" height="25.5"/>
-        <image name="eventsIcon" width="25" height="25"/>
-        <image name="facebookIcon" width="47.666667938232422" height="47.666667938232422"/>
-        <image name="imagenRojaPerfil" width="143" height="146"/>
-        <image name="instagramIcon" width="47.666667938232422" height="47.666667938232422"/>
-        <image name="logo-via-san-angel-2" width="494" height="500"/>
-        <image name="logo-via-san-angel-3" width="500" height="116"/>
-        <image name="mapsIcon" width="25" height="25"/>
-        <image name="settingsIcon" width="25" height="25"/>
-        <image name="storeIcon" width="25" height="25"/>
+        <image name="cuponesBarra" width="25" height="25"/>
+        <image name="eventosBarra" width="25" height="25"/>
+        <image name="logoEasycode" width="1012" height="134"/>
+        <image name="logoFacebook" width="143" height="143"/>
+        <image name="logoInstagram" width="143" height="143"/>
+        <image name="logoViaSanAngelCompleto" width="500" height="116"/>
+        <image name="logoViaSanAngelRojo" width="494" height="500"/>
+        <image name="mapaBarra" width="25" height="25"/>
+        <image name="perfilRojo" width="143" height="146"/>
+        <image name="puertaRoja" width="143" height="146"/>
+        <image name="tiendasBarra" width="25" height="25"/>
     </resources>
 </document>
