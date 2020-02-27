@@ -88,12 +88,38 @@ class calendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDa
     
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
         
-        let dateString = self.dateFormatter2.string(from: date)
+        var dateString = self.dateFormatter2.string(from: date)
         
         if self.eventosParaCalendario.contains(dateString) {
             
             print(self.dateFormatter2.string(from: date))
             print("this contains stuff")
+            
+                let lastDateString = "\(dateString)"
+            print(lastDateString)
+            
+            if lastDateString == "2020-02-28" {
+                
+                
+                   UserDefaults.standard.set("1", forKey: "eventID")
+                
+                   let storyBoard: UIStoryboard = UIStoryboard(name: "eventsDetails", bundle: nil)
+                   let vc = storyBoard.instantiateViewController(withIdentifier: "eventsDetailsViewController") as! eventsDetailsViewController
+                   present(vc, animated: true, completion: nil)
+                
+                
+            }
+            
+            if lastDateString == "2020-03-10" {
+                
+                
+                   UserDefaults.standard.set("2", forKey: "eventID")
+                
+                   let storyBoard: UIStoryboard = UIStoryboard(name: "eventsDetails", bundle: nil)
+                   let vc = storyBoard.instantiateViewController(withIdentifier: "eventsDetailsViewController") as! eventsDetailsViewController
+                   present(vc, animated: true, completion: nil)
+                
+            }
             
         } else {
             

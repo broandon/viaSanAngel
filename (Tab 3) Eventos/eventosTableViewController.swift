@@ -67,6 +67,21 @@ class eventosTableViewController: UITableViewController {
         
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+
+
+        let document = eventos[indexPath.row]
+             
+             let eventID = document["Id"] as! String
+             
+             UserDefaults.standard.set(eventID, forKey: "eventID")
+          
+             let storyBoard: UIStoryboard = UIStoryboard(name: "eventsDetails", bundle: nil)
+             let vc = storyBoard.instantiateViewController(withIdentifier: "eventsDetailsViewController") as! eventsDetailsViewController
+             present(vc, animated: true, completion: nil)
+        
+    }
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let document = eventos[indexPath.row]

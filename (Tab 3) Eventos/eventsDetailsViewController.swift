@@ -16,7 +16,12 @@ class eventsDetailsViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func getOut(_ sender: Any) {
+        
+        self.dismiss(animated: true, completion: nil)
+        
+    }
+    
     /*
     // MARK: - Navigation
 
