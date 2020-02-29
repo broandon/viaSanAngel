@@ -27,7 +27,7 @@ class signUpViewController: UIViewController, NVActivityIndicatorViewable {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        print("Showing the sign up view")
         
     }
     
@@ -48,6 +48,8 @@ class signUpViewController: UIViewController, NVActivityIndicatorViewable {
     //MARK: Funcs
     
     @IBAction func createAccount(_ sender: Any) {
+        
+        print("Account is being created")
         
         checkTextFields()
         
@@ -89,6 +91,8 @@ class signUpViewController: UIViewController, NVActivityIndicatorViewable {
                         let stateString = "\(state)"
                         
                         if stateString == "200" {
+                            
+                            print("Created the account")
                             
                             DispatchQueue.main.async {
                                 

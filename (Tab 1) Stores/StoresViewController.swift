@@ -11,6 +11,7 @@ import Hero
 import NVActivityIndicatorView
 import SDWebImage
 import TableViewReloadAnimation
+import Firebase
 
 class StoresViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, NVActivityIndicatorViewable, UISearchBarDelegate {
     
@@ -20,6 +21,7 @@ class StoresViewController: UIViewController, UITableViewDelegate, UITableViewDa
     let reuseDocument = "DocumentoCellStores"
     let userInfo = UserDefaults.standard.string(forKey: "userID")
     let http = HTTPViewController()
+    let elMeroToken = UserDefaults.standard.string(forKey: "tokenFCM")
     
     @IBOutlet weak var tableView : UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
@@ -29,7 +31,8 @@ class StoresViewController: UIViewController, UITableViewDelegate, UITableViewDa
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        searchBar.isHidden = true
+        print("Showing stores view")
+        getNewToken()
         setupTableView()
         downloadStores()
         
@@ -43,8 +46,116 @@ class StoresViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     //MARK: Funcs
     
+    func downloadStores() {
+        
+        print("Downloading stores")
+        
+        let url = URL(string: http.baseURL())!
+        
+        var request = URLRequest(url: url)
+        request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
+        request.httpMethod = "POST"
+        let postString = "funcion=getStores&id_user="+userInfo!
+        
+        request.httpBody = postString.data(using: .utf8)
+        URLSession.shared.dataTask(with: request) { data, response, error in
+            guard let data = data, error == nil, response != nil else {
+                return
+            }
+            
+            do {
+                
+                
+                let json = try? JSONSerialization.jsonObject(with: data, options: .mutableContainers)
+                
+                if let dictionary = json as? Dictionary<String, AnyObject>
+                    
+                {
+                    
+                    if let items = dictionary["data"] as? [Dictionary<String, Any>] {
+                        
+                        for d in items {
+                            
+                            self.tiendas.append(d)
+                            
+                        }
+                        
+                    }
+                    
+                }
+                
+                DispatchQueue.main.async {
+                    if self.tiendas.count > 0 {
+                        self.tableView.reloadData(with: .simple(duration: 0.45, direction: .top(useCellsFrame: true), constantDelay: 0))
+                        
+                    }
+                    
+                }
+                
+            }
+            
+        }.resume()
+        
+    }
+    
+    func getNewToken() {
+        
+        print("Getting new token")
+        
+        InstanceID.instanceID().instanceID { (result, error) in
+            if let error = error {
+                print("Error fetching remote instange ID: \(error)")
+            } else if let result = result {
+                print("Remote instance ID token: \(result.token)")
+                
+                let tokenFCM = result.token
+                
+                UserDefaults.standard.set(tokenFCM, forKey: "tokenFCM")
+                
+                let url = URL(string: self.http.baseURL())!
+                
+                var request = URLRequest(url: url)
+                request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type") // Headers
+                request.httpMethod = "POST" // Metodo
+                
+                
+                let strin1 = "funcion=sendToken&id_user="+self.userInfo!
+                let string2 = "&token="+tokenFCM
+                let string3 = "&type_device=1"
+                
+                let postString = strin1+string2+string3
+                
+                request.httpBody = postString.data(using: .utf8) // SE codifica a UTF-8
+                
+                let task = URLSession.shared.dataTask(with: request) { data, response, error in
+                    
+                    // Validacion para errores de Red
+                    
+                    guard let data = data, error == nil else {
+                        print("error=\(String(describing: error))")
+                        return
+                    }
+                    
+                    do {
+                        
+                        let json = try? JSONSerialization.jsonObject(with: data, options: []) as? NSDictionary
+                        
+                    }
+                    
+                }
+                
+                task.resume()
+                
+            }
+        }
+        
+    }
+    
+    //MARK: Tableview data
+    
     func setupTableView() {
         
+        searchBar.isHidden = true
         tableView.delegate = self
         tableView.dataSource = self
         searchBar.delegate = self
@@ -138,60 +249,6 @@ class StoresViewController: UIViewController, UITableViewDelegate, UITableViewDa
         }
         
         return tiendas.count
-        
-    }
-    
-    func downloadStores() {
-        
-        let url = URL(string: http.baseURL())!
-        
-        var request = URLRequest(url: url)
-        request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
-        request.httpMethod = "POST"
-        let postString = "funcion=getStores&id_user="+userInfo!
-        
-        request.httpBody = postString.data(using: .utf8)
-        URLSession.shared.dataTask(with: request) { data, response, error in
-            guard let data = data, error == nil, response != nil else {
-                return
-            }
-            
-            do {
-                
-                
-                let json = try? JSONSerialization.jsonObject(with: data, options: .mutableContainers)
-                
-                if let dictionary = json as? Dictionary<String, AnyObject>
-                    
-                {
-                    
-                    print("tiendas")
-                    print(dictionary)
-                    print("*********")
-                    
-                    if let items = dictionary["data"] as? [Dictionary<String, Any>] {
-                        
-                        for d in items {
-                            
-                            self.tiendas.append(d)
-                            
-                        }
-                        
-                    }
-                    
-                }
-                
-                DispatchQueue.main.async {
-                    if self.tiendas.count > 0 {
-                        self.tableView.reloadData(with: .simple(duration: 0.45, direction: .top(useCellsFrame: true), constantDelay: 0))
-                        
-                    }
-                    
-                }
-                
-            }
-            
-        }.resume()
         
     }
     

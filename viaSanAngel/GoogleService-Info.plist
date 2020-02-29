@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>867815203983-9v1b2upmca3nkud2djkh85deikcjff20.apps.googleusercontent.com</string>
+	<string>867815203983-3h2oqpecgn0uth2n75hbto9cii8rfc3t.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.867815203983-9v1b2upmca3nkud2djkh85deikcjff20</string>
+	<string>com.googleusercontent.apps.867815203983-3h2oqpecgn0uth2n75hbto9cii8rfc3t</string>
 	<key>API_KEY</key>
 	<string>AIzaSyC2xaaiy0LUwswIP_Z5QM0PfDqQQxNtZtg</string>
 	<key>GCM_SENDER_ID</key>
@@ -13,7 +13,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.viasanangel.broandon</string>
+	<string>com.viasanangel.easycode</string>
 	<key>PROJECT_ID</key>
 	<string>viasanangel-e60b4</string>
 	<key>STORAGE_BUCKET</key>
@@ -29,7 +29,7 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:867815203983:ios:285c7cab1315a2e46f7cfa</string>
+	<string>1:867815203983:ios:d00e0a26da30c65d6f7cfa</string>
 	<key>DATABASE_URL</key>
 	<string>https://viasanangel-e60b4.firebaseio.com</string>
 </dict>

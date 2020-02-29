@@ -29,7 +29,6 @@
 		CF852C2423D23D0900A78E7D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF852C2323D23D0900A78E7D /* Extensions.swift */; };
 		CF852C2723D261CD00A78E7D /* profileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF852C2623D261CD00A78E7D /* profileViewController.swift */; };
 		CF852C2923D2642F00A78E7D /* pickerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF852C2823D2642F00A78E7D /* pickerDelegate.swift */; };
-		CF9A2D3624073ABC000A3ABE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF9A2D3524073ABB000A3ABE /* GoogleService-Info.plist */; };
 		CFA75117234AEBAF0005559F /* configuracionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA75116234AEBAF0005559F /* configuracionTableViewController.swift */; };
 		CFA9104A23F3611C00131DA6 /* folio.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFA9104923F3611C00131DA6 /* folio.storyboard */; };
 		CFA9104C23F3621A00131DA6 /* folioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA9104B23F3621A00131DA6 /* folioViewController.swift */; };
@@ -43,6 +42,7 @@
 		CFBCB5372347E730009F32B0 /* viaSanAngel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CFBCB5352347E730009F32B0 /* viaSanAngel.xcdatamodeld */; };
 		CFBCB53C2347E731009F32B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFBCB53A2347E731009F32B0 /* LaunchScreen.storyboard */; };
 		CFBCB5452347F413009F32B0 /* signInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBCB5442347F413009F32B0 /* signInViewController.swift */; };
+		CFD073032409CB8100E8D884 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CFD073022409CB8100E8D884 /* GoogleService-Info.plist */; };
 		CFE8CDAD23EA40DA00561260 /* configuracionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE8CDAC23EA40DA00561260 /* configuracionViewController.swift */; };
 		CFF82BBB23D8BC9700CF76BA /* userDefaults.rtf in Resources */ = {isa = PBXBuildFile; fileRef = CFF82BBA23D8BC9700CF76BA /* userDefaults.rtf */; };
 		CFF82BBD23D8BE1E00CF76BA /* Coupons.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFF82BBC23D8BE1E00CF76BA /* Coupons.storyboard */; };
@@ -79,7 +79,6 @@
 		CF852C2323D23D0900A78E7D /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		CF852C2623D261CD00A78E7D /* profileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profileViewController.swift; sourceTree = "<group>"; };
 		CF852C2823D2642F00A78E7D /* pickerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pickerDelegate.swift; sourceTree = "<group>"; };
-		CF9A2D3524073ABB000A3ABE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CF9A2D3724073FB4000A3ABE /* Vía.SanÁngel.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Vía.SanÁngel.entitlements"; sourceTree = "<group>"; };
 		CFA75116234AEBAF0005559F /* configuracionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = configuracionTableViewController.swift; sourceTree = "<group>"; };
 		CFA9104923F3611C00131DA6 /* folio.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = folio.storyboard; sourceTree = "<group>"; };
@@ -96,6 +95,7 @@
 		CFBCB53B2347E731009F32B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CFBCB53D2347E731009F32B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CFBCB5442347F413009F32B0 /* signInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signInViewController.swift; sourceTree = "<group>"; };
+		CFD073022409CB8100E8D884 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CFE8CDAC23EA40DA00561260 /* configuracionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = configuracionViewController.swift; sourceTree = "<group>"; };
 		CFF82BBA23D8BC9700CF76BA /* userDefaults.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = userDefaults.rtf; sourceTree = "<group>"; };
 		CFF82BBC23D8BE1E00CF76BA /* Coupons.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Coupons.storyboard; sourceTree = "<group>"; };
@@ -243,7 +243,7 @@
 			isa = PBXGroup;
 			children = (
 				CF9A2D3724073FB4000A3ABE /* Vía.SanÁngel.entitlements */,
-				CF9A2D3524073ABB000A3ABE /* GoogleService-Info.plist */,
+				CFD073022409CB8100E8D884 /* GoogleService-Info.plist */,
 				CFBCB52C2347E730009F32B0 /* AppDelegate.swift */,
 				CFBCB5302347E730009F32B0 /* ViewController.swift */,
 				CFBCB5322347E730009F32B0 /* Main.storyboard */,
@@ -351,10 +351,10 @@
 				CF74A17623D1354400950974 /* tiendasTableViewCell.xib in Resources */,
 				CFBCB53C2347E731009F32B0 /* LaunchScreen.storyboard in Resources */,
 				CF1223ED23F216D3006A93B0 /* eventosTableViewCell.xib in Resources */,
-				CF9A2D3624073ABC000A3ABE /* GoogleService-Info.plist in Resources */,
 				CFA9104A23F3611C00131DA6 /* folio.storyboard in Resources */,
 				CF59E4DE23D66594000FBB25 /* cuponesTableViewCell.xib in Resources */,
 				CF1223E523F20240006A93B0 /* Events.storyboard in Resources */,
+				CFD073032409CB8100E8D884 /* GoogleService-Info.plist in Resources */,
 				CFAB54A323D82A4D005A35DC /* storeDetail.storyboard in Resources */,
 				CF5415D123CFCF2800CFD34A /* Assets.xcassets in Resources */,
 				CFBCB5342347E730009F32B0 /* Main.storyboard in Resources */,
@@ -586,7 +586,7 @@
 				CODE_SIGN_ENTITLEMENTS = "viaSanAngel/Vía.SanÁngel.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
-				DEVELOPMENT_TEAM = 6RW3S42MR2;
+				DEVELOPMENT_TEAM = W4MERUEP35;
 				INFOPLIST_FILE = viaSanAngel/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -594,7 +594,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.1.1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.viasanangel.broandon;
+				PRODUCT_BUNDLE_IDENTIFIER = com.viasanangel.easycode;
 				PRODUCT_NAME = ViaSanAngel;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -609,7 +609,7 @@
 				CODE_SIGN_ENTITLEMENTS = "viaSanAngel/Vía.SanÁngel.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
-				DEVELOPMENT_TEAM = 6RW3S42MR2;
+				DEVELOPMENT_TEAM = W4MERUEP35;
 				INFOPLIST_FILE = viaSanAngel/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -617,7 +617,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.1.1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.viasanangel.broandon;
+				PRODUCT_BUNDLE_IDENTIFIER = com.viasanangel.easycode;
 				PRODUCT_NAME = ViaSanAngel;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;

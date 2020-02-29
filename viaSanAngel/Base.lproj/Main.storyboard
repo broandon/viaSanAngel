@@ -1255,7 +1255,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="95l-K5-DVk"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Cupones" image="cuponIcon" selectedImage="cuponesBarra" id="spB-5U-QIO"/>
+                    <tabBarItem key="tabBarItem" title="Cupones" image="cuponesBarra" id="spB-5U-QIO"/>
                     <connections>
                         <outlet property="tableView" destination="Mum-Nn-0Wt" id="Son-eu-nAF"/>
                     </connections>
@@ -1397,7 +1397,6 @@
     <resources>
         <image name="ajustesBarra" width="25" height="25"/>
         <image name="balanzaRoja" width="143" height="146"/>
-        <image name="cuponIcon" width="32.5" height="32.5"/>
         <image name="cuponesBarra" width="25" height="25"/>
         <image name="eventosBarra" width="25" height="25"/>
         <image name="logoEasycode" width="1012" height="134"/>
