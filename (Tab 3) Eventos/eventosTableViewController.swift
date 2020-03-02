@@ -136,10 +136,6 @@ class eventosTableViewController: UITableViewController {
                     
                 {
                     
-                    print("eventos")
-                    print(dictionary)
-                    print("*********")
-                    
                     if let items = dictionary["data"] as? [Dictionary<String, Any>] {
                         
                         for d in items {

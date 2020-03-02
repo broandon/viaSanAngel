@@ -16,7 +16,7 @@ class profileViewController: UIViewController, NVActivityIndicatorViewable {
     
     //MARK: Outlets
     
-            @IBOutlet weak var profileImage: UIButton!
+    @IBOutlet weak var profileImage: UIButton!
     
     var imagePicker: ImagePicker!
     var http = HTTPViewController()
@@ -25,17 +25,16 @@ class profileViewController: UIViewController, NVActivityIndicatorViewable {
     @IBOutlet weak var nombreTextfield: UITextField!
     @IBOutlet weak var apellidoTextfield: UITextField!
     @IBOutlet weak var numeroTextfield: UITextField!
-    @IBOutlet weak var mailTextfield: UITextField!
     
     //MARK: viewDid
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        startAnimating(type: .ballClipRotatePulse)
+        print("Showing profile view controller")
+        
         setupProfileImage()
         getUserInfo()
-        stopAnimating()
         
         self.imagePicker = ImagePicker(presentationController: self, delegate: self)
         
@@ -52,23 +51,7 @@ class profileViewController: UIViewController, NVActivityIndicatorViewable {
         
     }
     
-    func getImageFromInernet(from url: String) {
-        guard let imageURL = URL(string: url) else { return }
-        
-        // just not to cause a deadlock in UI!
-        DispatchQueue.global().async {
-            guard let imageData = try? Data(contentsOf: imageURL) else { return }
-            
-            let image = UIImage(data: imageData)
-            DispatchQueue.main.async {
-                self.profileImage.setImage(image, for: .normal)
-            }
-        }
-    }
-    
     func getUserInfo() {
-        
-        startAnimating(type: .ballClipRotatePulse)
         
         // POST REQUEST
         
@@ -103,9 +86,6 @@ class profileViewController: UIViewController, NVActivityIndicatorViewable {
                         
                         if let info = data["info"] as? Dictionary<String, Any> {
                             
-                            print("INFO")
-                            print(info)
-                            
                             let nombre = info["nombre"]
                             let apellido = info["apellidos"]
                             let telefono = info ["telefono"]
@@ -119,6 +99,8 @@ class profileViewController: UIViewController, NVActivityIndicatorViewable {
                                 self.apellidoTextfield.text! = apellido as! String
                                 self.numeroTextfield.text! = telefono as! String
                                 
+                                self.profileImage.sd_imageIndicator = SDWebImageActivityIndicator.grayLarge
+                                self.profileImage.sd_imageTransition = SDWebImageTransition.flipFromBottom
                                 self.profileImage.sd_setImage(with: imageURL, for: .normal, completed: nil)
                                 
                             }
@@ -156,8 +138,6 @@ class profileViewController: UIViewController, NVActivityIndicatorViewable {
                         } else {
                             
                             DispatchQueue.main.async {
-                                
-                                self.stopAnimating()
                                 
                                 let alert = UIAlertController(title: "Error", message: "Hay un problema con el servidor, inténtalo de nuevo más tarde.", preferredStyle: .alert)
                                 
@@ -227,14 +207,7 @@ class profileViewController: UIViewController, NVActivityIndicatorViewable {
                                 let alert = UIAlertController(title: "¡Exito!", message: "Tu información ha sido actualizada.", preferredStyle: .alert)
                                 alert.addAction(UIAlertAction(title: "Muy bien", style: .cancel, handler: { action in
                                     
-                                    self.hero.isEnabled = true
-                                    
-                                    let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                                    let newViewController = storyBoard.instantiateViewController(withIdentifier: "mainTabBarViewController") as! UITabBarController
-                                    newViewController.hero.modalAnimationType = .fade
-                                    newViewController.selectedIndex = 4
-                                    
-                                    self.hero.replaceViewController(with: newViewController)
+                                    print("Updated info")
                                     
                                 }))
                                 
@@ -296,14 +269,7 @@ class profileViewController: UIViewController, NVActivityIndicatorViewable {
     
     @IBAction func close(_ sender: Any) {
         
-        self.hero.isEnabled = true
-        
-        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let newViewController = storyBoard.instantiateViewController(withIdentifier: "mainTabBarViewController") as! UITabBarController
-        newViewController.hero.modalAnimationType = .fade
-        newViewController.selectedIndex = 4
-        
-        self.hero.replaceViewController(with: newViewController)
+        self.dismiss(animated: true, completion: nil)
         
     }
     
@@ -335,7 +301,7 @@ extension profileViewController : ImagePickerDelegate  {
                 let imgString = image?.toBase64()
                 MultipartFormData.append(imgString!.data(using: String.Encoding.utf8)!, withName: "image")
         }, to: "http://easycode.mx/viasanangel/webservice/controller_last.php", method: .post, headers: headers) { (result) in
-                        
+            
             switch result {
                 
             case .success(let upload, _, _):

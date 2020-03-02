@@ -207,12 +207,14 @@ class couponDetailTableViewController: UITableViewController, NVActivityIndicato
             alert.addAction(UIAlertAction(title: "Crear cuenta", style: .cancel, handler: { action in
                 
                 UserDefaults.standard.set(false, forKey: "isLoggedIn")
-
                 
-                let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                let goBackVC = storyBoard.instantiateViewController(withIdentifier: "signInViewController") as! signInViewController
-                goBackVC.modalPresentationStyle = .fullScreen
-                self.present(goBackVC, animated: true, completion: nil)
+                
+                guard let rootVC = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "signInViewController") as? signInViewController else {
+                    return
+                }
+                
+                UIApplication.shared.windows.first?.rootViewController = rootVC
+                UIApplication.shared.windows.first?.makeKeyAndVisible()
                 
             }))
             

@@ -83,7 +83,7 @@
         <scene sceneID="rfZ-eL-hAs">
             <objects>
                 <tableViewController storyboardIdentifier="eventsDetailsTableViewController" id="zmb-WI-EOL" customClass="eventsDetailsTableViewController" customModule="ViaSanAngel" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="OEa-1e-ksR">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="OEa-1e-ksR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="801"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>

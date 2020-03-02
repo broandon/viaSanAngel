@@ -425,7 +425,7 @@
         <!--Profile View Controller-->
         <scene sceneID="VIA-6y-O6j">
             <objects>
-                <viewController storyboardIdentifier="myProfileViewController" modalPresentationStyle="overCurrentContext" id="eRq-94-0XR" customClass="profileViewController" customModule="ViaSanAngel" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="myProfileViewController" id="eRq-94-0XR" customClass="profileViewController" customModule="ViaSanAngel" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wSa-I0-CdR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -475,6 +475,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Bcn-r1-QxH" secondAttribute="height" multiplier="1:1" id="ciS-7a-4oy"/>
                                 </constraints>
+                                <state key="normal" image="perfilRojo"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
                                 </userDefinedRuntimeAttributes>
@@ -843,7 +844,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoEasycode" translatesAutoresizingMaskIntoConstraints="NO" id="3x1-IS-zJ1">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="firmaEasycode" translatesAutoresizingMaskIntoConstraints="NO" id="3x1-IS-zJ1">
                                                     <rect key="frame" x="107.66666666666669" y="11" width="199" height="81"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="3x1-IS-zJ1" secondAttribute="height" multiplier="113:46" id="DXu-G0-wxL"/>
@@ -1007,8 +1008,8 @@
                                 <color key="textColor" red="0.82026982309999996" green="0.1177081242" blue="0.27689903970000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="29" translatesAutoresizingMaskIntoConstraints="NO" id="KMY-xT-dCm">
-                                <rect key="frame" x="16" y="151" width="382" height="286"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="KMY-xT-dCm">
+                                <rect key="frame" x="16" y="151" width="382" height="319"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OZE-Rw-7Bn">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="34"/>
@@ -1019,7 +1020,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Apellidos" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eZU-kJ-VmW">
-                                        <rect key="frame" x="0.0" y="63" width="382" height="34"/>
+                                        <rect key="frame" x="0.0" y="57" width="382" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="additional-name"/>
                                         <userDefinedRuntimeAttributes>
@@ -1027,7 +1028,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Teléfono" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t6j-iE-U9m">
-                                        <rect key="frame" x="0.0" y="126" width="382" height="34"/>
+                                        <rect key="frame" x="0.0" y="114" width="382" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="tel"/>
                                         <userDefinedRuntimeAttributes>
@@ -1035,7 +1036,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Correo electrónico" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hJt-9l-2y3">
-                                        <rect key="frame" x="0.0" y="189" width="382" height="34"/>
+                                        <rect key="frame" x="0.0" y="171" width="382" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
                                         <userDefinedRuntimeAttributes>
@@ -1043,7 +1044,16 @@
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dQq-Wg-eYp">
-                                        <rect key="frame" x="0.0" y="252" width="382" height="34"/>
+                                        <rect key="frame" x="0.0" y="228" width="382" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="password"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="doneAccessory" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirma tu contraseña" textAlignment="natural" minimumFontSize="17" id="IMi-bC-uag">
+                                        <rect key="frame" x="0.0" y="281" width="382" height="33"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="password"/>
                                         <userDefinedRuntimeAttributes>
@@ -1116,13 +1126,14 @@
                         <outlet property="mail" destination="hJt-9l-2y3" id="8Zh-MO-bbe"/>
                         <outlet property="name" destination="OZE-Rw-7Bn" id="Ake-0K-Y8p"/>
                         <outlet property="password" destination="dQq-Wg-eYp" id="FlY-tt-Pkd"/>
+                        <outlet property="passwordConfirmation" destination="IMi-bC-uag" id="a6W-kG-AaL"/>
                         <outlet property="phone" destination="t6j-iE-U9m" id="qpp-c8-ELp"/>
                         <outlet property="surname" destination="eZU-kJ-VmW" id="J0H-eo-4Lh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Pe-YS-cZj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1149" y="-564"/>
+            <point key="canvasLocation" x="1147.8260869565217" y="-564.13043478260875"/>
         </scene>
         <!--Tiendas-->
         <scene sceneID="mLJ-gb-6uz">
@@ -1397,9 +1408,9 @@
     <resources>
         <image name="ajustesBarra" width="25" height="25"/>
         <image name="balanzaRoja" width="143" height="146"/>
-        <image name="cuponesBarra" width="25" height="25"/>
+        <image name="cuponesBarra" width="37.5" height="37.5"/>
         <image name="eventosBarra" width="25" height="25"/>
-        <image name="logoEasycode" width="1012" height="134"/>
+        <image name="firmaEasycode" width="223" height="51"/>
         <image name="logoFacebook" width="143" height="143"/>
         <image name="logoInstagram" width="143" height="143"/>
         <image name="logoViaSanAngelCompleto" width="500" height="116"/>

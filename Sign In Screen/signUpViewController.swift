@@ -19,6 +19,9 @@ class signUpViewController: UIViewController, NVActivityIndicatorViewable {
     @IBOutlet weak var phone: UITextField!
     @IBOutlet weak var mail: UITextField!
     @IBOutlet weak var password: UITextField!
+    @IBOutlet weak var passwordConfirmation: UITextField!
+    
+    let textFields = [UITextField]()
     
     let http = HTTPViewController()
     
@@ -49,9 +52,102 @@ class signUpViewController: UIViewController, NVActivityIndicatorViewable {
     
     @IBAction func createAccount(_ sender: Any) {
         
+        
         print("Account is being created")
         
-        checkTextFields()
+        if name.text!.isEmpty {
+            
+            name.backgroundColor = UIColor(red: 0.82, green: 0.11, blue: 0.28, alpha: 1.00)
+            
+            name.textColor = .white
+            
+            let alert = UIAlertController(title: "Falta un dato", message: "Revisa los campos vacios.", preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: "Intentar de nuevo", style: .default, handler: nil))
+            
+            self.present(alert, animated: true)
+            
+            return
+            
+        }
+        
+        if password.text! != passwordConfirmation.text {
+            
+            let alert = UIAlertController(title: "Las contraseñas no coinciden", message: "Revisa que tu contraseña sea la misma en ambos campos y anotala en un lugar seguro.", preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: "Intentar de nuevo", style: .default, handler: nil))
+            
+            self.present(alert, animated: true)
+            
+            return
+            
+        }
+        
+        if surname.text!.isEmpty {
+            
+            surname.backgroundColor = UIColor(red: 0.82, green: 0.11, blue: 0.28, alpha: 1.00)
+            
+            surname.textColor = .white
+            
+            let alert = UIAlertController(title: "Falta un dato", message: "Revisa los campos vacios.", preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: "Intentar de nuevo", style: .default, handler: nil))
+            
+            self.present(alert, animated: true)
+            
+            return
+            
+        }
+        
+        if phone.text!.isEmpty {
+            
+            phone.backgroundColor = UIColor(red: 0.82, green: 0.11, blue: 0.28, alpha: 1.00)
+            
+            phone.textColor = .white
+            
+            let alert = UIAlertController(title: "Falta un dato", message: "Revisa los campos vacios.", preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: "Intentar de nuevo", style: .default, handler: nil))
+            
+            self.present(alert, animated: true)
+            
+            return
+            
+        }
+        
+        if mail.text!.isEmpty {
+            
+            mail.backgroundColor = UIColor(red: 0.82, green: 0.11, blue: 0.28, alpha: 1.00)
+            
+            mail.textColor = .white
+            
+            let alert = UIAlertController(title: "Falta un dato", message: "Revisa los campos vacios.", preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: "Intentar de nuevo", style: .default, handler: nil))
+            
+            self.present(alert, animated: true)
+            
+            return
+            
+        }
+        
+        if password.text!.isEmpty {
+            
+            password.backgroundColor = UIColor(red: 0.82, green: 0.11, blue: 0.28, alpha: 1.00)
+            
+            password.textColor = .white
+            
+            let alert = UIAlertController(title: "Falta un dato", message: "Revisa los campos vacios.", preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: "Intentar de nuevo", style: .default, handler: nil))
+            
+            self.present(alert, animated: true)
+            
+            return
+            
+        }
+        
+        
         
         startAnimating(type: .ballClipRotatePulse)
         

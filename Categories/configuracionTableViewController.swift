@@ -21,6 +21,7 @@ class configuracionTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        print("Showing settings view")
         
         
     }
@@ -29,22 +30,19 @@ class configuracionTableViewController: UITableViewController {
     
     @IBAction func closeSession(_ sender: Any) {
         
+        print("Closing session")
         
         let alert = UIAlertController(title: "Cerrar Sesión", message: "¿De verdad quieres cerrar la sesión? Deberás introducir tu mail y contraseña nuevamente.", preferredStyle: .alert)
         
         alert.addAction(UIAlertAction(title: "No", style: .default, handler: nil))
+        
         alert.addAction(UIAlertAction(title: "Cerrar sesión", style: .destructive, handler: { action in
             
             UserDefaults.standard.set(false, forKey: "isLoggedIn")
             UserDefaults.standard.removeObject(forKey: "userID")
-  
-            self.hero.isEnabled = true
+            UserDefaults.standard.removeObject(forKey: "tokenFCM")
             
-            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let newViewController = storyBoard.instantiateViewController(withIdentifier: "signInViewController") as! signInViewController
-            newViewController.hero.modalAnimationType = .push(direction: .down)
-            
-            self.hero.replaceViewController(with: newViewController)
+            self.resetRoot()
             
         }))
         
@@ -58,11 +56,10 @@ class configuracionTableViewController: UITableViewController {
         
     }
     
-    
     @IBAction func openFacebookProfile(_ sender: Any) {
         
         let fbURLWeb: NSURL = NSURL(string: "https://www.facebook.com/ccviasanangel/")!
-        let fbURLID: NSURL = NSURL(string: "fb://profile/3076468245700823")!
+        let fbURLID: NSURL = NSURL(string: "fb://profile/ccviasanangel")!
         
         if(UIApplication.shared.canOpenURL(fbURLID as URL)){
             // FB installed
@@ -93,44 +90,42 @@ class configuracionTableViewController: UITableViewController {
     
     //MARK: Funcs
     
+    func resetRoot() {
+           guard let rootVC = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "signInViewController") as? signInViewController else {
+               return
+           }
+
+           UIApplication.shared.windows.first?.rootViewController = rootVC
+           UIApplication.shared.windows.first?.makeKeyAndVisible()
+    }
+    
     @IBAction func openProfile(_ sender: Any) {
         
         if userInfo == "0" {
-                 
-                 // Alert with action
-                 
-                 let alert = UIAlertController(title: "¡Error!", message: "Para ver tu perfil debes iniciar sesión o crear una cuenta", preferredStyle: .alert)
-                 
-                 alert.addAction(UIAlertAction(title: "Entendido", style: .cancel, handler: { action in
-                    
-                    UserDefaults.standard.set(false, forKey: "isLoggedIn")
-
-                     self.hero.isEnabled = true
-                     
-                     let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                     let newViewController = storyBoard.instantiateViewController(withIdentifier: "signInViewController") as! signInViewController
-                    newViewController.modalPresentationStyle = .fullScreen
-                     newViewController.hero.modalAnimationType = .fade
-                     
-                     self.hero.replaceViewController(with: newViewController)
-                     
-                 }))
-                 
-                 self.present(alert, animated: true)
             
-                 return
-                 
-             }
+            // Alert with action
+            
+            let alert = UIAlertController(title: "¡Error!", message: "Para ver tu perfil debes iniciar sesión o crear una cuenta", preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: "Entendido", style: .cancel, handler: { action in
+                
+                UserDefaults.standard.set(false, forKey: "isLoggedIn")
+                
+                self.resetRoot()
+                
+            }))
+            
+            self.present(alert, animated: true)
+            
+            return
+            
+        }
         
-        self.hero.isEnabled = true
+        let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let newVC = storyboard.instantiateViewController(withIdentifier: "myProfileViewController") as! profileViewController
         
-        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let newViewController = storyBoard.instantiateViewController(withIdentifier: "myProfileViewController") as! profileViewController
-        newViewController.hero.modalAnimationType = .auto
-        
-        self.hero.replaceViewController(with: newViewController)
+        present(newVC, animated: true, completion: nil)
         
     }
-    
     
 }

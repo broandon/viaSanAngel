@@ -17,13 +17,18 @@ class mapWebViewViewController: UIViewController, WKNavigationDelegate, NVActivi
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        print("Loaded map view")
+        
         startAnimating(type: .ballClipRotatePulse)
         
         webView.scrollView.delegate = self
         webView.navigationDelegate = self
         
         let url = URL(string: "http://easycode.mx/viasanangel/mapaviaangel/mapaviasanangel.php")!
+        
         webView.load(URLRequest(url: url))
+        
+        print("Loading map")
         
     }
     
@@ -31,9 +36,13 @@ class mapWebViewViewController: UIViewController, WKNavigationDelegate, NVActivi
         
         stopAnimating()
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { // Change `2.0` to the desired number of seconds.
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            
             webView.scrollView.setZoomScale(-3000, animated: true)
+            
         }
+        
+        print("Finished loading")
         
     }
     

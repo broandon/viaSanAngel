@@ -13,11 +13,11 @@ class calendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDa
     
     //MARK: Outlets
     
-    var eventos : [Dictionary<String, Any>] = []
     var reuseDocument = "DocumentoCellEventosCalendar"
+    var eventsWithID : [[String:String]] = []
     let userInfo = UserDefaults.standard.string(forKey: "userID")
     let http = HTTPViewController()
-    var eventosParaCalendario : Array<String> = []
+    var eventsForCalendarDot : Array<String> = []
     
     fileprivate lazy var dateFormatter2: DateFormatter = {
         
@@ -34,7 +34,6 @@ class calendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDa
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         downloadAllDates()
         
         calendar.dataSource = self
@@ -45,7 +44,7 @@ class calendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDa
         dateComponents.month = 01
         dateComponents.day = 01
         let userCalendar = Calendar.current
-        calendar.setCurrentPage(userCalendar.date(from: dateComponents)!, animated: false)                
+        calendar.setCurrentPage(userCalendar.date(from: dateComponents)!, animated: false)
         
     }
     
@@ -63,7 +62,7 @@ class calendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDa
         let userCalendar = Calendar.current
         
         calendar.setCurrentPage(userCalendar.date(from: dateComponents)!, animated: true)
-                
+        
     }
     
     
@@ -73,76 +72,40 @@ class calendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDa
         
         let dateString = self.dateFormatter2.string(from: date)
         
-        if self.eventosParaCalendario.contains(dateString) {
+        if self.eventsForCalendarDot.contains(dateString) {
             return 1
-        }
-        
-        if self.eventosParaCalendario.contains(dateString) {
-            return 3
         }
         
         return 0
     }
-
-
+    
     
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
         
-        var dateString = self.dateFormatter2.string(from: date)
-        
-        if self.eventosParaCalendario.contains(dateString) {
-            
-            print(self.dateFormatter2.string(from: date))
-            print("this contains stuff")
-            
-                let lastDateString = "\(dateString)"
-            print(lastDateString)
-            
-            if lastDateString == "2020-02-28" {
-                
-                
-                   UserDefaults.standard.set("1", forKey: "eventID")
-                
-                   let storyBoard: UIStoryboard = UIStoryboard(name: "eventsDetails", bundle: nil)
-                   let vc = storyBoard.instantiateViewController(withIdentifier: "eventsDetailsViewController") as! eventsDetailsViewController
-                   present(vc, animated: true, completion: nil)
-                
-                
-            }
-            
-            if lastDateString == "2020-03-10" {
-                
-                
-                   UserDefaults.standard.set("2", forKey: "eventID")
-                
-                   let storyBoard: UIStoryboard = UIStoryboard(name: "eventsDetails", bundle: nil)
-                   let vc = storyBoard.instantiateViewController(withIdentifier: "eventsDetailsViewController") as! eventsDetailsViewController
-                   present(vc, animated: true, completion: nil)
-                
-            }
-            
-        } else {
-            
-            print("Nothing here")
-            
-        }
-        
-    }
-    
-    func calendar(_ calendar: FSCalendar, willDisplay cell: FSCalendarCell, for date: Date, at monthPosition: FSCalendarMonthPosition) {
-        
         let dateString = self.dateFormatter2.string(from: date)
         
-        if self.eventosParaCalendario.contains(dateString) {
+        if self.eventsForCalendarDot.contains(dateString) {
             
-            cell.eventIndicator.numberOfEvents = 1
+            let existenceCheck = "\(eventsWithID.map({$0.keys.first!}))"
+            
+            if existenceCheck.contains(dateString) {
+                
+                let eventID = eventsWithID.filter({$0["\(dateString)"] != nil}).map({$0["\(dateString)"]!})
+                                
+                UserDefaults.standard.set(eventID.first!, forKey: "eventID")
+                
+                let storyBoard: UIStoryboard = UIStoryboard(name: "eventsDetails", bundle: nil)
+                let vc = storyBoard.instantiateViewController(withIdentifier: "eventsDetailsViewController") as! eventsDetailsViewController
+                present(vc, animated: true, completion: nil)
+                
+            }
             
         }
         
     }
     
     func downloadAllDates() {
-                
+        
         let url = URL(string: http.baseURL())!
         
         var request = URLRequest(url: url)
@@ -164,26 +127,24 @@ class calendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDa
                     
                 {
                     
-                    if let items = dictionary["data"] as? [Dictionary<String, Any>] {
+                    if let realitems = dictionary["data"] as? [[String: String]] {
                         
-                        for d in items {
+                        for obj in realitems {
                             
-                            self.eventos.append(d)
+                            self.eventsWithID.append([obj["fecha"]!: obj["Id"]!])
                             
-                            print(self.eventos.count)
                         }
+                        
                         
                     }
                     
                     if let data = dictionary["data"] as? [[String: Any]] {
                         
-                        
                         for datas in data {
-                                                        
+                            
                             if let fechaReal = datas["fecha"] as? String {
                                 
-                                self.eventosParaCalendario.append(fechaReal)
-
+                                self.eventsForCalendarDot.append(fechaReal)
                                 
                             }
                             
@@ -192,7 +153,6 @@ class calendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDa
                     }
                     
                 }
-                
                 
             }
             
