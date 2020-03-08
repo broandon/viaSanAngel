@@ -698,6 +698,9 @@
                                                         <constraint firstAttribute="width" secondItem="dyP-Ln-EKK" secondAttribute="height" multiplier="47:31" id="lbq-of-Eo8"/>
                                                     </constraints>
                                                     <color key="onTintColor" red="0.7516317964" green="0.20203265549999999" blue="0.29020628329999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <connections>
+                                                        <action selector="notificationsSwitch:" destination="UJG-yQ-RJq" eventType="valueChanged" id="18v-76-8Kv"/>
+                                                    </connections>
                                                 </switch>
                                             </subviews>
                                             <constraints>
@@ -868,6 +871,7 @@
                     </tableView>
                     <connections>
                         <outlet property="cerrarSesionText" destination="fYQ-Pz-Amy" id="QJx-RI-4aj"/>
+                        <outlet property="notificationSwitch" destination="dyP-Ln-EKK" id="Eck-lu-ImF"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VV1-B7-3QB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1052,7 +1056,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirma tu contraseña" textAlignment="natural" minimumFontSize="17" id="IMi-bC-uag">
-                                        <rect key="frame" x="0.0" y="281" width="382" height="33"/>
+                                        <rect key="frame" x="0.0" y="285" width="382" height="34"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="password"/>

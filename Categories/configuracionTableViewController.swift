@@ -15,6 +15,11 @@ class configuracionTableViewController: UITableViewController {
     
     @IBOutlet weak var cerrarSesionText: UILabel!
     let userInfo = UserDefaults.standard.string(forKey: "userID")
+    @IBOutlet weak var notificationSwitch: UISwitch!
+         private lazy var myFunction: Void = {
+        notificationSwitch.isOn = true
+    }()
+    
     
     //MARK: viewDid
     
@@ -22,12 +27,27 @@ class configuracionTableViewController: UITableViewController {
         super.viewDidLoad()
         
         print("Showing settings view")
+        checkNotifications()
         
         
     }
     
+    
     //MARK: Buttons
     
+    @IBAction func notificationsSwitch(_ sender: Any) {
+        
+        if notificationSwitch.isOn {
+            
+            UIApplication.shared.registerForRemoteNotifications()
+            
+        } else {
+            
+            UIApplication.shared.unregisterForRemoteNotifications()
+            
+        }
+        
+    }
     @IBAction func closeSession(_ sender: Any) {
         
         print("Closing session")
@@ -89,6 +109,35 @@ class configuracionTableViewController: UITableViewController {
     
     
     //MARK: Funcs
+    
+    func checkNotifications() {
+        
+        let isRegisteredForRemoteNotifications = UIApplication.shared.isRegisteredForRemoteNotifications
+        if isRegisteredForRemoteNotifications {
+            
+            print("granted")
+            UserDefaults.standard.set(true, forKey: "switchState")
+            
+        } else {
+            
+            print("not granted")
+            UserDefaults.standard.set(false, forKey: "switchState")
+            
+        }
+        
+        _ = myFunction
+        
+        if UserDefaults.standard.bool(forKey: "switchState") == true {
+            
+            notificationSwitch.setOn(true, animated: true)
+            
+        } else {
+            
+            notificationSwitch.setOn(false, animated: true)
+            
+        }
+        
+    }
     
     func resetRoot() {
            guard let rootVC = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "signInViewController") as? signInViewController else {
