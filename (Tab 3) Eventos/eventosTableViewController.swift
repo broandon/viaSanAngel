@@ -28,7 +28,7 @@ class eventosTableViewController: UITableViewController {
         
         setupTableView()
         downloadEventos()
-        
+        print(eventos)
         
     }
     
@@ -71,6 +71,8 @@ class eventosTableViewController: UITableViewController {
 
 
         let document = eventos[indexPath.row]
+        
+        print(document)
              
              let eventID = document["Id"] as! String
              
@@ -85,6 +87,9 @@ class eventosTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let document = eventos[indexPath.row]
+        
+        let anotherDocument = eventos
+        print(anotherDocument)
         
         let imagen = document["imagen_evento"] as! String
         let titulo = document["nombre"] as! String
@@ -136,6 +141,8 @@ class eventosTableViewController: UITableViewController {
                     
                 {
                     
+                    print(dictionary)
+                    
                     if let items = dictionary["data"] as? [Dictionary<String, Any>] {
                         
                         for d in items {
@@ -159,6 +166,10 @@ class eventosTableViewController: UITableViewController {
             }
             
         }.resume()
+        
+        print("These are the events")
+        print(eventos)
+        print("********************")
         
     }
     
